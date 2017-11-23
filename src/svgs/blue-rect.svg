@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-7.77495424%" y1="-6.94290083%" x2="41.7779738%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#1C8AEE" offset="0%"></stop>
+            <stop stop-color="#2346B5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-8" transform="translate(-1176.000000, -402.000000)" fill="url(#linearGradient-1)">
+            <rect id="Rectangle-7" transform="translate(1189.833096, 415.833096) rotate(33.000000) translate(-1189.833096, -415.833096) " x="1179.8331" y="405.833096" width="20" height="20"></rect>
+        </g>
+    </g>
+</svg>

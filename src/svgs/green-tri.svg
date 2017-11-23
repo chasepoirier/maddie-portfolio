@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="111px" height="123px" viewBox="0 0 111 123" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Triangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-29.8590686%" y1="0%" x2="90.9651753%" y2="122.814806%" id="linearGradient-1">
+            <stop stop-color="#2ECDAA" offset="0%"></stop>
+            <stop stop-color="#46B9C4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-8" transform="translate(-899.000000, -146.000000)" fill="url(#linearGradient-1)">
+            <polygon id="Triangle" transform="translate(929.000000, 191.583716) rotate(-30.000000) translate(-929.000000, -191.583716) " points="929 139.877556 992.609736 243.289876 865.390264 243.289876"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,47 @@
+header {
+	width: calc(100% - 200px);
+	margin: 0 auto;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .left {
+	display: flex;
+	justify-content: flex-start;
+	height: 100%;
+	align-items: center;
+}
+
+header .left .logo-container {
+	height: 40px;
+	width: 40px;
+	margin-right: 8px;
+}
+
+header .left .logo-container .logo {
+	height: 100%;
+	width: 100%;
+}
+
+header .right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 100%;
+	list-style: none;
+}
+
+header .right li a {
+	font-size: 16px;
+	text-decoration: none;
+	color: #666;
+	transition: all .2s;
+	padding: 2px 5px;
+	margin: 0px 25px;
+}
+
+header .right li a:hover {
+	color: #333;
+}
