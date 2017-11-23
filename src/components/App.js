@@ -5,8 +5,10 @@ import '../css/header.css';
 import '../css/project.css';
 import '../fonts/style.css'
 
+
 // App components
 import Home from './Home';
+import About from './About';
 import Header from './Header';
 
 const App = () => (
@@ -17,7 +19,7 @@ const App = () => (
 
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
       </Switch>
     </div>
     </BrowserRouter>

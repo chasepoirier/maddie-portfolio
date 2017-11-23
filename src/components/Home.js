@@ -7,7 +7,7 @@ class Home extends Component {
   render() {
     return (
       <div className="main-content">
-			   <Slider data={ProjectList} />
+			<Slider data={ProjectList} />
       </div>
     );
   }
