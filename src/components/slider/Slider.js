@@ -19,7 +19,7 @@ const Slider = (props) => {
 	    
 	    <HomeSlide />
 		
-		{projects}
+
 	    
 	  </div>
   );
@@ -27,3 +27,4 @@ const Slider = (props) => {
 
 export default Slider;
 
+//		{projects}
