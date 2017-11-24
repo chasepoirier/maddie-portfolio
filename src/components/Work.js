@@ -37,7 +37,7 @@ class Work extends Component {
 
 
   	if(this.state.slideCount === 1) {
-  		styleRight = { backgroundColor: '#3A3B44'}
+  		styleRight = { backgroundColor: '#3A3B44', transitionDelay: '.4s'}
   		styleLeft = { backgroundColor: '#3A3B44'}
   	} else if(this.state.slideCount === 2) {
   		styleRight = { backgroundColor: '#20B8FF', transform: 'translateX(100%)'}
