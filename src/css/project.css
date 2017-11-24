@@ -1,8 +1,48 @@
-.slider {
+.slider,
+.slide.home {
 	margin: 0 auto;
 	margin-bottom: 100px;
 	width: calc(100% - 200px);
 	height: calc(100vh - 200px);
+	position: relative;
+	
+}
+
+.overflow {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.background {
+	margin: 0 auto;
+	top: 100px;
+	left: 100px;
+	margin-bottom: 100px;
+	width: calc(100% - 200px);
+	height: calc(100vh - 200px);
+	position: absolute;
+	background-color: #F7F7F7;
+	overflow: hidden;
+}
+
+.background .colored-bg.right {
+	right: -40%;
+	transform: translateX(-100%);
+}
+
+.background .colored-bg.left {
+	left: -40%;
+}
+
+.background .colored-bg {
+	background-color: #3A3B44;
+	position: absolute;
+	width: 40%;
+	height: 100%;
+	top: 0px;
+	right: 0px;
+	transition: all cubic-bezier(.19,1,.22,1) .4s;
 }
 
 .slide-controls {
@@ -49,58 +89,82 @@
 }
 
 
-.background {
-	width: 100%;
+.work-list {
 	height: 100%;
-	background-color: #F7F7F7;
+	padding: 0px;
+    list-style: none;
+    margin: 0px;
+    white-space: nowrap;
 }
 
-.background .slide {
+.slide.home {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.work-list .slide {
+	display: inline-flex;
+	white-space: normal;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
 	height: 100%;
-	position: relative;
 }
 
 
-.background .content {
+.work-list .content,
+.slide.home .content {
 	width: 433px;
 	position: relative;
 	z-index: 1;
 }
 
-.background .content.home {
+.slide.home .content.home {
 	text-align: center;
 	align-items: center;
 }
 
-.background .content.home p {
+.work-list .content.home p,
+.slide.home .content.home p {
 	font-size: 20px;
 }
 
-.background .content.project {
+.work-list .content.project {
 	display: flex;
 	justify-content: center;
 	width: 80%;
 	align-items: center;
 }
 
-.background .content h1 {
+.work-list .slide.even .content.project {
+	flex-direction: row-reverse;
+}
+
+.work-list .content h1,
+.slide.home .content h1 {
 	margin-top: 0px;
 	font-family: 'SF UI Display Bold';
 	font-size: 28px;
 	margin-bottom: 8px;
 }
 
-.background .content p {
+.work-list .content p {
 	margin-top: 0px;
 	font-family: 'SF UI Display Light';
 	font-size: 18px;
 }
 
-.background .content a {
+a:visited {
+	color:#444;
+}
+
+a {
+	text-decoration: none;
+}
+
+.work-list .content a,
+.slide.home .content div {
 	margin-top: 0px;
 	font-family: 'SF UI Display Medium';
 	font-size: 16px;
@@ -108,7 +172,8 @@
 	color: #444;
 }
 
-.background .content a::after {
+.work-list .content a::after,
+.slide.home .content div::after {
 	display: inline-block;
     content: '';
     width: 7px;
@@ -119,21 +184,109 @@
 	background-repeat: no-repeat;
 }
 
-.background .content .right .header-img {
+.work-list .content .right .header-img {
 	width: 648px;
 	height: 420px;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.work-list .content .right .header-img.flickr {
 	background-image: url(../images/header-flickr.png);
 }
 
-.background .colored-bg {
-	background-color: #3A3B44;
-	position: absolute;
-	width: 35%;
-	height: 100%;
-	top: 0px;
-	right: 0px;
+.work-list .content .right .header-img.ripple {
+	background-image: url(../images/header-ripple.png);
 }
 
+.work-list .content .right .header-img.mycourses {
+	background-image: url(../images/header-mycourses.png);
+}
+
+.work-list .content .right .header-img.weekly {
+	background-image: url(../images/header-dailies.png);
+}
+
+.work-list .content .right .header-img.mycosmetics {
+	background-image: url(../images/header-mycosmetics.png);
+}
+
+.work-list .content .right .header-img.displaced {
+	background-image: url(../images/header-displaced.png);
+}
+
+
+
+
+
+
+/* ================================= 
+    ReactCSSTransitionGroup Classes
+==================================== */
+
+/* start enter state */
+
+.slide-enter {
+  transform: translateX(100%);
+}
+
+
+/* end enter state */
+
+.slide-enter.slide-enter-active {
+  transform: translateX(0);
+  transition: transform 1s ease-out;
+}
+
+
+/* start leave state */
+
+
+.slide-leave {
+  transform: translateX(0);
+}
+
+/* end leave state */
+
+.slide-leave.slide-leave-active {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 1s ease-in;
+}
+
+/* initial mounting */
+
+.slide-appear {
+  opacity: 0;
+}
+
+.slide-appear.slide-appear-active {
+  opacity: 1;
+  transition: opacity 1.75s;
+}
+
+/* initial mounting */
+
+.bg-enter {
+  transform: translateX(100%);
+}
+
+
+/* end enter state */
+
+.bg-enter.bg-enter-active {
+  transform: translateX(0);
+  transition: transform 1s ease-out;
+}
+
+
+.bg-appear {
+  transform: translateX(100%);
+}
+
+.bg-appear.bg-appear-active {
+  transform: translateX(-100%);
+  transition: transform 1.4s;
+  
+}

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import '../css/home.css';
 import '../css/header.css';
@@ -8,6 +8,7 @@ import '../fonts/style.css'
 
 // App components
 import Home from './Home';
+import Work from './Work';
 import About from './About';
 import Header from './Header';
 
@@ -19,6 +20,7 @@ const App = () => (
 
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/work" component={Work} />
         <Route path="/about" component={About} />
       </Switch>
     </div>

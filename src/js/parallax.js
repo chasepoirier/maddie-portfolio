@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
+export function parallax(event) { 
 
 
 	var parallaxBox = document.getElementById ( 'box' );
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		document.getElementById ( 'l7' ).style.transform = 'translate3d(0px,0px,0px)';
 		document.getElementById ( 'l8' ).style.transform = 'translate3d(0px,0px,0px)';
 	}
-});
+}
 
 function mouseParallax ( id, left, top, mouseX, mouseY, speed ) {
 	var obj = document.getElementById ( id );

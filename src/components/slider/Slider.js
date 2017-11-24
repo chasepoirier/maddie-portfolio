@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
-import HomeSlide from './HomeSlide';
+import ReactDOM from 'react-dom';
+
 import WorkSlide from './WorkSlide';
+
+import Animation from '../../js/Animation';
+import TransitionGroup from 'react-transition-group/TransitionGroup';
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+
 
 
 class Slider extends Component {
@@ -8,68 +15,82 @@ class Slider extends Component {
   constructor(props) {
     super(props);
 	
-	let projects = [];
+	//let projects = [];
 
-    this.state = {
-      slideCount: 1
-    }
+	this.dom = {};
+
+   
+
   }
-
+	
+	
   renderSlides = () => {
 	
-	this.projects = this.props.data.map((project) => { return <WorkSlide 
+	this.projects = this.props.data.map((project) => { 
+
+		if (project.key % 2 === 0) {
+			return <WorkSlide 
     			title={project.name}
                 desc={project.bio}
-                img={project.img_src}
-                key={project.key} 
+                key={project.key}
+                project={project.project} 
+                
             />
+        } else {
+        	return <WorkSlide
+        		isEven={true}
+    			title={project.name}
+                desc={project.bio}
+                key={project.key} 
+                project={project.project} 
+
+            />
+        }
         });
   }
+	
+componentDidMount() {
+	this.dom.root = ReactDOM.findDOMNode(this);
+}
 
-  nextSlide = () => {
-  	if(this.state.slideCount === 7) {
-      this.setState({ slideCount: 2 })
-  	} else {
-  		this.setState({ slideCount: this.state.slideCount + 1 })
-  	}
+  componentWillEnter(cb) {
+	Animation.show(this.dom.root, cb);
+	console.log('here');
   }
 
-  previousSlide = () => {
-      if(this.state.slideCount === 2) {
-      this.setState({ slideCount: 7 })
-  	} else {
-  		this.setState({ slideCount: this.state.slideCount - 1 })
-  	}
+  componentWillLeave(cb) {
+	Animation.hide(this.dom.root, cb);
   }
 
 	render() {
 
 		this.renderSlides();
 
+		const style = {
+	      transform: `translate(-${this.props.slideCount - 1}00%, 0%)`,
+	      transition: 'all cubic-bezier(.19,1,.22,1) 1s '
+	    }
+
 	  return (
-		  <div className="slider">
-		    
-		    <div className="background">
 
-		    	{this.state.slideCount === 1 ? <HomeSlide nextSlide={this.nextSlide} /> : null}
-				{this.state.slideCount === 2 ? this.projects[0] : null}
-				{this.state.slideCount === 3 ? this.projects[1] : null}
-				{this.state.slideCount === 4 ? this.projects[2] : null}
-				{this.state.slideCount === 5 ? this.projects[3] : null}
-				{this.state.slideCount === 6 ? this.projects[4] : null}
-				{this.state.slideCount === 7 ? this.projects[5] : null}
+		  <div style={this.divStyle} className="slider">
+		    <div className="overflow">
+		    <TransitionGroup style={style} className="work-list" component="ul">
+				
+					
+					{this.projects}
+				
 
+			</TransitionGroup>
 			</div>
 
-			{this.state.slideCount === 1 ? null : 
-
+			
 			<div className="slide-controls">
-				<div onClick={this.previousSlide} className="backward"></div>
-				<div className="count">{this.state.slideCount - 1} / 6</div>
-				<div onClick={this.nextSlide} className="forward"></div>
+				<div onClick={this.props.countDown} className="backward"></div>
+				<div className="count">{this.props.slideCount} / 6</div>
+				<div onClick={this.props.countUp} className="forward"></div>
 		    </div> 
 
-			}
 		    
 
 		  </div>
@@ -79,4 +100,3 @@ class Slider extends Component {
 }
 
 export default Slider;
-
