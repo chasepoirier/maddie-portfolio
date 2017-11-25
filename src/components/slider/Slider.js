@@ -33,6 +33,7 @@ class Slider extends Component {
     			title={project.name}
                 desc={project.bio}
                 key={project.key}
+                number={project.number}
                 project={project.project} 
                 
             />
@@ -40,6 +41,7 @@ class Slider extends Component {
         	return <WorkSlide
         		isEven={true}
     			title={project.name}
+    			number={project.number}
                 desc={project.bio}
                 key={project.key} 
                 project={project.project} 
@@ -74,7 +76,7 @@ componentDidMount() {
 	  return (
 
 		  <div style={this.divStyle} className="slider">
-		    <div className="overflow">
+		    <div id="box" className="overflow">
 		    <TransitionGroup style={style} className="work-list" component="ul">
 				
 					

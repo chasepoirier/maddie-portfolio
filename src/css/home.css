@@ -1,4 +1,14 @@
+a {
+	color: #444;
+}
 
+.animated-page-wrapper {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /*	STYLES FOR SHAPE SVGS  */
 
@@ -13,6 +23,11 @@
 .shape-container .shape {
 	position: absolute;
 	transform: translate3d(0px, 0px, 0px);
+	transition: all linear .2s;
+}
+
+#l1,
+#l2 {
 	transition: all linear .2s;
 }
 

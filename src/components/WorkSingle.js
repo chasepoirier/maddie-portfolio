@@ -10,7 +10,7 @@ import AnimatedWrapper from './AnimatedWrapper';
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-class Work extends Component {    
+class WorkSingle extends Component {    
 
 	constructor(props) {
 		super(props);
@@ -69,15 +69,15 @@ class Work extends Component {
       <div className="main-content">
 			<div className="background">
 				<div style={styleRight} className="colored-bg right"></div>
-            	<div style={styleLeft} className="colored-bg left"></div>
+        <div style={styleLeft} className="colored-bg left"></div>
 			</div>
       		
 
-			<Slider data={ProjectList} slideCount={this.state.slideCount} countUp={this.nextSlide} countDown={this.previousSlide} />
+			
       </div>
     );
   }
 }
 
-export default Work;
+export default WorkSingle;
 
