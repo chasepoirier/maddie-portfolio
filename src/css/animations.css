@@ -1,0 +1,52 @@
+@keyframes scaleUp {
+  from {transform: scale(.85);}
+  to {transform: scale(1);}
+}
+
+.scaling {
+  animation: scaleUp .7s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.project-background {
+  width: calc(100% + 20px);
+  height: 300px;
+  transform: translate3d(-100px,-100px,0);
+  transition-delay: .3s;
+}
+
+.background .colored-bg.project-colored-background {
+  width: calc(100% + 20px);
+  transition-delay: .3s;
+  right: calc(-100% - 20px);
+}
+
+.background .colored-bg.project-colored-background-left {
+  width: calc(100% + 20px);
+  transition-delay: .3s;
+  left: calc(-100% - 20px);
+}
+
+.work-list .slide .content.project .left .revealer.title-revealer {
+  transition: all .2s  cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: scale(1,1);
+}
+
+.work-list .slide .content.project .right.project-image {
+  transform: translate(-25%, -50px) scale(.85,.85);
+}
+
+.work-list .slide .content.project .right.project-image-left {
+  transform: translate(25%, 50px) scale(.85,.85);
+}
+
+header .left .logo-container.arrow.showArrow {
+  transform: translate(0px, 0px) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+header .left .logo-container.logo.hide {
+  opacity: 0;
+  transform: translateY(10px);
+  visibility: hidden;
+}

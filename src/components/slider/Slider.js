@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 
 import WorkSlide from './WorkSlide';
 
+import { showArrow } from '../../js/helpers';
+
 import Animation from '../../js/Animation';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 
-
+import SocialLinks from '../Social';
 
 class Slider extends Component {
 
@@ -35,6 +37,7 @@ class Slider extends Component {
                 key={project.key}
                 number={project.number}
                 project={project.project} 
+                slideCount={this.props.slideCount}
                 
             />
         } else {
@@ -43,6 +46,7 @@ class Slider extends Component {
     			title={project.name}
     			number={project.number}
                 desc={project.bio}
+                slideCount={this.props.slideCount}
                 key={project.key} 
                 project={project.project} 
 
@@ -64,6 +68,27 @@ componentDidMount() {
 	Animation.hide(this.dom.root, cb);
   }
 
+  getStyleCounter = () => {
+    
+    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+    if(url !== 'projects') {
+     return { transform: 'translateY(10px)', opacity: 0, visibility: 'hidden' }
+    } else {
+      return { transform: 'translateY(0px)', opacity: 1 }
+    }
+  }
+
+  arrowHandler = () => {
+    
+    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+	//alert(url);
+
+    if(url !== 'projects') {
+     showArrow();
+    }
+  }
+
 	render() {
 
 		this.renderSlides();
@@ -75,9 +100,9 @@ componentDidMount() {
 
 	  return (
 
-		  <div style={this.divStyle} className="slider">
+		  <div style={this.divStyle} onClick={this.arrowHandler} className="slider">
 		    <div id="box" className="overflow">
-		    <TransitionGroup style={style} className="work-list" component="ul">
+		    <TransitionGroup style={style} className="work-list" onClick={this.props.clickHandler} component="ul">
 				
 					
 					{this.projects}
@@ -86,14 +111,15 @@ componentDidMount() {
 			</TransitionGroup>
 			</div>
 
+			<div style={this.getStyleCounter()} className="footer">
+				<div className="slide-controls">
+					<div onClick={this.props.countDown} className="backward"></div>
+					<div className="count">{this.props.slideCount} / 6</div>
+					<div onClick={this.props.countUp} className="forward"></div>
+			    </div> 
 			
-			<div className="slide-controls">
-				<div onClick={this.props.countDown} className="backward"></div>
-				<div className="count">{this.props.slideCount} / 6</div>
-				<div onClick={this.props.countUp} className="forward"></div>
-		    </div> 
-
-		    
+		    	<SocialLinks />
+		    </div>
 
 		  </div>
 

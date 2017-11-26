@@ -1,79 +1,175 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import {withRouter} from 'react-router-dom';
 
-
+import ReactDOM from 'react-dom';
 import Slider from './slider/Slider.js'
 import ProjectList from '../data/projects';
+
+import Animation from '../js/Animation';
 
 import * as Animated from "animated/lib/targets/react-dom";
 import AnimatedWrapper from './AnimatedWrapper';
 
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import TransitionGroup from 'react-transition-group/TransitionGroup';
+import { Helmet } from 'react-helmet';
 
 class Work extends Component {    
 
 	constructor(props) {
 		super(props);
+    this.dom = {};
 
-		this.state = {
-	      slideCount: 1,
-	      animations: []
-	    }
+   
+		
+    this.state = {
+      isClicked: false
+    };
+
 	}
 
-  nextSlide = () => {
-  	if(this.state.slideCount === 6) {
-      this.setState({ slideCount: 1 })
-  	} else {
-  		this.setState({ slideCount: this.state.slideCount + 1 })
-  	}
+  componentDidMount() {
+    this.dom.root = ReactDOM.findDOMNode(this);
+
+    
   }
 
-  previousSlide = () => {
-      if(this.state.slideCount === 1) {
-      this.setState({ slideCount: 6 })
-  	} else {
-  		this.setState({ slideCount: this.state.slideCount - 1 })
-  	}
+  getStyleBG = () => {
+    
+    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+    if(url !== 'projects') {
+     return "project-background background"
+    } else {
+      return "background"
+    }
   }
+
+  getStyleBgColoredRight = () => {
+    
+    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+    if(url === 'flickr' || url === 'mycourses' || url === 'mycosmetics') {
+     return "project-colored-background"
+    } else {
+      return ""
+    }
+  }
+
+  getStyleBgColoredLeft = () => {
+    
+    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+    if(url === 'ripple' || url === 'weekly' || url === 'displaced') {
+     return "project-colored-background-left"
+    } else {
+      return ""
+    }
+  }
+
+  getStyleRight = () => {
+    
+
+    if(this.props.slideCount === 1) {
+
+      return { backgroundColor: '#3A3B44', transitionDelay: '.4s' }
+                      //styleLeft: {backgroundColor: '#3A3B44'}});
+
+    } else if(this.props.slideCount === 2) {
+      return { backgroundColor: '#20B8FF', transform: 'translateX(100%)'}
+                      //styleLeft: {backgroundColor: '#20B8FF', transform: 'translateX(100%)', transitionDelay: '.4s'}});
+
+    } else if(this.props.slideCount === 3) {
+
+      //this.styleLeft = { backgroundColor: '#1C8AEE', transform: 'translateX(-100%)'}
+      return  { backgroundColor: '#1C8AEE', transform: 'translateX(-100%)', transitionDelay: '.4s'} 
+                      //{ styleLeft: {backgroundColor: '#1C8AEE', transform: 'translateX(-100%)'}
+    } else if(this.props.slideCount === 4) {
+
+      return { backgroundColor: '#374269', transform: 'translateX(100%)'}
+                      //styleLeft: {backgroundColor: '#374269', transform: 'translateX(100%)', transitionDelay: '.4s'}});
+
+      //this.setState({ backgroundColor: '#374269', transform: 'translateX(100%)'})
+      //this.styleLeft = { backgroundColor: '#374269', transform: 'translateX(100%)', transitionDelay: '.4s'}
+    } else if(this.props.slideCount === 5) {
+
+      return { backgroundColor: '#F55360', transform: 'translateX(-100%)', transitionDelay: '.4s'}
+
+     //styleLeft: {backgroundColor: '#F55360', transform: 'translateX(-100%)'},
+    } else if(this.props.slideCount === 6) {
+
+      return { backgroundColor: '#90CCDD', transform: 'translateX(100%)'}
+
+      //                styleLeft: {backgroundColor: '#90CCDD', transform: 'translateX(100%)', transitionDelay: '.4s'}});
+    } 
+    
+  }
+
+  getStyleLeft = () => {
+    
+    
+
+    if(this.props.slideCount === 1) {
+
+       //return {backgroundColor: '#3A3B44'}
+                      //styleLeft: {backgroundColor: '#3A3B44'}});
+
+    } else if(this.props.slideCount === 2) {
+      return {backgroundColor: '#20B8FF', transform: 'translateX(100%)', transitionDelay: '.4s'}
+                      //styleLeft: {backgroundColor: '#20B8FF', transform: 'translateX(100%)', transitionDelay: '.4s'}});
+
+    } else if(this.props.slideCount === 3) {
+
+      //this.styleLeft = { backgroundColor: '#1C8AEE', transform: 'translateX(-100%)'}
+      return {backgroundColor: '#1C8AEE', transform: 'translateX(-100%)'}
+                      //{ styleLeft: {backgroundColor: '#1C8AEE', transform: 'translateX(-100%)'}
+    } else if(this.props.slideCount === 4) {
+
+      return {backgroundColor: '#374269', transform: 'translateX(100%)', transitionDelay: '.4s'}
+                      //styleLeft: {backgroundColor: '#374269', transform: 'translateX(100%)', transitionDelay: '.4s'}});
+
+      //this.setState({ backgroundColor: '#374269', transform: 'translateX(100%)'})
+      //this.styleLeft = { backgroundColor: '#374269', transform: 'translateX(100%)', transitionDelay: '.4s'}
+    } else if(this.props.slideCount === 5) {
+
+      return {backgroundColor: '#F55360', transform: 'translateX(-100%)'}
+
+     //styleLeft: {backgroundColor: '#F55360', transform: 'translateX(-100%)'},
+    } else if(this.props.slideCount === 6) {
+
+      return {backgroundColor: '#90CCDD', transform: 'translateX(100%)', transitionDelay: '.4s'}
+
+      //                styleLeft: {backgroundColor: '#90CCDD', transform: 'translateX(100%)', transitionDelay: '.4s'}});
+    } 
+    
+  }
+
+  
  
   render() {
 
   	let styleRight = { backgroundColor: 'blue' }
-  	let styleLeft = { backgroundColor: 'blue' }
+  	//let this.styleLeft = { backgroundColor: 'blue' }
+    
 
-
-  	if(this.state.slideCount === 1) {
-  		styleRight = { backgroundColor: '#3A3B44', transitionDelay: '.4s'}
-  		styleLeft = { backgroundColor: '#3A3B44'}
-  	} else if(this.state.slideCount === 2) {
-  		styleRight = { backgroundColor: '#20B8FF', transform: 'translateX(100%)'}
-  		styleLeft = { backgroundColor: '#20B8FF', transform: 'translateX(100%)', transitionDelay: '.4s'}
-  	} else if(this.state.slideCount === 3) {
-  		styleLeft = { backgroundColor: '#1C8AEE', transform: 'translateX(-100%)'}
-  		styleRight = { backgroundColor: '#1C8AEE', transform: 'translateX(-100%)', transitionDelay: '.4s'}
-  	} else if(this.state.slideCount === 4) {
-  		styleRight = { backgroundColor: '#374269', transform: 'translateX(100%)'}
-  		styleLeft = { backgroundColor: '#374269', transform: 'translateX(100%)', transitionDelay: '.4s'}
-  	} else if(this.state.slideCount === 5) {
-  		styleLeft = { backgroundColor: '#F55360', transform: 'translateX(-100%)'}
-  		styleRight = { backgroundColor: '#F55360', transform: 'translateX(-100%)', transitionDelay: '.4s'}
-  	} else if(this.state.slideCount === 6) {
-  		styleRight = { backgroundColor: '#90CCDD', transform: 'translateX(100%)'}
-  		styleLeft = { backgroundColor: '#90CCDD', transform: 'translateX(100%)', transitionDelay: '.4s'}
-  	} 
+  	
 
     return (
     	
 
       <div className="main-content">
-			<div className="background">
-				<div style={styleRight} className="colored-bg right"></div>
-            	<div style={styleLeft} className="colored-bg left"></div>
+      <Helmet>
+        <title>Projects - Madison Yocum - Interaction & Visual Designer</title>
+      </Helmet>
+			<div className={this.getStyleBG()}>
+        <TransitionGroup>
+				  <div style={this.getStyleRight()} className={this.getStyleBgColoredRight() + " colored-bg right"}></div>
+          <div style={this.getStyleLeft()} className={this.getStyleBgColoredLeft() + " colored-bg left"}></div>
+        </TransitionGroup>
 			</div>
       		
 
-			<Slider data={ProjectList} slideCount={this.state.slideCount} countUp={this.nextSlide} countDown={this.previousSlide} />
+			<Slider clickHandler={this.clickHandler} data={ProjectList} slideCount={this.props.slideCount} countUp={this.props.countUp} countDown={this.props.countDown} />
       </div>
     );
   }

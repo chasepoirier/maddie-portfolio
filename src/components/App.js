@@ -21,33 +21,47 @@ import About from './About';
 import Header from './Header';
 
 
+
+
 export default class App extends Component {
   constructor(props) {
     super(props);
+    
+    let url = "";
+
+    this.state = {
+        slideCount: 1,
+        url: null
+      }
+  }
+
+  nextSlide = () => {
+    if(this.state.slideCount === 6) {
+      this.setState({ slideCount: 1 })
+    } else {
+      this.setState({ slideCount: this.state.slideCount + 1 })
+    }
+  }
+
+  previousSlide = () => {
+      if(this.state.slideCount === 1) {
+      this.setState({ slideCount: 6 })
+    } else {
+      this.setState({ slideCount: this.state.slideCount - 1 })
+    }
+  }
+
+  setUrl = (url) => {
+    this.url = url
   }
 
   render() {
     return (
       <div className="wrapper">
         <Header />
-         <Route
-          render={({ location }) => (
-            <TransitionGroup component="main">
-              <AnimatedSwitch
-                key={location.key}
-                location={location}
-              >
-                <Route exact path="/" component={Home} />
-                <Route
-                  exact
-                  path="/projects"
-                  component={Work}
-                />
-                <Route component={Home} />
-              </AnimatedSwitch>
-            </TransitionGroup>
-          )}
-        />
+            <Route exact path="/" component={Home} />
+            <Route path="/projects" render={( {match} ) => <Work slideCount={this.state.slideCount} path={this.url}  countUp={this.nextSlide} countDown={this.previousSlide} />} />
+            <Route path="/projects/:id" render={({ match }) => <div>{this.setUrl(match.path)} {this.url}</div>}/>
       </div>
     );
   }

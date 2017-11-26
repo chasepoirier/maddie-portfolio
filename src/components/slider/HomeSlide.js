@@ -8,6 +8,8 @@ import OrangeTri from '../../svgs/orange-tri.svg';
 import PinkCircle from '../../svgs/pink-circle.svg';
 import YellowRing from '../../svgs/yellow-ring.svg';
 import { parallax } from '../../js/parallax.js';
+import SocialLinks from '../Social';
+import { NavLink } from 'react-router-dom';
 
 class HomeSlide extends React.Component { 
 
@@ -24,7 +26,8 @@ class HomeSlide extends React.Component {
     				<p>An aspiring interaction and visual designer, with skillsets in product design and entrepreneurship.</p>
     				<div>view work</div>
     			</div>
-          <div id="box" className="shape-container">
+
+          <NavLink to="/projects" id="box" className="shape-container">
             <img id="l1" src={RedRect} alt="Red Rectangle" className="shape red-rect" />
             <img id="l2" src={BluePenta} alt="Blue Pentagon" className="shape blue-penta" />
             <img id="l3" src={BlueRect} alt="Blue Rectangle" className="shape blue-rect" />
@@ -33,6 +36,9 @@ class HomeSlide extends React.Component {
             <img id="l6" src={OrangeTri} alt="Orange Triangle" className="shape orange-tri" />
             <img id="l7" src={PinkCircle} alt="Pink Circle" className="shape pink-circle" />
             <img id="l8" src={YellowRing} alt="Yellow Ring" className="shape yellow-ring" />
+          </NavLink>
+          <div className="footer-home">
+            <SocialLinks />
           </div>
       </div>
     );

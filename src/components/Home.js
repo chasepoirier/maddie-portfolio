@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import HomeSlide from './slider/HomeSlide';
+
 //import AnimatedWrapper from './AnimatedWrapper';
 //import { render, findDOMNode } from 'ReactDOM';
 
@@ -21,12 +22,12 @@ class Home extends Component {
       		<div className="background"></div>
 
       		
-      		<NavLink to="/projects">
+      		
   
       				<HomeSlide />
       			
-      		</NavLink>
-      		
+      	
+          
 			
       </div>
     );
