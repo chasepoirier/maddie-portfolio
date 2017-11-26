@@ -32,11 +32,11 @@
 }
 
 .work-list .slide .content.project .right.project-image {
-  transform: translate(-25%, -50px) scale(.85,.85);
+  transform: translate(-25%, -40px) scale(.85,.85);
 }
 
 .work-list .slide .content.project .right.project-image-left {
-  transform: translate(25%, 50px) scale(.85,.85);
+  transform: translate(25%, -40px) scale(.85,.85);
 }
 
 header .left .logo-container.arrow.showArrow {
@@ -49,4 +49,41 @@ header .left .logo-container.logo.hide {
   opacity: 0;
   transform: translateY(10px);
   visibility: hidden;
+}
+
+li.slide {
+  position: relative;
+}
+
+.large-title {
+  font-size: 190px;
+  color: #fff;
+  position: absolute;
+  top: 30px;
+  text-align: center;
+  width: 100%;
+  left: 0px;
+  letter-spacing: 0px;
+  font-family: 'SF UI Display Bold';
+  transform: translateY(150px);
+  visibility: hidden;
+  opacity: 0;
+  
+  
+}
+
+.large-title.unmount {
+  transition: all .4s  cubic-bezier(0.215, 0.61, 0.355, 1) !important;
+  transition-delay: 0s !important;
+  transform: translateY(150px) !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.large-title.visible {
+  transform: translateY(0);
+  visibility: visible;
+  transition: all .6s  cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-delay: .5s;
+  opacity: 1;
 }

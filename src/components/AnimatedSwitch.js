@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Switch } from "react-router-dom";
 import * as Animated from "animated/lib/targets/react-dom";
 import TransitionGroup from "react-transition-group/TransitionGroup";
+import { TweenMax, Elastic } from 'gsap';
+import $ from 'jquery';
 
 export default class AnimatedSwitch extends Switch {
 	constructor(props) {
@@ -11,25 +13,47 @@ export default class AnimatedSwitch extends Switch {
 		};
 	}
 	componentWillAppear(cb) {
-		console.log("componentWillAppear");
+		const duration = 2.5;
+		let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+		if(url === 'projects' || url === '') {
 		setTimeout(
-			() => Animated.spring(this.state.animate, { toValue: 1 }).start(),
-			250
-		);
-		cb();
+			() => TweenMax.to($('.animated-page-wrapper'), duration, { 
+				opacity: 1, 
+//				height: 0, 
+				onComplete() { cb(); }, 
+				ease: Elastic.easeOut.config(0.25, 1),
+			}), 250)
+		}
 	}
 	componentWillEnter(cb) {
-		console.log("componentWillEnter");
+
+		const duration = .5;
+		let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+		if(url === 'projects' || url === '') {
 		setTimeout(
-			() => Animated.spring(this.state.animate, { toValue: 1 }).start(),
-			250
-		);
-		cb();
+			() => TweenMax.to($('.animated-page-wrapper'), duration, { 
+				opacity: 1, 
+//				height: 0, 
+				onComplete() { cb(); }, 
+				ease: Elastic.easeOut.config(0.25, 1),
+			}), 250)
+		}
 	}
 	componentWillLeave(cb) {
-		console.log("componentWillLeave");
-		Animated.spring(this.state.animate, { toValue: 0 }).start();
-		setTimeout(() => cb(), 175);
+		const duration = .5;
+		let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+		if(url === 'projects' || url === '') {
+		setTimeout(
+			() => TweenMax.to($('.animated-page-wrapper'), duration, { 
+				opacity: 0, 
+//				height: 0, 
+				onComplete() { cb(); }, 
+				ease: Elastic.easeOut.config(0.25, 1),
+			}), 250)
+		}
 	}
 	render() {
 		const style = {

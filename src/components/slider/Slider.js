@@ -102,13 +102,13 @@ componentDidMount() {
 
 		  <div style={this.divStyle} onClick={this.arrowHandler} className="slider">
 		    <div id="box" className="overflow">
-		    <TransitionGroup style={style} className="work-list" onClick={this.props.clickHandler} component="ul">
+		    <ul style={style} className="work-list" onClick={this.props.clickHandler} >
 				
 					
 					{this.projects}
 				
 
-			</TransitionGroup>
+			</ul>
 			</div>
 
 			<div style={this.getStyleCounter()} className="footer">

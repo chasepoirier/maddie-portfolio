@@ -61,7 +61,8 @@ export default class App extends Component {
         <Header />
             <Route exact path="/" component={Home} />
             <Route path="/projects" render={( {match} ) => <Work slideCount={this.state.slideCount} path={this.url}  countUp={this.nextSlide} countDown={this.previousSlide} />} />
-            <Route path="/projects/:id" render={({ match }) => <div>{this.setUrl(match.path)} {this.url}</div>}/>
+            <Route path="/projects/:id" render={({ match }) => <div>{this.setUrl(match.path)} {this.url}</div>} />
+          )} />
       </div>
     );
   }

@@ -72,33 +72,33 @@ class Work extends Component {
 
     if(this.props.slideCount === 1) {
 
-      return { backgroundColor: '#3A3B44', transitionDelay: '.4s' }
+      return { background: 'linear-gradient(135deg, #3a3b44 0%,#121214 100%)', transitionDelay: '.4s' }
                       //styleLeft: {backgroundColor: '#3A3B44'}});
 
     } else if(this.props.slideCount === 2) {
-      return { backgroundColor: '#20B8FF', transform: 'translateX(100%)'}
+      return { background: 'linear-gradient(135deg, #3a3b44 0%,#121214 100%)', transform: 'translateX(100%)'}
                       //styleLeft: {backgroundColor: '#20B8FF', transform: 'translateX(100%)', transitionDelay: '.4s'}});
 
     } else if(this.props.slideCount === 3) {
 
       //this.styleLeft = { backgroundColor: '#1C8AEE', transform: 'translateX(-100%)'}
-      return  { backgroundColor: '#1C8AEE', transform: 'translateX(-100%)', transitionDelay: '.4s'} 
+      return  { background: 'linear-gradient(135deg, #1C8AEE 0%,#2346B5 100%)', transform: 'translateX(-100%)', transitionDelay: '.4s'} 
                       //{ styleLeft: {backgroundColor: '#1C8AEE', transform: 'translateX(-100%)'}
     } else if(this.props.slideCount === 4) {
 
-      return { backgroundColor: '#374269', transform: 'translateX(100%)'}
+      return { background: 'linear-gradient(135deg, #1C8AEE 0%,#2346B5 100%)', transform: 'translateX(100%)'}
                       //styleLeft: {backgroundColor: '#374269', transform: 'translateX(100%)', transitionDelay: '.4s'}});
 
       //this.setState({ backgroundColor: '#374269', transform: 'translateX(100%)'})
       //this.styleLeft = { backgroundColor: '#374269', transform: 'translateX(100%)', transitionDelay: '.4s'}
     } else if(this.props.slideCount === 5) {
 
-      return { backgroundColor: '#F55360', transform: 'translateX(-100%)', transitionDelay: '.4s'}
+      return { background: 'linear-gradient(45deg, #F55360 0%,#FF8678 100%)', transform: 'translateX(-100%)', transitionDelay: '.4s'}
 
      //styleLeft: {backgroundColor: '#F55360', transform: 'translateX(-100%)'},
     } else if(this.props.slideCount === 6) {
 
-      return { backgroundColor: '#90CCDD', transform: 'translateX(100%)'}
+      return { background: 'linear-gradient(45deg, #F55360 0%,#FF8678 100%)', transform: 'translateX(100%)'}
 
       //                styleLeft: {backgroundColor: '#90CCDD', transform: 'translateX(100%)', transitionDelay: '.4s'}});
     } 
@@ -111,33 +111,33 @@ class Work extends Component {
 
     if(this.props.slideCount === 1) {
 
-       //return {backgroundColor: '#3A3B44'}
+       return {background: 'linear-gradient(45deg, #4DA8CC 0%,#90CCDD 100%)'}
                       //styleLeft: {backgroundColor: '#3A3B44'}});
 
     } else if(this.props.slideCount === 2) {
-      return {backgroundColor: '#20B8FF', transform: 'translateX(100%)', transitionDelay: '.4s'}
+      return {background: 'linear-gradient(45deg, #0088C6 0%,#20B8FF 100%)', transform: 'translateX(100%)', transitionDelay: '.4s'}
                       //styleLeft: {backgroundColor: '#20B8FF', transform: 'translateX(100%)', transitionDelay: '.4s'}});
 
     } else if(this.props.slideCount === 3) {
 
       //this.styleLeft = { backgroundColor: '#1C8AEE', transform: 'translateX(-100%)'}
-      return {backgroundColor: '#1C8AEE', transform: 'translateX(-100%)'}
+      return {background: 'linear-gradient(45deg, #0088C6 0%,#20B8FF 100%)', transform: 'translateX(-100%)'}
                       //{ styleLeft: {backgroundColor: '#1C8AEE', transform: 'translateX(-100%)'}
     } else if(this.props.slideCount === 4) {
 
-      return {backgroundColor: '#374269', transform: 'translateX(100%)', transitionDelay: '.4s'}
+      return {background: 'linear-gradient(45deg, #374269 0%,#616C94 100%)', transform: 'translateX(100%)', transitionDelay: '.4s'}
                       //styleLeft: {backgroundColor: '#374269', transform: 'translateX(100%)', transitionDelay: '.4s'}});
 
       //this.setState({ backgroundColor: '#374269', transform: 'translateX(100%)'})
       //this.styleLeft = { backgroundColor: '#374269', transform: 'translateX(100%)', transitionDelay: '.4s'}
     } else if(this.props.slideCount === 5) {
 
-      return {backgroundColor: '#F55360', transform: 'translateX(-100%)'}
+      return {background: 'linear-gradient(45deg, #374269 0%,#616C94 100%)', transform: 'translateX(-100%)'}
 
      //styleLeft: {backgroundColor: '#F55360', transform: 'translateX(-100%)'},
     } else if(this.props.slideCount === 6) {
 
-      return {backgroundColor: '#90CCDD', transform: 'translateX(100%)', transitionDelay: '.4s'}
+      return {background: 'linear-gradient(45deg, #4DA8CC 0%,#90CCDD 100%)', transform: 'translateX(100%)', transitionDelay: '.4s'}
 
       //                styleLeft: {backgroundColor: '#90CCDD', transform: 'translateX(100%)', transitionDelay: '.4s'}});
     } 

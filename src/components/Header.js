@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 //import logo from '../svgs/logo.svg';
 import InlineSVG from 'svg-inline-react';
-import { hideArrow } from '../js/helpers';
+import { hideArrow, showArrow } from '../js/helpers';
 
 
 const svgSource = `<svg className="logo" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -30,10 +30,22 @@ class Header extends React.Component {
     }
   }
 
+  componentDidMount() {
+    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+    if(url === 'flickr' || url === 'mycourses' || url === 'mycosmetics' || url === 'ripple' || url === 'weekly' || url === 'displaced') {
+      showArrow();
+    }
+    
+  }
+
 
   render() {
+  
     return (
+
   <header>
+    
     <div className="left">
 		<NavLink className="logo-container logo" to="/">
 			 <InlineSVG src={svgSource}  />
@@ -42,7 +54,7 @@ class Header extends React.Component {
 		{this.checkUrl() === true ? null : <div className="name header-white">Madison Yocum</div>}
     </div>
     <ul className="right">
-      <li><NavLink id="headers" className="header-white" to="/projects">Work</NavLink></li>
+      <li onClick={hideArrow}><NavLink id="headers" className="header-white" to="/projects">Work</NavLink></li>
       <li><NavLink className="header-white" to="/about">About</NavLink></li>
       <li><NavLink className="header-white" to="/resume">Resume</NavLink></li>
     </ul>

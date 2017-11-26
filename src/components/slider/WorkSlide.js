@@ -1,23 +1,46 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { setToWhite, setToBlack, centerPosition, showArrow } from '../../js/helpers';
+import { Link, withRouter } from 'react-router-dom';
+import { showTitle, hideTitle, setToWhite, setToBlack, centerPosition, showArrow, disableLink, activeLink } from '../../js/helpers';
 
 import { parallaxOne } from '../../js/parallax.js';
+
 
 class WorkSlide extends React.Component {
 	
 	constructor(props) {
 		super(props);
-
+			
 		this.state = {
 	      style: null
 	    }	
 	}
-	
+
+	handleSubmit = (e) => { 
+		let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+		if (url === 'projects') {
+
+	    	let path = `projects/${this.props.project}`;
+	    	this.props.history.push(path);	
+		} else {
+			
+		}
+
+	  	e.preventDefault();
+  
+ 	 }
 
 	componentDidMount() {
-      parallaxOne();
       
+      
+      let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+	    if(url !== 'projects') {
+	    	disableLink();
+	    } else {
+	    	parallaxOne();
+	    	activeLink();
+	    }
   	}
 
   	componentWillUpdate(nextProps, nextState) {
@@ -40,9 +63,13 @@ class WorkSlide extends React.Component {
     let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
 
     if(url !== 'projects') {
+    	disableLink();
     	setToWhite();
+    	showTitle();
      return { transform: 'translateY(10px)', opacity: 0, visibility: 'hidden' }
     } else {
+    	hideTitle();
+    	activeLink();
     	setToBlack();
       return { transform: 'translateY(0px)', opacity: 1 }
     }
@@ -61,13 +88,14 @@ class WorkSlide extends React.Component {
     }
   }
 
+
 	
 	render() {
 	
 
 		return(
-			<Link to={"projects/"+this.props.project}>
-			<li  className={this.props.isEven ? "slide even" : "slide"}>
+			<li onClick={this.handleSubmit} className={this.props.isEven ? "slide even" : "slide"}>
+				<div className="large-title">{this.props.project}</div>
 				<div className="content project">
 					<div style={this.getStyleCounter()}  id="title-revealer" className="left">
 						<h1>{this.props.title}</h1>
@@ -80,10 +108,9 @@ class WorkSlide extends React.Component {
 					</div>
 				</div>
 			</li>
-			</Link>
 		);
 	}
 }
 
-export default WorkSlide;
+export default withRouter(WorkSlide);
 
