@@ -30,14 +30,12 @@ class Work extends Component {
 
   componentDidMount() {
     this.dom.root = ReactDOM.findDOMNode(this);
-
     
   }
 
   getStyleBG = () => {
     
     let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
-
     if(url !== 'projects') {
      return "project-background background"
     } else {

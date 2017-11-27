@@ -9,10 +9,10 @@ import ReactDOM from 'react-dom';
 
 import {withRouter} from 'react-router-dom';
 
-import Animation from '../js/Animation';
+//import Animation from '../js/Animation';
 import {TweenMax, Elastic} from 'gsap';
 
-import { animateIn, animateOut } from '../js/helpers';
+import { animateIn, animateOut } from '../js/Animation';
 
 import TransitionGroup from 'react-transition-group/TransitionGroup' // ES6
 
@@ -45,7 +45,7 @@ constructor()  {
     return (
         
 
-        <span>
+        <TransitionGroup>
         {this.state.url === true ? 
         <div id="home" className="main-content">
       		<div className="background"></div>
@@ -57,7 +57,7 @@ constructor()  {
                 <HomeSlide style={style} />
           </div>
         }
-        </span>
+        </TransitionGroup>
 
     );
   }

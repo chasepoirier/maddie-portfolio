@@ -3,13 +3,18 @@ import ReactDOM from 'react-dom';
 
 import WorkSlide from './WorkSlide';
 
-import { showArrow } from '../../js/helpers';
+import { showArrow, animateOut } from '../../js/helpers';
+
+import { TweenMax, Elastic } from 'gsap';
+import { parallaxOne } from '../../js/parallax';
+
+import { animateFooter } from '../../js/Animation';
 
 import Animation from '../../js/Animation';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-
+import $ from 'jquery';
 import SocialLinks from '../Social';
 
 class Slider extends Component {
@@ -57,16 +62,11 @@ class Slider extends Component {
 	
 componentDidMount() {
 	this.dom.root = ReactDOM.findDOMNode(this);
+	animateFooter();
+	parallaxOne();
+
 }
 
-  componentWillEnter(cb) {
-	Animation.show(this.dom.root, cb);
-	console.log('here');
-  }
-
-  componentWillLeave(cb) {
-	Animation.hide(this.dom.root, cb);
-  }
 
   getStyleCounter = () => {
     
@@ -100,6 +100,8 @@ componentDidMount() {
 
 	  return (
 
+	  	<TransitionGroup>
+
 		  <div style={this.divStyle} onClick={this.arrowHandler} className="slider">
 		    <div id="box" className="overflow">
 		    <ul style={style} className="work-list" onClick={this.props.clickHandler} >
@@ -122,6 +124,7 @@ componentDidMount() {
 		    </div>
 
 		  </div>
+		  </TransitionGroup>
 
 	  );
 	}

@@ -4,6 +4,9 @@ import { showTitle, hideTitle, setToWhite, setToBlack, centerPosition, showArrow
 
 import { parallaxOne } from '../../js/parallax.js';
 
+import { staggerHideTitle } from '../../js/Animation';
+
+
 
 class WorkSlide extends React.Component {
 	
@@ -17,11 +20,17 @@ class WorkSlide extends React.Component {
 
 	handleSubmit = (e) => { 
 		let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+		staggerHideTitle(this.props.slideCount);
+
+		parallaxOne();
 
 		if (url === 'projects') {
 
+
 	    	let path = `projects/${this.props.project}`;
-	    	this.props.history.push(path);	
+	    	this.props.history.push(path);
+	    	
+
 		} else {
 			
 		}
@@ -38,7 +47,7 @@ class WorkSlide extends React.Component {
 	    if(url !== 'projects') {
 	    	disableLink();
 	    } else {
-	    	parallaxOne();
+	    	
 	    	activeLink();
 	    }
   	}
@@ -66,12 +75,12 @@ class WorkSlide extends React.Component {
     	disableLink();
     	setToWhite();
     	showTitle();
-     return { transform: 'translateY(10px)', opacity: 0, visibility: 'hidden' }
+     
     } else {
     	hideTitle();
     	activeLink();
     	setToBlack();
-      return { transform: 'translateY(0px)', opacity: 1 }
+     
     }
   }
 
@@ -94,17 +103,17 @@ class WorkSlide extends React.Component {
 	
 
 		return(
-			<li onClick={this.handleSubmit} className={this.props.isEven ? "slide even" : "slide"}>
+			<li id={"slide-" + this.props.number} onClick={this.handleSubmit} className={this.props.isEven ? "slide even" : "slide"}>
 				<div className="large-title">{this.props.project}</div>
 				<div className="content project">
 					<div style={this.getStyleCounter()}  id="title-revealer" className="left">
-						<h1>{this.props.title}</h1>
-						<p>{this.props.desc}</p>
-						<div className="view">view work</div>
+						<h1 className="title-tag">{this.props.title}</h1>
+						<p className="title-tag"> {this.props.desc}</p>
+						<div className="view title-tag">view work</div>
 						
 					</div>
 					<div className={"right " + this.getStyleImg()}>
-						<div id={"l" + this.props.number} className={"header-img " + this.props.project + " " + this.state.style + " " }></div>
+						<div id={"l" + this.props.number + "-slide"} className={"header-img " + this.props.project + " " + this.state.style + " " }></div>
 					</div>
 				</div>
 			</li>

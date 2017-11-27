@@ -11,7 +11,7 @@ import { parallax } from '../../js/parallax.js';
 import SocialLinks from '../Social';
 import { NavLink } from 'react-router-dom';
 
-import { animateOut } from '../../js/helpers';
+import { animateOut, animateName } from '../../js/Animation';
 
 class HomeSlide extends React.Component { 
 
@@ -28,6 +28,11 @@ class HomeSlide extends React.Component {
       return "background"
     }
   }
+
+  pageTransition = () => {
+    animateOut();
+    animateName();
+  }
   
   render() {
 
@@ -39,7 +44,7 @@ class HomeSlide extends React.Component {
     				<div>view work</div>
     			</div>
 
-          <NavLink onClick={animateOut} to="/projects" id="box" className="shape-container">
+          <NavLink onClick={this.pageTransition} to="/projects" id="box-home" className="shape-container">
             <img id="l1" src={RedRect} alt="Red Rectangle" className="shape red-rect" />
             <img id="l2" src={BluePenta} alt="Blue Pentagon" className="shape blue-penta" />
             <img id="l3" src={BlueRect} alt="Blue Rectangle" className="shape blue-rect" />

@@ -81,7 +81,15 @@ html {
 #l5,
 #l6,
 #l7,
-#l8 {
+#l8,
+#l1-slide,
+#l2-slide,
+#l3-slide,
+#l4-slide,
+#l5-slide,
+#l6-slide,
+#l7-slide,
+#l8-slide {
 	transition: all linear .2s;
 }
 

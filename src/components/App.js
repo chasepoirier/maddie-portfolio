@@ -58,7 +58,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <Header />
+        <Header slideCount={this.state.slideCount} />
         <div id="overlay" />
             <Route path="/" component={Home} />
             <Route path="/projects" render={( {match} ) => <Work slideCount={this.state.slideCount} path={this.url}  countUp={this.nextSlide} countDown={this.previousSlide} />} />
