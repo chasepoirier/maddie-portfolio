@@ -157,7 +157,8 @@ class Work extends Component {
     return (
     	
 
-      <div className="main-content">
+      <div id="work" className="main-content">
+      <div className="overlay" />
       <Helmet>
         <title>Projects - Madison Yocum - Interaction & Visual Designer</title>
       </Helmet>
@@ -170,6 +171,7 @@ class Work extends Component {
       		
 
 			<Slider clickHandler={this.clickHandler} data={ProjectList} slideCount={this.props.slideCount} countUp={this.props.countUp} countDown={this.props.countDown} />
+
       </div>
     );
   }

@@ -56,8 +56,6 @@ export function showTitle() {
 	setTimeout(function() {
 		$('.large-title').addClass('visible');
 	}, 400);
-
-	
 }
 
 export function hideTitle() {
@@ -74,14 +72,32 @@ export function hideTitle() {
 
 const duration = 0.5;
 
-export function animateIn(cb) {
+export function animateIn() {
 
-	return TweenMax.from($('#home'), duration, { opacity: 0, height: 0, onComplete() { cb(); }, ease: Elastic.easeOut.config(0.25, 1),});
+	
+	$('#home').css('display', 'block');
 
+	setTimeout(function() {
+		$('#work').css('display', 'none');
+	}, 1200);
+	
+
+	TweenMax.to($('.slider'), 1, { transform: 'scale(.85,.85)', opacity: 0, ease: Elastic.easeOut.config(0.25, 1),});
+	TweenMax.to($('#overlay'), .8, { transform: 'scale(1,1)', transformOrigin: 'right', ease: Elastic.easeOut.config(0.25, 1),}).delay(.4);
+	TweenMax.to($('#overlay'), .4, { transform: 'scale(0,1)', transformOrigin: 'left', ease: Elastic.easeOut.config(0.25, 1),}).delay(1.2);
+	TweenMax.to($('.slide.home'), 1, { transform: 'scale(1,1)', opacity: 1, ease: Elastic.easeOut.config(0.25, 1),}).delay(1.2);
 }
 
-export function animateOut(cb) {
+export function animateOut() {
+	$('#work').css('display', 'block');
 
-	return TweenMax.to($('#home'), duration, { opacity: 0, height: 0, onComplete() { cb(); }, ease: Elastic.easeOut.config(0.25, 1),});
+	setTimeout(function() {
+		$('#home').css('display', 'none');
+	}, 1200);
+
+	TweenMax.to($('.slide.home'), 1, { transform: 'scale(.85,.85)', opacity: 0, ease: Elastic.easeOut.config(0.25, 1),});
+	TweenMax.to($('#overlay'), .8, { transform: 'scale(1,1)', ease: Elastic.easeOut.config(0.25, 1),}).delay(.4);
+	TweenMax.to($('#overlay'), .4, { transform: 'scale(0,1)', transformOrigin: 'right', ease: Elastic.easeOut.config(0.25, 1),}).delay(1.2);
+	TweenMax.to($('.slider'), 1, { transform: 'scale(1,1)', opacity: 1, ease: Elastic.easeOut.config(0.25, 1),}).delay(1.2);
 
 }

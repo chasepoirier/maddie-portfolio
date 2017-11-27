@@ -7,6 +7,8 @@ import HomeSlide from './slider/HomeSlide';
 
 import ReactDOM from 'react-dom';
 
+import {withRouter} from 'react-router-dom';
+
 import Animation from '../js/Animation';
 import {TweenMax, Elastic} from 'gsap';
 
@@ -16,35 +18,47 @@ import TransitionGroup from 'react-transition-group/TransitionGroup' // ES6
 
 //import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-class Home extends Component {    
+class Home extends Component {  
 
-  componentWillLeave(cb) {
-    //Animation.hide(this.dom.root, cb);
+constructor()  {
+  super();
 
-    animateOut(cb);
+  this.state = {
+    url: false
   }
+}
 
-  componentWillEnter(cb) {
-    animateIn(cb);
+
+  componentDidMount() {
+    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+    
+    if(url === '') {
+     this.setState({url: true})
+    } else {
+      this.setState({url: false})
+    }
   }
+  
  
   render() {
+    let style = {transform: 'scale(.85,.85)', opacity: 0}
     return (
+        
 
-      <TransitionGroup>
+        <span>
+        {this.state.url === true ? 
         <div id="home" className="main-content">
       		<div className="background"></div>
-
-      		
-      		
-  
       				<HomeSlide />
-      			
-      	
-          
-			
         </div>
-      </TransitionGroup>
+        : 
+        <div id="home" style={{display: 'none'}} className="main-content">
+            <div className="background"></div>
+                <HomeSlide style={style} />
+          </div>
+        }
+        </span>
+
     );
   }
 }

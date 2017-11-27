@@ -1,8 +1,8 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 //import logo from '../svgs/logo.svg';
 import InlineSVG from 'svg-inline-react';
-import { hideArrow, showArrow } from '../js/helpers';
+import { hideArrow, showArrow, animateIn, animateOut } from '../js/helpers';
 
 
 const svgSource = `<svg className="logo" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -39,6 +39,20 @@ class Header extends React.Component {
     
   }
 
+  handleSubmit = (e) => { 
+    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+    if (url !== '') {
+        animateIn();
+        let path = "/";
+        this.props.history.push(path);  
+    } else {
+    }
+
+      e.preventDefault();
+  
+   }
+
 
   render() {
   
@@ -47,14 +61,14 @@ class Header extends React.Component {
   <header>
     
     <div className="left">
-		<NavLink className="logo-container logo" to="/">
+		<div onClick={this.handleSubmit} className="logo-container logo" to="/">
 			 <InlineSVG src={svgSource}  />
-		</NavLink>
+		</div>
     <NavLink className="logo-container arrow" to="/projects"><div onClick={hideArrow} id="back-arrow"></div></NavLink>
 		{this.checkUrl() === true ? null : <div className="name header-white">Madison Yocum</div>}
     </div>
     <ul className="right">
-      <li onClick={hideArrow}><NavLink id="headers" className="header-white" to="/projects">Work</NavLink></li>
+      <li onClick={hideArrow, animateOut}><NavLink id="headers" className="header-white" to="/projects">Work</NavLink></li>
       <li><NavLink className="header-white" to="/about">About</NavLink></li>
       <li><NavLink className="header-white" to="/resume">Resume</NavLink></li>
     </ul>
@@ -63,4 +77,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);

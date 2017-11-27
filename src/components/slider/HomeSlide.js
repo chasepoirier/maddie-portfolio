@@ -11,23 +11,35 @@ import { parallax } from '../../js/parallax.js';
 import SocialLinks from '../Social';
 import { NavLink } from 'react-router-dom';
 
+import { animateOut } from '../../js/helpers';
+
 class HomeSlide extends React.Component { 
 
   componentDidMount() {
     parallax();
   }
+
+  handleAnimation = () => {
+    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+    if(url !== 'projects') {
+     return "project-background background"
+    } else {
+      return "background"
+    }
+  }
   
   render() {
 
     return ( 
-      <div className="slide home">
+      <div style={this.props.style} className="slide home">
     			<div className="content home">
     				<h1>Hello! I'm Madison Yocum.</h1>
     				<p>An aspiring interaction and visual designer, with skillsets in product design and entrepreneurship.</p>
     				<div>view work</div>
     			</div>
 
-          <NavLink to="/projects" id="box" className="shape-container">
+          <NavLink onClick={animateOut} to="/projects" id="box" className="shape-container">
             <img id="l1" src={RedRect} alt="Red Rectangle" className="shape red-rect" />
             <img id="l2" src={BluePenta} alt="Blue Pentagon" className="shape blue-penta" />
             <img id="l3" src={BlueRect} alt="Blue Rectangle" className="shape blue-rect" />
