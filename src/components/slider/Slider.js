@@ -3,16 +3,20 @@ import ReactDOM from 'react-dom';
 
 import WorkSlide from './WorkSlide';
 
-import { showArrow, animateOut } from '../../js/helpers';
+import { showArrow, animateOut, hideArrow } from '../../js/helpers';
 
 import { TweenMax, Elastic } from 'gsap';
 import { parallaxOne } from '../../js/parallax';
 
-import { animateFooter } from '../../js/Animation';
+import { animateFooter, staggerShowTitle, staggerHideTitle  } from '../../js/Animation';
 
 import Animation from '../../js/Animation';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+import keydown from 'react-keydown';
+
+import { withRouter } from 'react-router-dom';
 
 import $ from 'jquery';
 import SocialLinks from '../Social';
@@ -25,10 +29,11 @@ class Slider extends Component {
 	//let projects = [];
 
 	this.dom = {};
-
    
-
+	this.bound_event = this._handleKeyDown.bind(this);
   }
+		
+
 	
 	
   renderSlides = () => {
@@ -59,14 +64,68 @@ class Slider extends Component {
         }
         });
   }
-	
-componentDidMount() {
+
+
+  componentWillUnmount() {
+  	window.removeEventListener("keydown", this.bound_event );	
+  }
+
+  componentDidMount() {
 	this.dom.root = ReactDOM.findDOMNode(this);
+	window.addEventListener("keydown", this.bound_event);	
 	animateFooter();
 	parallaxOne();
 
 }
 
+
+
+  _handleKeyDown = (event) => {
+				    
+
+			let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+			
+
+			if(event.key === 'ArrowRight' && url === 'projects' && $('#home').css('display') === 'none' ) {
+				this.props.countUp();
+
+			} else if(event.key === 'ArrowLeft' && url === 'projects') {
+				//alert('go down')
+				this.props.countDown();
+			} else if(event.key === 'Enter' || event.key === 'ArrowUp' ) {
+				
+				if(url === 'projects' && $('#home').css('display') === 'none'){
+					showArrow();
+					staggerHideTitle(this.props.slideCount);
+
+					if(this.props.slideCount === 1) this.props.history.push('/projects/flickr');
+					if(this.props.slideCount === 2) this.props.history.push('/projects/ripple');
+					if(this.props.slideCount === 3) this.props.history.push('/projects/mycourses');
+					if(this.props.slideCount === 4) this.props.history.push('/projects/weekly');
+					if(this.props.slideCount === 5) this.props.history.push('/projects/mycosmetics');
+					if(this.props.slideCount === 6) this.props.history.push('/projects/displaced');
+
+				} else {
+					return
+				}
+
+			} else if(event.key === 'ArrowLeft' || event.key === 'ArrowDown' || event.key === 'Backspace' && url !== 'projects') {
+				if(url === 'flickr' || url === 'mycourses' || url === 'mycosmetics' || url === 'ripple' || url === 'weekly' || url === 'displaced') {
+					staggerShowTitle(this.props.slideCount);
+					hideArrow();
+					this.props.history.goBack();
+				}
+			} else if(event.key === 'ArrowRight' && url !== 'projects') {
+				event.preventDefault();
+			}
+
+
+
+
+
+	}
+	
 
   getStyleCounter = () => {
     
@@ -130,4 +189,4 @@ componentDidMount() {
 	}
 }
 
-export default Slider;
+export default withRouter(Slider);

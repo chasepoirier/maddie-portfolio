@@ -41,9 +41,21 @@ html {
 
 .footer-home {
 	position: absolute;
-	right: 0px;
-	bottom: -50px;
-	z-index: 10000;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    bottom: -50px;
+    z-index: 10000;
+    justify-content: space-between;
+}
+
+.footer-home .icon {
+	opacity: .6 !important;
+}
+
+.footer-home  .count  {
+ 	margin: 0 5px;
+    white-space: nowrap;
 }
 
 .animated-page-wrapper {

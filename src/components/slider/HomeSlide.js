@@ -54,7 +54,14 @@ class HomeSlide extends React.Component {
             <img id="l7" src={PinkCircle} alt="Pink Circle" className="shape pink-circle" />
             <img id="l8" src={YellowRing} alt="Yellow Ring" className="shape yellow-ring" />
           </NavLink>
+
           <div className="footer-home">
+          <div className="slide-controls">
+            <div onClick={this.props.countDown} className="backward"></div>
+            <div className="count">Use Keys</div>
+            <div onClick={this.props.countUp} className="forward"></div>
+          </div> 
+      
             <SocialLinks />
           </div>
       </div>
