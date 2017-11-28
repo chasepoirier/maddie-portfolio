@@ -89,7 +89,7 @@ class Slider extends Component {
 
 	
 	animateFooter();
-	parallaxOne();
+	//parallaxOne();
 
 }
 
@@ -126,7 +126,7 @@ class Slider extends Component {
 
 			let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
 
-			
+			console.log(event)
 
 			if(event.key === 'ArrowRight' && url === 'projects' && $('#home').css('display') === 'none' ) {
 				this.props.countUp();
@@ -134,7 +134,7 @@ class Slider extends Component {
 			} else if(event.key === 'ArrowLeft' && url === 'projects') {
 				//alert('go down')
 				this.props.countDown();
-			} else if(event.key === 'Enter' || event.key === 'ArrowUp' ) {
+			} else if(event.key === 'Enter' || event.key === 'ArrowUp' || event.key === ' ' ) {
 				
 				if(url === 'projects' && $('#home').css('display') === 'none'){
 					showArrow();
