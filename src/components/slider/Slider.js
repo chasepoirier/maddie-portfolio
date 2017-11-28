@@ -28,9 +28,17 @@ class Slider extends Component {
 	
 	//let projects = [];
 
+	this.state = {
+		exec: true
+	}
+
 	this.dom = {};
+
+	this.array = [];
    
 	this.bound_event = this._handleKeyDown.bind(this);
+	this.scroll_event = this._handleScroll.bind(this);
+
   }
 		
 
@@ -39,8 +47,10 @@ class Slider extends Component {
   renderSlides = () => {
 	
 	this.projects = this.props.data.map((project) => { 
+		this.array.push(project);
 
 		if (project.key % 2 === 0) {
+			
 			return <WorkSlide 
     			title={project.name}
                 desc={project.bio}
@@ -72,13 +82,44 @@ class Slider extends Component {
 
   componentDidMount() {
 	this.dom.root = ReactDOM.findDOMNode(this);
+	window.addEventListener('wheel', this.scroll_event);	
+
+
 	window.addEventListener("keydown", this.bound_event);	
+
+	
 	animateFooter();
 	parallaxOne();
 
 }
 
+  _handleScroll = (event) => {
 
+  		let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+
+  		if(url === 'projects') {
+			if(Math.sign(event.deltaY) == 1 ) {
+				
+
+				if(this.state.exec === true) {
+					console.log('here');
+					this.props.countUp();
+					this.setState({exec: false});
+					setTimeout(() => {this.setState({exec: true})}, 1650);
+				}
+
+			
+			} else {
+				if(this.state.exec === true) {
+					this.props.countDown();
+					this.setState({exec: false});
+					setTimeout(() => {this.setState({exec: true})}, 1650);
+				}
+				
+			}
+  		}
+  }
 
   _handleKeyDown = (event) => {
 				    
@@ -99,12 +140,12 @@ class Slider extends Component {
 					showArrow();
 					staggerHideTitle(this.props.slideCount);
 
-					if(this.props.slideCount === 1) this.props.history.push('/projects/flickr');
-					if(this.props.slideCount === 2) this.props.history.push('/projects/ripple');
-					if(this.props.slideCount === 3) this.props.history.push('/projects/mycourses');
-					if(this.props.slideCount === 4) this.props.history.push('/projects/weekly');
-					if(this.props.slideCount === 5) this.props.history.push('/projects/mycosmetics');
-					if(this.props.slideCount === 6) this.props.history.push('/projects/displaced');
+					if(this.props.slideCount === 1) this.props.history.push('/projects/' + this.array[0].project);
+					if(this.props.slideCount === 2) this.props.history.push('/projects/' + this.array[1].project);
+					if(this.props.slideCount === 3) this.props.history.push('/projects/' + this.array[2].project);
+					if(this.props.slideCount === 4) this.props.history.push('/projects/' + this.array[3].project);
+					if(this.props.slideCount === 5) this.props.history.push('/projects/' + this.array[4].project);
+					if(this.props.slideCount === 6) this.props.history.push('/projects/' + this.array[5].project);
 
 				} else {
 					return
