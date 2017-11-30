@@ -6,6 +6,30 @@ html {
     overflow-y: scroll;
 }
 
+#ishan {
+	width: 110%;
+	height: 110%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background-image: url(../images/ishan.jpg);
+	background-size: cover;
+	z-index: 10000000000;
+	display: none;
+}
+
+#maddie {
+	width: 110%;
+	height: 110%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background-image: url(../images/maddie.jpeg);
+	background-size: cover;
+	z-index: 10000000000;
+	display: none;
+}
+
 #overlay {
 	position: absolute;
 	margin: 0 auto;

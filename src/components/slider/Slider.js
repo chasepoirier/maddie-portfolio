@@ -29,15 +29,15 @@ class Slider extends Component {
 	//let projects = [];
 
 	this.state = {
-		exec: true
+		exec: true,
 	}
+
 
 	this.dom = {};
 
 	this.array = [];
-   
 	this.bound_event = this._handleKeyDown.bind(this);
-	this.scroll_event = this._handleScroll.bind(this);
+	this.scroll_event = this._handleScroll.bind(this); 
 
   }
 		
@@ -97,6 +97,7 @@ class Slider extends Component {
 
   		let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
 
+		
 
   		if(url === 'projects') {
 			if(Math.sign(event.deltaY) == 1 ) {
@@ -123,7 +124,8 @@ class Slider extends Component {
 
   _handleKeyDown = (event) => {
 				    
-
+			
+			
 			let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
 
 			console.log(event)
@@ -135,6 +137,8 @@ class Slider extends Component {
 				//alert('go down')
 				this.props.countDown();
 			} else if(event.key === 'Enter' || event.key === 'ArrowUp' || event.key === ' ' ) {
+				
+
 				
 				if(url === 'projects' && $('#home').css('display') === 'none'){
 					showArrow();
@@ -201,7 +205,6 @@ class Slider extends Component {
 	  return (
 
 	  	<TransitionGroup>
-
 		  <div style={this.divStyle} onClick={this.arrowHandler} className="slider">
 		    <div id="box" className="overflow">
 		    <ul style={style} className="work-list" onClick={this.props.clickHandler} >

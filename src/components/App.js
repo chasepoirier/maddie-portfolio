@@ -19,7 +19,7 @@ import Home from './Home';
 import Work from './Work';
 import About from './About';
 import Header from './Header';
-
+import Resume from './Resume';
 
 
 
@@ -61,6 +61,7 @@ export default class App extends Component {
         <Header slideCount={this.state.slideCount} />
         <div id="overlay" />
             <Route path="/" component={Home} />
+            <Route path="/resume" render={({ match }) => <Resume />} />
             <Route path="/projects" render={( {match} ) => <Work slideCount={this.state.slideCount} path={this.url}  countUp={this.nextSlide} countDown={this.previousSlide} />} />
             <Route path="/projects/:id" render={({ match }) => <div></div>} />
       </div>

@@ -22,7 +22,7 @@ class WorkSlide extends React.Component {
 		let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
 		staggerHideTitle(this.props.slideCount);
 
-		parallaxOne();
+		//parallaxOne();
 
 		if (url === 'projects') {
 
