@@ -1,0 +1,194 @@
+.about.main-content {
+	
+	position: absolute;
+	margin: 0 auto;
+	width: calc(100% - 200px);
+	height: auto;
+	top: 100px;
+	left: 100px;
+	z-index: 2;
+	margin-bottom:100px;
+}
+
+.about-pic {
+	width: 298px;
+	height: 298px;
+	position: absolute;
+	top: 0px;
+	right: 100px;
+	background-image: url(../images/about_pic.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.slide.about {
+	z-index: 100000;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.slide.about .content {
+	width: 95%;
+	max-width: 1080px;
+	position: relative;
+	z-index: 1;
+	margin: 75px auto;
+}
+
+.slide.about .content.about {
+	height: 100%;
+}
+
+.slide.about .content.about p {
+	font-size: 18px;
+	width: 95%;
+	text-align: justify;
+	max-width: 582px;
+	line-height: 26px;
+}
+
+.slide.about .content.about h1 {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'SF UI Display Bold';
+}
+
+.slide.about .content.about .about-buttons {
+	width: 95%;
+	max-width: 582px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.slide.about .content.about .about-buttons .link:nth-of-type(1){
+	margin-left: 0px;
+}
+
+.slide.about .content.about .about-buttons .link {
+	display: block;
+	cursor: pointer;
+	font-family: 'SF UI Display Medium';
+	font-size: 16px;
+	padding: 2px 4px;
+	margin: 0 15px;
+	color: #000;
+	opacity: .6;
+	transition: opacity .2s ease;
+}
+
+.slide.about .content.about .about-buttons .link.outlined {
+	border-radius: 20px;
+	opacity: 1;
+	height: 35px;
+	width: 177px;
+	border: #1C9EDB 1.5px solid;
+	text-align: center;
+	padding: 0px;
+	color: #1C9EDB;
+	background: transparent;
+	transition: all .2s ease;
+	line-height: 35px;
+}
+
+.contact-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.contact-container .contact {
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	border: 1.5px solid #444;
+	text-align: center;
+	font-size: 16px;
+	color: #444;
+	font-family: 'SF UI Display Medium';
+	border-radius: 100px;
+	margin-right: 20px;
+	transition: all .2s;
+}
+
+.contact-container .contact:hover {
+	background-color: #444;
+	color: #fff;
+}
+
+.contact-container .copyright {
+	opacity: .4;
+	font-size: 14px;
+}
+
+.slide.about .content.about .about-buttons .link:hover {
+	opacity: 1;
+}
+
+.slide.about .content.about .about-buttons .link.outlined:hover {
+	background: #1C9EDB;
+	color: #fff;
+}
+
+.slide.about .shape-container {
+	cursor: default;
+}
+
+.slide.about .shape-container .shape.red-rect {
+	width: 110px;
+	height: 110px;
+	top: -25px;
+	left: -90px;
+}
+
+.slide.about .shape-container .shape.orange-tri {
+	top: 100px;
+	left: -18px;
+	transform: scale(1.5,1.5) rotate(6deg);
+}
+
+.slide.about .shape-container .shape.blue-rect {
+	bottom: -35px;
+	right: 20px;
+}
+
+.slide.about .shape-container .shape.green-tri {
+	top: -15px;
+	right: -40px;
+	transform: scale(.9,.9);
+}
+
+.slide.about .shape-container .shape.navy-circle {
+	top: -25px;
+	right: -15px;
+}
+
+.slide.about .shape-container .shape.pink-circle {
+	bottom: -30px;
+	right: 65px;
+}
+
+.slide.about .shape-container .shape.yellow-ring {
+	bottom: -50px;
+	left: 125px;
+}
+
+.footer-about {
+	position: absolute;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    bottom: -50px;
+    z-index: 10000;
+    justify-content: space-between;
+}
+
+.footer-about .icon {
+	opacity: .6 !important;
+}
+
+.footer-about  .count  {
+ 	margin: 0 5px;
+    white-space: nowrap;
+}

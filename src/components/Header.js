@@ -2,9 +2,8 @@ import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 //import logo from '../svgs/logo.svg';
 import InlineSVG from 'svg-inline-react';
-import { hideArrow, showArrow } from '../js/helpers';
-import { animateIn, animateOut, animateName, hideName, staggerHideTitle, staggerShowTitle } from '../js/Animation';
-
+import { hideArrow, showArrow, addAboutClasses } from '../js/helpers';
+import { animateWorkOut, toAboutPage, animateIn, animateOut, animateName, hideName, staggerHideTitle, staggerShowTitle } from '../js/Animation';
 import $ from 'jquery';
 
 
@@ -38,13 +37,10 @@ class Header extends React.Component {
 
     if(url === 'flickr' || url === 'mycourses' || url === 'mycosmetics' || url === 'ripple' || url === 'weekly' || url === 'displaced') {
       showArrow();
-
     }
-
     if(url !== '') {
       animateName();
     }
-
     
   }
 
@@ -68,6 +64,10 @@ class Header extends React.Component {
     let home = $('#home');
     let arrow = $('#back-arrow')
 
+    if(url === 'projects') {
+      animateWorkOut();
+    }
+
     if (home.css('display') === 'none') {
         if(arrow.parent().css('visibility') === 'visible') {
           staggerShowTitle(this.props.slideCount);
@@ -75,12 +75,14 @@ class Header extends React.Component {
           hideArrow();
           return
 
-        } else {
+        } if(url === 'projects') {
+            animateWorkOut();
+          } else {
+            
 
-
-          animateOut();
+            animateOut();
           
-       }
+          }
     } else {
 
       animateName();
@@ -93,6 +95,21 @@ class Header extends React.Component {
    arrowHandler = () => {
     hideArrow();
     staggerShowTitle(this.props.slideCount);
+   }
+
+   toAboutPage = () => {
+      //addAboutClasses();
+
+      let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+      let home = $('#home');
+      let arrow = $('#back-arrow')
+
+      if(url === '') {
+        animateName();
+      } 
+
+      animateOut();
+
    }
 
 
@@ -111,8 +128,8 @@ class Header extends React.Component {
     </div>
     <ul className="right">
       <li onClick={this.workHandler}><NavLink id="headers" className="header-white" to="/projects">Work</NavLink></li>
-      <li><NavLink className="header-white" to="/about">About</NavLink></li>
-      <li><NavLink className="header-white" to="/resume">Resume</NavLink></li>
+      <li><NavLink onClick={this.toAboutPage} className="header-white" to="/about">About</NavLink></li>
+      <li><NavLink onClick={this.toAboutPage} className="header-white" to="/resume">Resume</NavLink></li>
     </ul>
   </header>
 );

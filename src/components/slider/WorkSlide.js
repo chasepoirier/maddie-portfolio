@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { showTitle, hideTitle, setToWhite, setToBlack, centerPosition, showArrow, disableLink, activeLink } from '../../js/helpers';
 
 import { parallaxOne } from '../../js/parallax.js';
+import $ from 'jquery';
 
 import { staggerHideTitle } from '../../js/Animation';
 
@@ -84,16 +85,35 @@ class WorkSlide extends React.Component {
     }
   }
 
+  getStyleTitle = () => {
+		$('.large-title').css('margin-left', '500px');
+  }
+
+
   getStyleImg = () => {
     
     let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+	
+	
+    if(url === 'flickr') {
+    	//$('.large-title').css('margin-left', '0px');
+     	return "project-image"
 
-    if(url === 'flickr' || url === 'mycourses' || url === 'mycosmetics') {
-     return "project-image"
-    } else if(url === 'ripple' || url === 'weekly' || url === 'displaced') {
-     return "project-image-left"
+    } else if(url === 'ripple' || url === 'displaced') {
+    	//$('.large-title').css('margin-left', '500px');
+     	return "project-image-left"
+
+    } else if(url === 'mycosmetics' || url === 'mycourses') {
+    	//$('.large-title').css('margin-left', '0px');
+     	return "project-image-more"
+
+    } else if(url === 'weekly') {
+    	$('.large-title').addClass('title-text');
+     	return "project-image-short"
+
     } else {
-      return ""
+    	$('.large-title').removeClass('title-text');
+      	return ""
     }
   }
 

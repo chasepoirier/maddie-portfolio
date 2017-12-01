@@ -73,5 +73,13 @@ export function hideTitle() {
 	$('.large-title').addClass('unmount');
 }	
 
+export function addAboutClasses() {
+	$('.slide').removeClass('home');
+    $('.slide').addClass('about');
+
+    $('.slide .content').removeClass('home');
+    $('.slide .content').addClass('about');
+}
+
 
 

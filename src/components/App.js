@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import '../css/home.css';
 import '../css/header.css';
 import '../css/project.css';
+import '../css/about.css';
 import '../css/animations.css';
 import '../fonts/style.css'
 
@@ -61,6 +62,7 @@ export default class App extends Component {
         <Header slideCount={this.state.slideCount} />
         <div id="overlay" />
             <Route path="/" component={Home} />
+            <Route path="/about" component={About} />
             <Route path="/resume" render={({ match }) => <Resume />} />
             <Route path="/projects" render={( {match} ) => <Work slideCount={this.state.slideCount} path={this.url}  countUp={this.nextSlide} countDown={this.previousSlide} />} />
             <Route path="/projects/:id" render={({ match }) => <div></div>} />

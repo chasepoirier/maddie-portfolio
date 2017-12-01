@@ -6,10 +6,13 @@ import ReactDOM from 'react-dom';
 import Slider from './slider/Slider.js'
 import ProjectList from '../data/projects';
 
-import Animation from '../js/Animation';
+import { animateWorkUp } from '../js/Animation';
+
+import $ from 'jquery';
 
 import * as Animated from "animated/lib/targets/react-dom";
 import AnimatedWrapper from './AnimatedWrapper';
+import { TweenMax, Elastic } from 'gsap';
 
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 import { Helmet } from 'react-helmet';
@@ -30,7 +33,15 @@ class Work extends Component {
 
   componentDidMount() {
     this.dom.root = ReactDOM.findDOMNode(this);
+
+    $('#work').css('opacity', '0');
+
+    animateWorkUp();
     
+  }
+
+  componentWillUnmount() {
+    TweenMax.to($('#work'), .7, { transform: 'translateY(20px)', opacity: 0, ease: Elastic.easeOut.config(0.25, 1),}); 
   }
 
   getStyleBG = () => {

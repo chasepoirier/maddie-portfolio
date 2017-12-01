@@ -1,14 +1,21 @@
 .slider,
-.slide.home {
+.slide.home,
+.slide.about {
 	margin: 0 auto;
 	width: 100%;
 	height: 100%;
 	position: relative;
-	
 }
 
-.slide.home {
+.slide {
+		overflow-x: hidden;
+}
+
+.slide.home,
+.slide.resume,
+.slide.about {
 	z-index: 1000;
+	overflow-x: visible;
 }
 
 .overflow {
@@ -196,7 +203,7 @@
 	justify-content: space-around;
 	width: 85%;
 	height: 85%;
-	overflow-x: hidden;
+	
 	align-content: center;
 	align-items: center;
 }
@@ -229,7 +236,7 @@ a {
 }
 
 .work-list .content .view,
-.slide.home .content div {
+.slide.home .content .view {
 	margin-top: 0px;
 	font-family: 'SF UI Display Medium';
 	font-size: 16px;
@@ -238,7 +245,7 @@ a {
 }
 
 .work-list .content .view::after,
-.slide.home .content div::after {
+.slide.home .content .view::after {
 	display: inline-block;
     content: '';
     width: 7px;

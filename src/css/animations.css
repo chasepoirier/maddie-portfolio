@@ -32,11 +32,21 @@
 }
 
 .work-list .slide .content.project .right.project-image {
-  transform: translate(-25%, -40px) scale(.85,.85);
+  transform: translate(23%, -60px) scale(.85,.85);
+}
+
+.work-list .slide .content.project .right.project-image-more {
+
+  transform: translate(32%, -60px) scale(.85,.85);
+}
+
+.work-list .slide .content.project .right.project-image-short {
+
+  transform: translate(80%, -60px) scale(.85,.85);
 }
 
 .work-list .slide .content.project .right.project-image-left {
-  transform: translate(25%, -40px) scale(.85,.85);
+  transform: translate(87%, -60px) scale(.85,.85);
 }
 
 header .left .logo-container.arrow.showArrow {
@@ -55,12 +65,17 @@ li.slide {
   position: relative;
 }
 
+.title-text::after {
+  content: ' UI'
+}
+
 .large-title {
-  font-size: 190px;
+  font-size: 125px;
+  text-transform: capitalize;
   color: #fff;
   position: absolute;
-  top: 30px;
-  text-align: center;
+  top: 82px;
+  text-align: left;
   width: 100%;
   left: 0px;
   letter-spacing: 0px;

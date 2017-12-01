@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import HomeSlide from './slider/HomeSlide';
+import About from './About';
 
 //import AnimatedWrapper from './AnimatedWrapper';
 //import { render, findDOMNode } from 'ReactDOM';
@@ -51,7 +52,6 @@ constructor()  {
           this.props.history.push('/projects');
         }
       }
-
 
 
 

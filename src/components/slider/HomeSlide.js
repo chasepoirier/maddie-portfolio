@@ -41,7 +41,7 @@ class HomeSlide extends React.Component {
     			<div className="content home">
     				<h1>Hello! I'm Madison Yocum.</h1>
     				<p>An aspiring interaction and visual designer, with skillsets in product design and entrepreneurship.</p>
-    				<div>view work</div>
+    				<div className="view">view work</div>
     			</div>
 
           <NavLink onClick={this.pageTransition} to="/projects" id="box-home" className="shape-container">
