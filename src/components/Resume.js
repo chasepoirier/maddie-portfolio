@@ -24,7 +24,7 @@ class Resume extends Component {
   render() {
     return (
       <div className="resume main-content">
-			<div className="main-line"></div>
+            <div className="main-line"></div>
             <div className="main-container">
                 <div className="objective"><div className="job">Interaction & Visual Designer</div>Focusing on product design and entrepreneurship. Currently, I am searching for an internship for the upcoming summer of 2018 and any other design, product and startup opportunities.
             </div>
@@ -121,7 +121,7 @@ class Resume extends Component {
         
               <SocialLinks />
             </div>
-      </div>
+        </div>
     );
   }
 }

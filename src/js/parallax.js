@@ -25,12 +25,12 @@ export function parallax(event) {
 		y = event.clientY - parallaxBox.offsetTop;
 		
 		mouseParallax ( 'l1', c1left, c1top, x, y, 8 );
-		mouseParallax ( 'l2', c2left, c2top, x, y, 25 );
+		mouseParallaxReverse ( 'l2', c2left, c2top, x, y, 25 );
 		mouseParallax ( 'l3', c3left, c3top, x, y, 10 );
-		mouseParallax ( 'l4', c4left, c4top, x, y, 18 );
+		mouseParallaxReverse ( 'l4', c4left, c4top, x, y, 18 );
 		mouseParallax ( 'l5', c5left, c5top, x, y, 32 );
 		mouseParallax ( 'l6', c6left, c6top, x, y, 23 );
-		mouseParallax ( 'l7', c7left, c7top, x, y, 19 );
+		mouseParallaxReverse ( 'l7', c7left, c7top, x, y, 19 );
 		mouseParallax ( 'l8', c8left, c8top, x, y, 12 );
 	}
 
@@ -112,8 +112,22 @@ function mouseParallax ( id, left, top, mouseX, mouseY, speed ) {
 	//alert(parentObj.html);
 	
 	obj.style.transform = `translate(
-							${0 - ( ( ( mouseX - ( parseInt( obj.offsetWidth, 10 ) / 2 + left ) ) / containerWidth ) * speed )}px,
-							${0 - ( ( ( mouseY - ( parseInt( obj.offsetHeight, 10 ) / 2 + top ) ) / containerHeight ) * speed )}px)`;
+							${0 - ( ( ( mouseX - ( parseInt( obj.offsetWidth, 10 ) / 100 + left ) ) / containerWidth ) * speed )}px,
+							${0 - ( ( ( mouseY - ( parseInt( obj.offsetHeight, 10 ) / 100 + top ) ) / containerHeight ) * speed )}px)`;
+	//obj.style.top = top - ( ( ( mouseY - ( parseInt( obj.offsetHeight ) / 100 + top ) ) / containerHeight ) * speed ) + 'px';
+}
+
+function mouseParallaxReverse ( id, left, top, mouseX, mouseY, speed ) {
+	var obj = document.getElementById ( id );
+	var parentObj = obj.parentNode,
+	containerWidth = parseInt( parentObj.offsetWidth , 10),
+	containerHeight = parseInt( parentObj.offsetHeight, 10 );
+
+	//alert(parentObj.html);
+	
+	obj.style.transform = `translate(
+							${0 + ( ( ( mouseX - ( parseInt( obj.offsetWidth, 10 ) / 100 + left ) ) / containerWidth ) * speed )}px,
+							${0 + ( ( ( mouseY - ( parseInt( obj.offsetHeight, 10 ) / 100 + top ) ) / containerHeight ) * speed )}px)`;
 	//obj.style.top = top - ( ( ( mouseY - ( parseInt( obj.offsetHeight ) / 2 + top ) ) / containerHeight ) * speed ) + 'px';
 }
 

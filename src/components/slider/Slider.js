@@ -104,7 +104,7 @@ class Slider extends Component {
 				
 
 				if(this.state.exec === true) {
-					console.log('here');
+					//console.log('here');
 					this.props.countUp();
 					this.setState({exec: false});
 					setTimeout(() => {this.setState({exec: true})}, 1650);
@@ -128,7 +128,7 @@ class Slider extends Component {
 			
 			let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
 
-			console.log(event)
+			//console.log(event)
 
 			if(event.key === 'ArrowRight' && url === 'projects' && $('#home').css('display') === 'none' ) {
 				this.props.countUp();

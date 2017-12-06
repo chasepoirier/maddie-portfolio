@@ -8,8 +8,10 @@ import '../css/animations.css';
 import '../fonts/style.css'
 
 import TransitionGroup from "react-transition-group/TransitionGroup";
-import { firstChild } from "../js/helpers";
+import { firstChild, hideArrow } from "../js/helpers";
 import AnimatedSwitch from "./AnimatedSwitch";
+
+import { staggerHideTitle, staggerShowTitle, animateIn, animateOut } from '../js/Animation';
 
 import { spring, AnimatedRoute } from 'react-router-transition';
 
@@ -34,6 +36,52 @@ export default class App extends Component {
         slideCount: 1,
         url: null
       }
+  }
+
+  componentDidMount() {
+    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+ 
+
+    window.onpopstate = () => {
+      url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+      this.checkProject(url, window.event);
+    }
+    
+    this.checkProject(url, 'test');
+    
+  }
+
+  checkProject = (url, event) => {
+
+    if(url === 'flickr') {
+      this.setState({slideCount: 1});
+      staggerHideTitle(1);
+    } else if (url === 'ripple') {
+      this.setState({slideCount: 2});
+      staggerHideTitle(2);
+    } else if (url === 'mycourses') {
+      this.setState({slideCount: 3});
+      staggerHideTitle(3);
+    } else if (url === 'weekly') {
+      this.setState({slideCount: 4});
+      staggerHideTitle(4);
+    } else if (url === 'mycosmetics') {
+      this.setState({slideCount: 5});
+      staggerHideTitle(5);
+    } else if (url === 'displaced') {
+      this.setState({slideCount: 6});
+      staggerHideTitle(6);
+    } else if (url === 'projects') {
+      console.log(event)
+      hideArrow();
+      animateOut();
+      staggerShowTitle(this.state.slideCount);
+    } else if (url === '') {
+      animateIn();
+    } else if (url === 'about' || url === 'resume') {
+      animateOut();
+    }
   }
 
   nextSlide = () => {

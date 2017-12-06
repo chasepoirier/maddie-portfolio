@@ -257,7 +257,7 @@ a {
 }
 
 .work-list .slide .content.project .left {
-	width: 30%;
+	width: 32%;
 	transition: all cubic-bezier(.19,1,.22,1) .4s;
 	position: relative;
 }

@@ -29,10 +29,8 @@ export default {
 };
 
 export function animateFooter() {
-	
 	TweenMax.fromTo(('.footer .slide-controls'), .4, {transform: 'translateY(10px)', opacity: 0}, { transform: 'translateY(0px)', opacity: .6, delay: .7, ease: 'cubic-bezier(0.215, 0.61, 0.355, 1)'  });
 	TweenMax.staggerFromTo(('.icon'), .2, {transform: 'translateY(10px)', opacity: 0}, { transform: 'translateY(0px)', opacity: .6, delay: .7, ease: Elastic.easeIn.config(0.25, 1) }, .1);
-
 }
 
 
