@@ -37,7 +37,6 @@ class Slider extends Component {
 
 	this.array = [];
 	this.bound_event = this._handleKeyDown.bind(this);
-	this.scroll_event = this._handleScroll.bind(this); 
 
   }
 		
@@ -82,7 +81,6 @@ class Slider extends Component {
 
   componentDidMount() {
 	this.dom.root = ReactDOM.findDOMNode(this);
-	window.addEventListener('wheel', this.scroll_event);	
 
 
 	window.addEventListener("keydown", this.bound_event);	
@@ -92,35 +90,6 @@ class Slider extends Component {
 	//parallaxOne();
 
 }
-
-  _handleScroll = (event) => {
-
-  		let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
-
-		
-
-  		if(url === 'projects') {
-			if(Math.sign(event.deltaY) == 1 ) {
-				
-
-				if(this.state.exec === true) {
-					//console.log('here');
-					this.props.countUp();
-					this.setState({exec: false});
-					setTimeout(() => {this.setState({exec: true})}, 1650);
-				}
-
-			
-			} else {
-				if(this.state.exec === true) {
-					this.props.countDown();
-					this.setState({exec: false});
-					setTimeout(() => {this.setState({exec: true})}, 1650);
-				}
-				
-			}
-  		}
-  }
 
   _handleKeyDown = (event) => {
 				    
