@@ -7,33 +7,32 @@ import NavyCircle from '../../svgs/navy-circle.svg';
 import OrangeTri from '../../svgs/orange-tri.svg';
 import PinkCircle from '../../svgs/pink-circle.svg';
 import YellowRing from '../../svgs/yellow-ring.svg';
-import { parallax } from '../../js/parallax.js';
 import SocialLinks from '../Social';
+import { parallax } from '../../js/parallax.js';
 import { NavLink } from 'react-router-dom';
-
 import { animateOut, animateName } from '../../js/Animation';
 
 class HomeSlide extends React.Component { 
 
   componentDidMount() {
-    parallax();
+      parallax();
   }
 
   handleAnimation = () => {
-    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+      let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
 
-    if(url !== 'projects') {
-     return "project-background background"
-    } else {
-      return "background"
-    }
+      if (url !== 'projects') {
+          return "project-background background"
+      } else {
+          return "background"
+      }
   }
 
   pageTransition = () => {
-    animateOut();
-    animateName();
+      animateOut();
+      animateName();
   }
-  
+
   render() {
 
     return ( 

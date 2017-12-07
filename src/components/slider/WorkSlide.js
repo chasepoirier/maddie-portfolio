@@ -1,126 +1,112 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import { showTitle, hideTitle, setToWhite, setToBlack, centerPosition, showArrow, disableLink, activeLink } from '../../js/helpers';
-
-import { parallaxOne } from '../../js/parallax.js';
+import { withRouter } from 'react-router-dom';
+import { showTitle, hideTitle, setToWhite, setToBlack, disableLink, activeLink } from '../../js/helpers';
 import $ from 'jquery';
-
 import { staggerHideTitle } from '../../js/Animation';
 
 
 
 class WorkSlide extends React.Component {
-	
-	constructor(props) {
-		super(props);
-			
-		this.state = {
-	      style: null
-	    }	
-	}
 
-	handleSubmit = (e) => { 
-		let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
-		staggerHideTitle(this.props.slideCount);
+        constructor(props) {
+            super(props);
 
-		//parallaxOne();
+            this.state = {
+                style: null
+            }
+        }
 
-		if (url === 'projects') {
+        handleSubmit = (e) => {
+            let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+            staggerHideTitle(this.props.slideCount);
+           	if (url === 'projects') {
+                let path = `projects/${this.props.project}`;
+                this.props.history.push(path);
+            }
+            e.preventDefault();
 
+        }
 
-	    	let path = `projects/${this.props.project}`;
-	    	this.props.history.push(path);
-	    	
-
-		} else {
-			
-		}
-
-	  	e.preventDefault();
-  
- 	 }
-
-	componentDidMount() {
-      
-      
-      let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
-
-	    if(url !== 'projects') {
-	    	disableLink();
-	    } else {
-	    	
-	    	activeLink();
-	    }
-  	}
-
-  	componentWillUpdate(nextProps, nextState) {
-  		
-
-  		if(this.props.slideCount !== nextProps.slideCount) {
-			//this.style = "remove";
-  			//setTimeout(() => {this.style = "scaling", 1000 });
-  			this.handleAnimation();
-  		}
-  	}
-
-  	handleAnimation(){
-  		this.setState({style: null});
-  		setTimeout(function() { this.setState({style: 'scaling'}); }.bind(this), 10);
-  	}
-
-  	getStyleCounter = () => {
-    
-    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
-
-    if(url !== 'projects') {
-    	disableLink();
-    	setToWhite();
-    	showTitle();
-     
-    } else {
-    	hideTitle();
-    	activeLink();
-    	setToBlack();
-     
-    }
-  }
-
-  getStyleTitle = () => {
-		$('.large-title').css('margin-left', '500px');
-  }
+        componentDidMount() {
 
 
-  getStyleImg = () => {
-    
-    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
-	
-	
-    if(url === 'flickr') {
-    	//$('.large-title').css('margin-left', '0px');
-     	return "project-image"
+            let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
 
-    } else if(url === 'ripple' || url === 'displaced') {
-    	//$('.large-title').css('margin-left', '500px');
-     	return "project-image-left"
+            if (url !== 'projects') {
+                disableLink();
+            } else {
 
-    } else if(url === 'mycosmetics' || url === 'mycourses') {
-    	//$('.large-title').css('margin-left', '0px');
-     	return "project-image-more"
+                activeLink();
+            }
+        }
 
-    } else if(url === 'weekly') {
-    	$('.large-title').addClass('title-text');
-     	return "project-image-short"
-
-    } else {
-    	$('.large-title').removeClass('title-text');
-      	return ""
-    }
-  }
+        componentWillUpdate(nextProps, nextState) {
 
 
-	
-	render() {
-	
+            if (this.props.slideCount !== nextProps.slideCount) {
+                //this.style = "remove";
+                //setTimeout(() => {this.style = "scaling", 1000 });
+                this.handleAnimation();
+            }
+        }
+
+        handleAnimation() {
+            this.setState({ style: null });
+            setTimeout(function() { this.setState({ style: 'scaling' }); }.bind(this), 10);
+        }
+
+        getStyleCounter = () => {
+
+            let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+            if (url !== 'projects') {
+                disableLink();
+                setToWhite();
+                showTitle();
+
+            } else {
+                hideTitle();
+                activeLink();
+                setToBlack();
+
+            }
+        }
+
+        getStyleTitle = () => {
+            $('.large-title').css('margin-left', '500px');
+        }
+
+
+        getStyleImg = () => {
+
+            let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+
+            if (url === 'flickr') {
+                //$('.large-title').css('margin-left', '0px');
+                return "project-image"
+
+            } else if (url === 'ripple' || url === 'displaced') {
+                //$('.large-title').css('margin-left', '500px');
+                return "project-image-left"
+
+            } else if (url === 'mycosmetics' || url === 'mycourses') {
+                //$('.large-title').css('margin-left', '0px');
+                return "project-image-more"
+
+            } else if (url === 'weekly') {
+                $('.large-title').addClass('title-text');
+                return "project-image-short"
+
+            } else {
+                $('.large-title').removeClass('title-text');
+                return ""
+            }
+        }
+
+
+
+        render() {
 
 		return(
 			<li id={"slide-" + this.props.number} onClick={this.handleSubmit} className={this.props.isEven ? "slide even" : "slide"}>

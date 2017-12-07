@@ -6,7 +6,6 @@ import '../css/resume.css';
 import { TweenMax, Elastic } from 'gsap';
 
 import { setToBlack, hideArrow } from '../js/helpers';
-import { animateOut,  animateName } from '../js/Animation';
 
 
 class Resume extends Component {    

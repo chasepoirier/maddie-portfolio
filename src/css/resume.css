@@ -128,14 +128,14 @@
     width: 30%;
 }
 
-.view{
+.resume.main-content .view{
     font-style: italic;
     margin-top: 20px;
     transition-timing-function: ease-in-out;
     transition: 0.2s;
 }
 
-.view:hover{
+.resume.main-content .view:hover{
     opacity: 0.7;
 }
 

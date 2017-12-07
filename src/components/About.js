@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import RedRect from '../svgs/red-rect-thick.svg';
-import BluePenta from '../svgs/blue-penta.svg';
 import PinkRect from '../svgs/pink-rect.svg';
 import GreenTri from '../svgs/green-tri.svg';
 import NavyCircle from '../svgs/navy-circle.svg';
@@ -9,14 +8,12 @@ import OrangeTri from '../svgs/orange-tri.svg';
 import BlueCircle from '../svgs/blue-oval.svg';
 import YellowRing from '../svgs/yellow-ring.svg';
 import SocialLinks from './Social';
-import { NavLink } from 'react-router-dom';
 
 
 import $ from 'jquery';
 import { TweenMax, Elastic } from 'gsap';
 
 import { setToBlack, hideArrow } from '../js/helpers';
-import { animateOut,  animateName } from '../js/Animation';
 
 class About extends Component { 
 
