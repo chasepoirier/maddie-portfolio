@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 import RedRect from '../svgs/red-rect-thick.svg';
 import PinkRect from '../svgs/pink-rect.svg';
 import GreenTri from '../svgs/green-tri.svg';
@@ -29,29 +29,33 @@ class About extends Component {
   render() {
     return (
     	<div className="about main-content">
-    		<div className="background"></div>
+    		<div className="about_background"></div>
       			<div className="slide about">
 	    			<div className="content about">
 	    				<h1>Hello! I'm Madison Yocum.</h1>
-	    				<p>An interaction and visual designer in my third year at Rochester 
-	            Institute of Technology studying New Media Design. Last summer, I was a 
-	            Design Intern at Flickr / Yahoo in San Francisco, and currently I'm looking 
-	            for an internship this upcoming summer of 2018 relating to design, product 
-	            or startups. I strive every day to learn something new, improve my own skills, 
-	            and create a better world and design solutions through problem solving, iteration, 
-	            and a user first mindset.
-	            <br /><br />
-	            When I'm not designing, I lead my startup I co-founded called Ripple, which was featured 
-	            at RIT and work with my team learning more about entrepreneurship and business 
-	            everyday. If you are looking for a hardworking designer and entrepreneur, someone with a 
-	            understanding for modern design and the tech / product industry, and enjoys learning, 
-	            please email or send me a message at madisonyocum@gmail.com</p>
-	    				<div className="about-buttons">
-							<a href="#" className="link outlined">View Resume</a>
-							<a target="blank" href="https://dribbble.com/madisonyocum" className="link">Dribbble</a>
-							<a target="blank" href="https://www.behance.net/madisonyocum" className="link">Behance</a>
-							<a target="blank" href="https://www.linkedin.com/in/madison-yocum/" className="link">LinkedIn</a>
-				          </div>
+	    				<p>An interaction designer and entrepreneur in my third year at Rochester Institute 
+	    				of Technology studying New Media Design and double minoring in Marketing and Advertising
+	    				 / Public Relations. Last summer, I was a Design Intern at 
+	    				 <a href='https://www.flickr.com' className="about-link" target="_blank"> Flickr / YAHOO </a> 
+	    				 in San Francisco, and currently, I'm looking for an internship this upcoming summer of 2018 
+	    				 relating to design, product or startups. I strive every day to learn something new, improve my 
+	    				 own skills, and create a better world and design solutions through problem-solving, iteration, 
+	    				 and a user first mindset.
+                        <br></br>
+                        <br></br>
+                        When I'm not designing, I lead my startups I co-founded called
+                       	<a href='http://rippleplatform.io/' className="about-link" target="_blank"> Ripple</a>, which was 
+                         <a href='https://cias.rit.edu/news/509' className="about-link" target="_blank"> featured at RIT</a>, 
+                         and <a href='http://www.udio-ventures.com/index.html' className="about-link" target="_blank"> Udio Ventures </a> 
+                         a current work-in-progress, working alongside my teams learning more about business every day. 
+                         I recently <a href='#' className="about-link" target="_blank">spoke and held a workshop </a> 
+                         business conference on entrepreneurship, product and my career, which was an amazing experience. 
+                         If you are looking for a hardworking designer and entrepreneur who enjoys learning and a good challenge,
+                         please email or send me a message at 
+                         <a href="mailto:madisonyocum@gmail.com?Subject=Hello!" className="about-link"> madisonyocum@gmail.com</a></p>
+	    				 <div className="about-buttons">
+							<Link to="../resume_madisonyocum.pdf" target="blank" className="link outlined">View Resume</Link>
+				         </div>
 
 	    			</div>
 	          <div className="about-pic">
@@ -70,7 +74,6 @@ class About extends Component {
 
 	          <div className="footer-about">
 	          <div className="contact-container">
-	            <a className="contact" href="mailto:madisonyocum@gmail.com">Contact</a>
 	            <div className="copyright">© Madison Yocum 2017</div>
 	          </div> 
 	            <SocialLinks />

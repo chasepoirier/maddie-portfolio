@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+import { Document } from 'react-pdf';
 import '../css/home.css';
 import '../css/header.css';
 import '../css/project.css';
@@ -99,6 +100,7 @@ export default class App extends Component {
       <div className="wrapper">
         <Header slideCount={this.state.slideCount} />
         <div id="overlay" />
+            {/*<Route path="/resume_madisonyocum.pdf" render={() => <Document file="resume_madisonyocum.pdf" />} />*/}
             <Route path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/resume" render={({ match }) => <Resume />} />
