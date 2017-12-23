@@ -73,7 +73,6 @@ class About extends Component {
 	            <a className="contact" href="mailto:madisonyocum@gmail.com">Contact</a>
 	            <div className="copyright">© Madison Yocum 2017</div>
 	          </div> 
-	      
 	            <SocialLinks />
 	          </div>
       </div>

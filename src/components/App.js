@@ -35,15 +35,11 @@ export default class App extends Component {
     componentDidMount() {
         let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
 
-
-
         window.onpopstate = () => {
             url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
             this.checkProject(url, window.event);
         }
-
         this.checkProject(url, 'test');
-
     }
 
     checkProject = (url, event) => {

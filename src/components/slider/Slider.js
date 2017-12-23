@@ -19,13 +19,10 @@ class Slider extends Component {
 
 
         this.dom = {};
-
         this.array = [];
         this.bound_event = this._handleKeyDown.bind(this);
 
     }
-
-
 
 
     renderSlides = () => {
