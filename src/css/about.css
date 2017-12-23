@@ -10,6 +10,10 @@
 	margin-bottom:100px;
 }
 
+.about_background{
+    background-color: #ffffff;
+}
+
 .about-pic {
 	width: 298px;
 	height: 298px;
@@ -40,16 +44,17 @@
 }
 
 .slide.about .content.about p {
-	font-size: 18px;
+	font-size: 16px;
 	width: 95%;
 	text-align: justify;
-	max-width: 582px;
+	max-width: 570px;
 	line-height: 26px;
 }
 
 .slide.about .content.about h1 {
 	padding: 0px;
 	margin: 0px;
+    font-size: 26px;
 	font-family: 'SF UI Display Bold';
 }
 
@@ -59,7 +64,7 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	margin-top: 50px;
+	margin-top: 35px;
 }
 
 .slide.about .content.about .about-buttons .link:nth-of-type(1){
@@ -83,10 +88,10 @@
 	opacity: 1;
 	height: 35px;
 	width: 177px;
-	border: #1C9EDB 1.5px solid;
+	border: #1CAEF2 1.5px solid;
 	text-align: center;
 	padding: 0px;
-	color: #1C9EDB;
+	color: #1CAEF2;
 	background: transparent;
 	transition: all .2s ease;
 	line-height: 35px;
@@ -98,24 +103,6 @@
 	align-items: center;
 }
 
-.contact-container .contact {
-	width: 120px;
-	height: 30px;
-	line-height: 30px;
-	border: 1.5px solid #444;
-	text-align: center;
-	font-size: 16px;
-	color: #444;
-	font-family: 'SF UI Display Medium';
-	border-radius: 100px;
-	margin-right: 20px;
-	transition: all .2s;
-}
-
-.contact-container .contact:hover {
-	background-color: #444;
-	color: #fff;
-}
 
 .contact-container .copyright {
 	opacity: .4;
@@ -127,7 +114,7 @@
 }
 
 .slide.about .content.about .about-buttons .link.outlined:hover {
-	background: #1C9EDB;
+	background: #1CAEF2;
 	color: #fff;
 }
 
@@ -191,4 +178,9 @@
 .footer-about  .count  {
  	margin: 0 5px;
     white-space: nowrap;
+}
+
+p .about-link {
+    font-family: 'SF UI Display Medium';
+    color: #1CAEF2;
 }

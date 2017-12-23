@@ -74,19 +74,19 @@
 
 .social-container {
 	width: 144px;
-	height: 24px;
+	height: 26px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
 .social-container .icon:hover {
-	opacity: 1 !important;
+	opacity: 0.5 !important;
 }
 
 .social-container .icon {
-	width: 16px;
-	opacity: 0;
+	width: 18px;
+	opacity: 1.0;
 	transition: all .2s;
 	height: 13px;
 	padding: 1px 3px;
