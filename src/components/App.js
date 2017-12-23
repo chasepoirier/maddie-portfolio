@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Document } from 'react-pdf';
 import '../css/home.css';
 import '../css/header.css';
+import '../css/footer.css'
 import '../css/project.css';
 import '../css/about.css';
 import '../css/animations.css';

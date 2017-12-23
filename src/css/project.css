@@ -63,55 +63,6 @@
 	transition: all cubic-bezier(.19,1,.22,1) .4s;
 }
 
-.footer {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 25px;
-	transition: all cubic-bezier(.19,1,.22,1) .4s;
-}
-
-.social-container {
-	width: 160px;
-	height: 30px;
-    opacity: 1.0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.social-container .icon:hover {
-    opacity: 0.5 !important;
-}
-
-.social-container .icon {
-	width: 14px;
-    opacity: 0%;
-	transition: all .2s;
-	height: 12px;
-	padding: 3px 3px;
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-.social-container .icon.email {
-	background-image: url(../images/email.png);
-}
-
-.social-container .icon.dribbble {
-	background-image: url(../images/dribbble.png);
-}
-
-.social-container .icon.behance {
-	background-image: url(../images/behance.png);
-}
-
-.social-container .icon.linkedin {
-	background-image: url(../images/linkedin.png);
-} 
-
 .slide-controls {
 	display: flex;
 	justify-content: space-between;

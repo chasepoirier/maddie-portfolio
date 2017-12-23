@@ -97,17 +97,6 @@
 	line-height: 35px;
 }
 
-.contact-container {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-
-.contact-container .copyright {
-	opacity: .4;
-	font-size: 14px;
-}
 
 .slide.about .content.about .about-buttons .link:hover {
 	opacity: 1;
@@ -159,25 +148,6 @@
 .slide.about .shape-container .shape.yellow-ring {
 	bottom: -50px;
 	left: 125px;
-}
-
-.footer-about {
-	position: absolute;
-    left: 0px;
-    display: flex;
-    width: 100%;
-    bottom: -50px;
-    z-index: 10000;
-    justify-content: space-between;
-}
-
-.footer-about .icon {
-	opacity: .6 !important;
-}
-
-.footer-about  .count  {
- 	margin: 0 5px;
-    white-space: nowrap;
 }
 
 p .about-link {

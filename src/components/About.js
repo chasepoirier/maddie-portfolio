@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import RedRect from '../svgs/red-rect-thick.svg';
 import PinkRect from '../svgs/pink-rect.svg';
 import GreenTri from '../svgs/green-tri.svg';
@@ -7,8 +7,10 @@ import NavyCircle from '../svgs/navy-circle.svg';
 import OrangeTri from '../svgs/orange-tri.svg';
 import BlueCircle from '../svgs/blue-oval.svg';
 import YellowRing from '../svgs/yellow-ring.svg';
-import SocialLinks from './Social';
 
+import PDF from '../resume_madisonyocum.pdf'
+
+import Footer from './Footer';
 
 import $ from 'jquery';
 import { TweenMax, Elastic } from 'gsap';
@@ -54,7 +56,7 @@ class About extends Component {
                          please email or send me a message at 
                          <a href="mailto:madisonyocum@gmail.com?Subject=Hello!" className="about-link"> madisonyocum@gmail.com</a></p>
 	    				 <div className="about-buttons">
-							<Link to="../resume_madisonyocum.pdf" target="blank" className="link outlined">View Resume</Link>
+							<a href={PDF} target="blank" className="link outlined">View Resume</a>
 				         </div>
 
 	    			</div>
@@ -69,15 +71,7 @@ class About extends Component {
 			            <img id="l8" src={YellowRing} alt="Yellow Ring" className="shape yellow-ring" />
 		         	</div>
 	          </div>
-
-	          
-
-	          <div className="footer-about">
-	          <div className="contact-container">
-	            <div className="copyright">© Madison Yocum 2017</div>
-	          </div> 
-	            <SocialLinks />
-	          </div>
+				<Footer />
       </div>
       </div>
     );
