@@ -26,7 +26,6 @@
    margin: 0 auto;
    flex-wrap: wrap;
    justify-content: space-between;
-   background-color: #F7F7F7;
    height: 215px;
    align-items: center;
 }
@@ -81,13 +80,13 @@
     font-size: 20px;
     font-weight: bolder;
     font-family: 'SF UI Display Bold';
-    color: #1C9EDB;
+    color: #1CAEF2;
     margin-bottom: 15px;
     letter-spacing: .25px;
 }
 
 .company:visited {
-    color: #1C9EDB;
+    color: #1CAEF2;
 }
 
 .job{
@@ -101,7 +100,7 @@
     font-family: 'SF UI Display Light';
     line-height: 18px;
     text-align: justify;
-    width: 445px;
+    width: 95%;
     margin-bottom: 40px;
 }
 
@@ -140,11 +139,11 @@
 }
 
 .button{
-    border: 2px solid #1C9EDB;
+    border: 2px solid #1CAEF2;
     border-radius: 500px;
     height: 35px;
     width: 230px;
-    color: #1C9EDB;
+    color: #1CAEF2;
     font-family: 'SF UI Display Medium';
     text-align: center;
     line-height: 35px;
@@ -155,17 +154,18 @@
 }
 
 .button:visited{
-    color: #1C9EDB;
+    color: #1CAEF2;
 }
 
 .button:hover{
-    background-color: #1C9EDB;
+    background-color: #1CAEF2;
     color: white;
 }
 
 .info{
     font-family: 'SF UI Display Light';
     margin-bottom: 15px;
+    margin-top: 3px;
 }
 
 .word strong{
