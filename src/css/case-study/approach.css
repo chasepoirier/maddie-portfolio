@@ -13,7 +13,7 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: top;
 }
 
 .case-study .content-container.approach .left {
@@ -41,6 +41,7 @@
 
 .case-study .content-container.approach .right .approach-img {
 	width: 100%;
+	margin-top: 25px;
 	height: 100%;
 	object-fit: contain;
 	object-position: center;
