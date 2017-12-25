@@ -1,0 +1,47 @@
+.case-study .count {
+	font-family: 'sf ui display semibold';
+	font-size: 16px;
+	margin-bottom: 15px;
+	margin-top: 75px;
+}
+
+.case-study .heading {
+	font-size: 26px;
+}
+
+.case-study .content-container.approach {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.case-study .content-container.approach .left {
+	width: 35%;
+}
+
+.case-study .content-container.approach .left .heading {
+	width: 70%;
+}
+
+.case-study .content-container.approach .right {
+	width: 60%;
+	height: 100%;
+}
+
+.case-study .content-container.approach .right span {
+	width: 70%;
+	text-align: justify;
+	display: block;
+}
+
+.case-study .content-container.approach .right span .title {
+	margin-bottom: 15px;
+}
+
+.case-study .content-container.approach .right .approach-img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}

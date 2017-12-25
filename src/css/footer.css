@@ -73,13 +73,19 @@
 	height: 26px;
 }
 
+.footer-about.caseStudy {
+	position: static;
+	width: 100%;
+	left: 0px;
+}
+
 .footer-about {
 	position: absolute;
     left: -100px;
     display: flex;
     width: calc(100% + 200px);
     bottom: -360px;
-    height: 334px;
+    height: 314px;
     background: #F7F7F7;
     z-index: 10000;
     justify-content: center;

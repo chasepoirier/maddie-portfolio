@@ -2,13 +2,21 @@ import React, { Component } from 'react';
 import SocialLinks from './Social';
 
 class Footer extends Component {
-	constructor() {	
-		super();
+	
+
+	componentDidMount() {
+		if(this.props.onCaseStudy === true) {
+			document.querySelector('.footer-about').className = 'footer-about caseStudy'
+		}
+	}
+
+	componentWillUnmount() {
+		document.querySelector('.footer-about').className = 'footer-about'
 	}
 
 	render() {
 		return (
-			<div className="footer-about">
+			<div ref="footer" className="footer-about">
 				<div className="footer-container">
 					<div className="center-content">
 						<div className="footer-text">I would love to talk with you!</div>

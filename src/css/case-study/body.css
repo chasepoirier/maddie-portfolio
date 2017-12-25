@@ -1,0 +1,178 @@
+.case-study {
+	position: relative;
+	z-index: 200000;
+	margin-top: 250px;
+}
+
+.case-study-wrapper {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	font-size: 16px;
+}
+
+.case-hairline {
+	width: 90%;
+	max-width: 1200px;
+	margin: 50px auto;
+	height: 1px;
+	background-color: #ccc;
+}
+
+.case-study .overview-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.case-study .overview-container .content {
+	width: 45%;	
+}
+
+.case-study .overview-container .content:first-child {
+	margin-left: 25px;
+}
+
+.case-study .overview-container .content:last-child {
+	margin-right: 50px;
+	width: 40%;
+}
+
+.case-study .heading {
+	font-size: 22px;
+	color: #1CAEF2;
+	font-family: 'SF UI display semibold';
+	margin-bottom: 30px;
+}
+
+.case-study .heading.centered {
+	width: 100%;
+	text-align: center;
+}
+
+.case-study .overview-container .content .text {
+	font-size: 16px;
+	width: 95%;
+	line-height: 21px;
+}
+
+.case-study .overview-container .content .overview-team {
+	width: 95%;
+	margin-top: 20px;
+}
+
+.case-study .full-width {
+	width: 100%;
+	height: 100%;
+	padding: 50px 0;
+	background-color: #F7F7F7;
+}
+
+.case-study .video.content-container {
+	width: 90%;
+	height: 100%;
+	margin: 0px auto;
+	max-width: 850px;
+	height: 475px;
+}
+
+.case-study .content-container.reseach {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.case-study .content-container.reseach .summary {
+	width: 50%;
+}
+
+.summary .text {
+	width: 88%;
+	text-align: justify;
+}
+
+.summary .text span.blue {
+	color: #1CAEF2;
+	font-family: 'SF UI display semibold';
+}
+
+.summary label {
+	font-family: 'SF UI display semibold';
+	columns: #000;
+	margin-top: 50px;
+	display: block;	
+}
+
+.summary .findings {
+	display: flex;
+	margin-top: 15px;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+}
+
+.summary .findings .finding .percent {
+	font-size: 26px;
+	margin-bottom: 5px;
+	color: #1CAEF2;
+	font-family: 'SF UI display medium';
+}
+
+.summary .findings .finding .text {
+	text-align: left;
+}
+
+.case-study .full-width.sketch {
+	padding: 0px;
+	background-color: transparent;
+}
+
+.case-study .full-width.sketch img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.case-study .content-container.reseach .image {
+	width: 45%;
+}
+
+.case-study .content-container.reseach .image .full-image {
+	object-fit: contain;
+	object-position: center;
+	width: 100%;
+	height: 100%;
+}
+
+.case-study .case-study-wrapper.image-wrapper-transparent {
+	background-color: transparent;
+	margin-top: 20px;
+}
+
+.case-study .case-study-wrapper.image-wrapper-transparent img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.case-study .image-wrapper {
+	background-color: #f7f7f7;
+	padding: 50px 0px;
+	margin: 75px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.case-study .image-wrapper img {
+	width: 95%;
+	max-width: 712px;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}

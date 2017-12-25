@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { Document } from 'react-pdf';
+import { Route } from 'react-router-dom';
 import '../css/home.css';
 import '../css/header.css';
 import '../css/footer.css'
@@ -8,6 +7,7 @@ import '../css/project.css';
 import '../css/about.css';
 import '../css/animations.css';
 import '../fonts/style.css'
+
 
 import { hideArrow } from "../js/helpers";
 
@@ -17,6 +17,7 @@ import { staggerHideTitle, staggerShowTitle, animateIn, animateOut } from '../js
 //import PageShell from './PageShell';
 
 // App components
+import CaseStudy from './case-study/CaseStudyWrapper';
 import Home from './Home';
 import Work from './Work';
 import About from './About';
@@ -34,17 +35,27 @@ export default class App extends Component {
         }
     }
 
-    componentDidMount() {
+    componentWillMount() {
         let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
 
         window.onpopstate = () => {
             url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
             this.checkProject(url, window.event);
         }
-        this.checkProject(url, 'test');
+        this.checkProject(url, 'test');   
     }
 
-    checkProject = (url, event) => {
+    componentDidMount() {
+    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+        window.onpopstate = () => {
+            url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+            this.checkProject(url, window.event);
+        }
+        this.checkProject(url, 'test');      
+    }
+
+    checkProject = (url) => {
 
         if (url === 'flickr') {
             this.setState({ slideCount: 1 });
@@ -65,7 +76,6 @@ export default class App extends Component {
             this.setState({ slideCount: 6 });
             staggerHideTitle(6);
         } else if (url === 'projects') {
-            console.log(event)
             hideArrow();
             animateOut();
             staggerShowTitle(this.state.slideCount);
@@ -101,12 +111,11 @@ export default class App extends Component {
       <div className="wrapper">
         <Header slideCount={this.state.slideCount} />
         <div id="overlay" />
-            {/*<Route path="/resume_madisonyocum.pdf" render={() => <Document file="resume_madisonyocum.pdf" />} />*/}
             <Route path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/resume" render={({ match }) => <Resume />} />
             <Route path="/projects" render={( {match} ) => <Work slideCount={this.state.slideCount} path={this.url}  countUp={this.nextSlide} countDown={this.previousSlide} />} />
-            <Route path="/projects/:id" render={({ match }) => <div></div>} />
+            <Route path="/projects/:id" render={({ match }) => <CaseStudy project={this.state.slideCount} />} />
       </div>
     );
   }

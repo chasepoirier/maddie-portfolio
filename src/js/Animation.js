@@ -86,3 +86,9 @@ export function animateOut() {
     animateFooter();
     animateWorkUp();
 }
+
+export function animateCaseStudyIn() {
+    TweenMax.staggerFromTo(('.case-animate'), .4, 
+        { transform: 'translateY(20px)', opacity: 0 }, 
+        { transform: 'translateY(0px)', opacity: 1, delay: 1, ease: Elastic.easeOut.config(0.25, 1) }, .1);
+}

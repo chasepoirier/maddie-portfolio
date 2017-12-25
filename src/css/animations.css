@@ -8,22 +8,22 @@
 }
 
 .project-background {
-  width: calc(100% + 220px);
+  width: calc(100% + 200px);
   height: 300px;
   transform: translate3d(-100px,-100px,0);
   transition-delay: .3s;
 }
 
 .background .colored-bg.project-colored-background {
-  width: calc(100% + 20px);
+  width: 100%;
   transition-delay: .3s;
-  right: calc(-100% - 20px);
+  right: -100%;
 }
 
 .background .colored-bg.project-colored-background-left {
-  width: calc(100% + 20px);
+  width: 100%;
   transition-delay: .3s;
-  left: calc(-100% - 20px);
+  left: -100%;
 }
 
 .work-list .slide .content.project .left .revealer.title-revealer {

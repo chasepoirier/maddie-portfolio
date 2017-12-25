@@ -1,0 +1,53 @@
+.upper-header {
+	width: 100%;
+	max-width: 750px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin-bottom: 60px;
+}
+
+.upper-header .desc {
+	max-width: 475px;
+	margin-right: 50px;
+	font-size: 20px;
+	width: 100%;
+}
+
+.upper-header .external-links .link-button {
+	border-radius: 50px;
+	width: 175px;
+	height: 32px;
+	line-height: 32px;
+	margin-bottom: 10px;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	display: block;
+	cursor: pointer;
+	background: linear-gradient(45deg, #0088C6 0%,#20B8FF 100%);
+}
+
+.upper-header .external-links .link-non-button {
+	margin-left: 5px;
+	font-size: 14px;
+	opacity: .8;
+}
+
+.project-info-container {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.project-info-container .content { 
+	margin-right: 50px;
+	width: 130px;
+}
+
+.project-info-container .heading {
+	font-family: 'SF UI Display semibold';
+	margin-bottom: 15px;
+}
+
