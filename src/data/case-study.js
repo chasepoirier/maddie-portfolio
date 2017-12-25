@@ -155,7 +155,7 @@ const ProjectInfo = [
         heading: 'Form virtual teams and establish collaboration.',
         text: 'Once a virtual agency and team is established, it’s important to showcase who they are and promote their team for future work and prospects. The team page / portfolio page shows simple casestudies of the freelancing work they have done, and allows clients to message and learn more about the team.',
         hasImg: true,
-        imageURL: 'ripple/approach_03.png'
+        imageURL: 'ripple/approach_04.png'
       }
     ],
     approachFullImages: [
