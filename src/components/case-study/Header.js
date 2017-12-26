@@ -6,6 +6,11 @@ class ProjectHeader extends Component {
 		this.info = this.props.headerInfo;
 	}
 
+	renderImg = (img) => {
+		const imageURL = require('../../images/' + img);
+		return imageURL;
+	}
+
 	render() {
 		
 		return(
@@ -20,7 +25,7 @@ class ProjectHeader extends Component {
 							?
 							<span>
 							<a href={this.info.websiteURL} target="blank" className="link-button">View Website</a>
-							<a href="#" className="link-non-button">Or view the investor pitch deck</a>
+							<a href={this.renderImg(this.info.finalPDF)} target="blank" className="link-non-button">Or view the investor pitch deck</a>
 							</span>
 							:
 							null

@@ -1,0 +1,100 @@
+.case-study .count {
+	font-family: 'sf ui display semibold';
+	font-size: 16px;
+	margin-bottom: 15px;
+	margin-top: 75px;
+}
+
+.case-study .heading {
+	font-size: 26px;
+}
+
+.case-study .content-container.takeaway {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: top;
+}
+
+.case-study .content-container.takeaway .external-links .link-button {
+	border-radius: 50px;
+	margin-top: 75px;
+	width: 175px;
+	height: 32px;
+	line-height: 32px;
+	margin-bottom: 10px;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	display: block;
+	cursor: pointer;
+	background: linear-gradient(45deg, #0088C6 0%,#20B8FF 100%);
+}
+
+.case-study .content-container.takeaway .external-links .link-non-button {
+	margin-left: 5px;
+	font-size: 14px;
+	opacity: .8;
+}
+
+.case-study .content-container.takeaway .left {
+	width: 95%;
+	max-width: 540px;
+}
+
+.case-study .content-container.takeaway .left .heading {
+	width: 70%;
+}
+
+.case-study .content-container.takeaway .left .heading span.quote {
+	font-family: 'sf ui display light';
+	font-size: 18px;
+	color: #555;
+}
+
+.case-study .content-container.takeaway .text span.blue {
+	color: #1CAEF2 !important;
+	font-family: 'SF UI display semibold';
+}
+
+.case-study .content-container.takeaway .text span.blue a {
+	color: #1CAEF2 !important;
+}
+
+.case-study .content-container.takeaway .text span.blue a:visited {
+	color: #1CAEF2 !important;
+}
+
+.case-study .content-container.takeaway .right {
+	width: 60%;
+	height: 100%;
+}
+
+.case-study .content-container.takeaway .right span {
+	width: 70%;
+	text-align: justify;
+	display: block;
+}
+
+.case-study .content-container.takeaway .right .caption {
+	font-size: 16px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 25px;
+	color: #444;
+	width: 95%;
+	max-width: 415px;
+}
+
+.case-study .content-container.takeaway .right span .title {
+	margin-bottom: 15px;
+}
+
+.case-study .content-container.takeaway .right .takeaway-img {
+	width: 100%;
+	max-height: 392px;
+	margin-top: -50px;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}

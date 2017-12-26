@@ -58,6 +58,12 @@
 	line-height: 21px;
 }
 
+.case-study .text.solution {
+	width: 95%;
+	max-width: 540px;
+	text-align: justify;
+}
+
 .case-study .overview-container .content .overview-team {
 	width: 95%;
 	margin-top: 20px;

@@ -26,8 +26,8 @@ class Approach extends Component {
 						{this.props.content.hasImg === false 
 							?
 							<span>
-							<div className="title">{this.props.content.nonImg.title}</div>
-							<div className="text">{this.props.content.nonImg.text}</div>
+								<div className="title">{this.props.content.nonImg.title}</div>
+								<div className="text">{this.props.content.nonImg.text}</div>
 							</span>
 							:
 							<img src={this.renderImg()} className="approach-img" alt=""/>

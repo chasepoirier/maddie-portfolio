@@ -14,40 +14,82 @@ class Slider extends Component {
 		}
 	}
 
-	componentDidMount() {
+	componentDidMount() {		
 		this.setState({count: 1});
-		document.querySelector('.slide-dot:first-child').style.backgroundColor = '#444';
+		
+		if(this.props.isFullWidth === true) {
+			this.refs.slideDot1.style.backgroundColor = '#444';
+		} else {
+			this.refs.slideDot1.style.backgroundColor = '#fff';
+		}		
 	}
 
-	componentDidUpdate(prevProps, prevState) {
-		let dots = document.querySelectorAll('.slide-dot');
-		dots.forEach(function(dot) {
-			dot.style.backgroundColor = '#ccc';
-		});
-		let activeDot = document.querySelector(`#slide-dot-${this.state.count}`);
-		activeDot.style.backgroundColor = '#444';
-	}
-
-	countUp = () => {
+	countUp = (e) => {
 		if(this.state.count === this.slides.length) {
 			this.setState({count: 1})
+			this.handleDotChange(e , 1 );
 		} else {
 			this.setState({count: this.state.count + 1})
+			this.handleDotChange(e , this.state.count + 1);
 		}
 	}
 
-	countDown = () => {
+	countDown = (e) => {
 		if(this.state.count === 1)	{
 			this.setState({count: this.slides.length})
+			this.handleDotChange(e , this.slides.length );
 		} else {
 			this.setState({count: this.state.count - 1})
+			this.handleDotChange(e , this.state.count - 1 );	
+		}
+	}
+
+	handleDotChange = (e, count) => {
+		let dots = e.target.parentElement.parentElement.parentElement.children[1].childNodes;
+
+		if(this.props.isFullWidth === true) {
+			dots.forEach(function(dot) {
+					dot.style.backgroundColor = '#ccc';
+			});
+		} else {
+			dots.forEach(function(dot) {
+					dot.style.backgroundColor = '#87CCEB';
+			});
+		}
+
+		
+		if(this.props.isFullWidth === true) {
+			dots[count - 1].style.backgroundColor = '#444';
+		} else {
+			dots[count - 1].style.backgroundColor = '#fff';
 		}
 	}
 
 	handleDotClick = (e) => {
 		let id = e.target.id;
+		let siblings = e.target.parentNode.childNodes;
+
+		if(this.props.isFullWidth === true) {
+			siblings.forEach(function(dot) {
+				dot.style.backgroundColor = '#ccc';
+			});
+		} else {
+			siblings.forEach(function(dot) {
+				dot.style.backgroundColor = '#87CCEB';
+			});
+		}
+
+		if(this.props.isFullWidth === true) {
+			e.target.style.backgroundColor = "#444"
+		} else {
+			e.target.style.backgroundColor = "#fff"
+		}
+
+		
+
 		let newID = id.replace('slide-dot-', '');
 		this.setState({count: parseInt(newID)})
+
 	}
 
 	renderSlides = () => {
@@ -62,9 +104,9 @@ class Slider extends Component {
 		let dots = [];
 		for(let i=0; i<this.slides.length; i++) {
 			dots.push(
-				<div id={`slide-dot-${i + 1}`} key={i} onClick={this.handleDotClick} className="slide-dot"></div>
-			)
-		}
+				<div ref={`slideDot${i+1}`} id={`slide-dot-${i + 1}`} key={i} onClick={this.handleDotClick} className="slide-dot"></div>
+			);
+		}		
 		return dots;
 	}
 
@@ -75,7 +117,13 @@ class Slider extends Component {
 	    }
 
 		return (
-			<div className="case-slider case-animate">
+			<div className={this.props.isFullWidth === false ? 
+				"case-slider case-animate wrapped"
+				:
+				"case-slider case-animate"
+			} 
+			>
+			<div className="slider-container">
 				<div className="slide-overflow">
 					<ul style={style} className="case-slide-wrapper">
 						{this.renderSlides()}
@@ -83,6 +131,7 @@ class Slider extends Component {
 					<div onClick={this.countDown} className="case-back-slide"></div>
 					<div onClick={this.countUp} className="case-next-slide"></div>
 				</div>
+			</div>
 				<div className="dot-control-container">
 					{this.renderSlideDots()}
 				</div>

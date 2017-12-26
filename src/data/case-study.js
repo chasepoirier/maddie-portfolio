@@ -93,7 +93,8 @@ const ProjectInfo = [
     	client: 'Startup Team, Investors & Ripple Users',
     	role: 'Co-founder and Product Designer',
     	duration: 'Fall 2016 - Present',
-    	websiteURL: 'http://www.rippleplatform.io'	
+    	websiteURL: 'http://www.rippleplatform.io',
+      finalPDF: 'Ripple-Final.pdf'	
     },
     headingSlider: [
       {
@@ -171,7 +172,26 @@ const ProjectInfo = [
       {
         imageURL: 'ripple/approach_04_pic.png'
       }
-    ]
+    ],
+    sliderTwo: [
+      {
+        url: 'ripple/slider2/01.jpg'
+      },
+      {
+        url: 'ripple/slider2/02.jpg'
+      },
+      {
+        url: 'ripple/slider2/03.jpg'
+      }
+    ],
+    takeaway: {
+      heading: '“Success is not what you have, but who you are.” <span class="quote">- Bo Bennet</span>',
+      text: 'The story of Ripple is just starting, we were <span class="blue"><a href="https://cias.rit.edu/news/509" target="blank">recently featured at RIT</a></span> on our journey so far, and I can’t wait to learn more about product, design, and entrepreneurship as each of us and our company grows.',
+      websiteURL: 'http://www.rippleplatform.io',
+      caption: 'At Demo Day, the last day to pitch ideas to investors and VCs after the RIT - Simone Center Summer Start Incubator.',
+      imageURL: 'ripple/team2.png',
+      finalPDF: 'Ripple-Final.pdf'
+    }
   }
 ];
 
