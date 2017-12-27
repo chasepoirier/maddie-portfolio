@@ -11,6 +11,19 @@ class ProjectHeader extends Component {
 		return imageURL;
 	}
 
+	renderExternalLinks = () => {
+		if(this.info.websiteURL === null) {
+			return <a href={this.renderImg(this.info.finalPDF)} rel="noopener noreferrer" target="_blank" className="link-button">{this.info.PDFtitle}</a>
+		} else {
+			return (
+				<span>
+					<a href={this.info.websiteURL} rel="noopener noreferrer" target="_blank" className="link-button">{this.info.websiteTitle}</a>
+					<a href={this.renderImg(this.info.finalPDF)} rel="noopener noreferrer" target="_blank" className="link-non-button">{this.info.PDFtitle}</a>
+				</span>
+			)
+		}
+	}
+
 	render() {
 		
 		return(
@@ -19,17 +32,7 @@ class ProjectHeader extends Component {
 				<div className="upper-header case-animate">
 					<div className="desc">{this.info.desc}</div>
 					<div className="external-links">
-
-						{this.info.websiteURL !== null 
-							
-							?
-							<span>
-							<a href={this.info.websiteURL} rel="noopener noreferrer" target="_blank" className="link-button">View Website</a>
-							<a href={this.renderImg(this.info.finalPDF)} target="_blank" className="link-non-button">Or view the investor pitch deck</a>
-							</span>
-							:
-							null
-						}
+						{this.renderExternalLinks()}
 					</div>	
 				</div>
 				

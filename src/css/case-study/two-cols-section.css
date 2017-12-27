@@ -1,0 +1,85 @@
+/* prefix with case study name for specifc styling */
+
+/* ex: .case-study.flickr .two-cols-section */
+
+
+
+/* Not Wrapped */
+.case-study .two-cols-section {
+	width: 100%;
+	z-index: 10;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.case-study .two-cols-section .col-1 { 
+	width: 95%;
+	max-width: 525px;
+	font-size: 16px;
+	line-height: 21px;
+	text-align: justify;
+}
+
+.case-study .two-cols-section .col-1 .two-cols-secondary-image {
+	width: 100%;
+	object-fit: contain;
+	margin-top: 50px;
+}
+.case-study .two-cols-section .col-2 { 
+	width: 100%;
+	max-height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+
+.case-study .two-cols-section .col-2 .col-img {
+	width: 80%;
+	margin-top: -50px;
+	height: 100%;
+	object-fit: contain;
+	object-position: top;
+}
+
+.case-study .two-cols-section .col-2 .prototype {
+	margin: 0 auto;
+	transform: scale(.65) translateY(-250px);
+	display: block;
+}
+
+
+
+/* Wrapped */
+
+.case-study .two-cols-section.wrapped {
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.case-study .two-cols-section.wrapped .col-1 {
+	margin-bottom: 50px;
+	width: 60%;
+}
+
+.case-study .two-cols-section.wrapped .col-2 { 
+	width: 100%;
+	justify-content: flex-start;
+}
+
+.case-study .two-cols-section.wrapped .col-2 .content-container {
+	margin-right: 10px;
+	width: 45%;
+}
+
+.case-study .two-cols-section.wrapped .col-2 .content-container .subheading {
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+
+
+
+
+

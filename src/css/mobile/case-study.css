@@ -34,16 +34,27 @@
 		display: none;
 	}
 
-	.case-study .content-container.approach {
+	.case-study .content-container.approach,
+	.case-study .two-cols-section {
 		flex-wrap: wrap;
 	}
 
-	.case-study .content-container.approach .left,
+	.case-study .two-cols-section .col-2 .col-img{
+		margin-top: 25px !important;
+	}
+
+	.case-study .image-wrapper.transparent {
+		margin-top: 0px !important;
+	}
+
+	/*.case-study .content-container.approach .left,
 	.case-study .content-container.approach .right {
 		width: 70% !important;
-	}
+	}*/
 
 	.case-study .content-container.approach .left {
 		margin-bottom: 25px;
 	}
+
+
 }

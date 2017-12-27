@@ -7,6 +7,10 @@
 	margin-bottom: 60px;
 }
 
+.case-study.flickr .upper-header .desc {
+	margin-right: 0px;
+}
+
 .upper-header .desc {
 	max-width: 475px;
 	margin-right: 50px;

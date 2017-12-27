@@ -50,10 +50,10 @@ class RippleCaseStudy extends Component {
 		let headings = document.querySelectorAll('.content .heading');
 		let button = document.querySelector('.external-links .link-button');
 
-		button.className = 'link-button ripple';
+		button.className += ' ripple';
 
 		headings.forEach(function(heading) {
-			heading.className = "heading ripple"
+			heading.className += " ripple "
 		});
 	}
 

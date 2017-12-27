@@ -9,13 +9,19 @@
 }
 
 .case-study .case-slider.wrapped.flickr {
-	background: #ccc;
-	margin-top: 100px;
+	background: #f7f7f7;
+	margin-top: 125px;
 	padding-bottom: 20px;
+	height: 425px;
+	margin-bottom: 175px;
 }
 
 .case-study .case-slider.wrapped.flickr .slider-container {
 	transform: translateY(-50px);
+}
+
+.case-study .case-slider.wrapped.flickr .dot-control-container {
+	margin-top: -60px;
 }
 
 .case-study .case-slider .slider-container {
@@ -84,12 +90,12 @@
 }
 
 .case-study .dot-control-container .slide-dot {
-	width: 15px;
-	height: 15px;
+	width: 12px;
+	height: 12px;
 	cursor: pointer;
 	transition: all .2s;
 	border-radius: 25px;
-	margin: 0 12px;
+	margin: 0 10px;
 }
 
 .case-study .dot-control-container .slide-dot.white {

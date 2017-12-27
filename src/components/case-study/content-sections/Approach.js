@@ -20,7 +20,7 @@ class Approach extends Component {
 						{this.props.content.text !== null ? <div className="text">{this.props.content.text}</div> : null}
 					</div>
 					<div className="right">
-						{this.props.content.hasImg === false 
+						{this.props.content.hasImg === false  
 							?
 							<span>
 								<div className="title">{this.props.content.nonImg.title}</div>

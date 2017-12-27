@@ -1,11 +1,4 @@
-.case-study .count {
-	font-family: 'sf ui display semibold';
-	font-size: 16px;
-	margin-bottom: 15px;
-	margin-top: 75px;
-}
-
-.case-study .heading {
+.case-study .content-container.takeaway .heading {
 	font-size: 26px;
 }
 

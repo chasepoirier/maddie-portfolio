@@ -5,7 +5,7 @@
 	margin-top: 75px;
 }
 
-.case-study .heading {
+.case-study .content-container.approach .heading {
 	font-size: 26px;
 }
 
@@ -16,21 +16,29 @@
 	align-items: flex-start;
 }
 
+.case-study .content-container.approach .left .text {
+	text-align: justify;
+}
+
 .case-study .content-container.approach .left {
-	width: 35%;
+	width: 95%;
+	max-width: 375px;
+	margin-right: 50px;
 }
 
 .case-study .content-container.approach .left .heading {
 	width: 70%;
 }
 
-.case-study .content-container.approach .right {
-	width: 60%;
-	height: 100%;
+/* Specifc heading length for Flickr case study */
+
+.case-study.flickr .content-container.approach .left .heading {
+	max-width: 375px;
 }
 
 .case-study .content-container.approach .right span {
-	width: 70%;
+	width: 100%;
+	max-width: 675px;
 	text-align: justify;
 	display: block;
 }

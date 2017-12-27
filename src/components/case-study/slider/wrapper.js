@@ -16,7 +16,7 @@ class Slider extends Component {
 	componentDidMount() {		
 		this.setState({count: 1});
 		
-		this.refs.slideDot1.className = 'slide-dot active ' + this.props.dotColor;
+		this.refs.slideDot1.className += ' active ';
 	}
 
 	countUp = (e) => {
@@ -44,9 +44,9 @@ class Slider extends Component {
 		let dotColor = this.props.dotColor;
 
 		dots.forEach(function(dot) {
-				dot.className = 'slide-dot ' + dotColor;
+			dot.classList.remove('active');
 		});
-		dots[count - 1].className = 'slide-dot active ' + dotColor;
+		dots[count - 1].className += ' active ';
 	}
 
 	handleDotClick = (e) => {
@@ -55,10 +55,10 @@ class Slider extends Component {
 		let dotColor = this.props.dotColor;
 
 		siblings.forEach(function(dot) {
-			dot.className = 'slide-dot ' + dotColor;
+			dot.classList.remove('active');
 		});
 
-		e.target.className = 'slide-dot active ' + dotColor;
+		e.target.className += ' active ';
 
 		let newID = id.replace('slide-dot-', '');
 		this.setState({count: parseInt(newID)})
