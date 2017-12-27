@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import '../../../css/case-study/approach.css';
 
 class Approach extends Component {
-	constructor() {
-		super();
-	}
 
 	renderImg = () => {
 		const imageURL = require('../../../images/case-studies/' + this.props.content.imageURL);
@@ -30,7 +27,7 @@ class Approach extends Component {
 								<div className="text">{this.props.content.nonImg.text}</div>
 							</span>
 							:
-							<img src={this.renderImg()} className="approach-img" alt=""/>
+							<img src={this.renderImg()} className="approach-img" alt="team"/>
 						}
 					</div>
 				</div>

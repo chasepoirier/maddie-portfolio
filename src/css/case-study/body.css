@@ -42,9 +42,20 @@
 
 .case-study .heading {
 	font-size: 22px;
-	color: #1CAEF2;
+	color: #333;
 	font-family: 'SF UI display semibold';
 	margin-bottom: 30px;
+}
+
+/* baseColor: '#0063DB',
+    gradientColor: 'linear-gradient(45deg, #0088C6 0%,#20B8FF 100%)' */
+
+.case-study .heading.ripple {
+	color: #1CAEF2;
+}
+
+.case-study .heading.flickr {
+	color: #0063db;
 }
 
 .case-study .heading.centered {

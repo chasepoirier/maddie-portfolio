@@ -3,20 +3,13 @@ import '../../../css/case-study/takeaway.css';
 
 
 class TakeAwaySection extends Component {
-	constructor() {
-		super();
-	}
-
+	
 	componentDidMount() {
 		this.renderText(document.querySelector('.content-container.takeaway .left .heading'), this.props.content.heading);
 		this.renderText(document.querySelector('.content-container.takeaway .left .text'), this.props.content.text);
 	}
 
 	renderText = (selector, text) => {
-		console.log('renderText:');
-		console.log(selector);
-		console.log(text);
-		console.log('');
 		selector.innerHTML = text;
 	}
 
@@ -35,7 +28,7 @@ class TakeAwaySection extends Component {
 						<div className="heading"></div>
 						<div className="text"></div>
 						<div className="external-links">
-							<a href={this.props.content.websiteURL} target="blank" className="link-button">View Website</a>
+							<a href={this.props.content.websiteURL} rel="noopener noreferrer" target="_blank" className="link-button">View Website</a>
 							<a href={this.renderImg(this.props.content.finalPDF)} target="blank" className="link-non-button">Or view the investor pitch deck</a>
 						</div>
 					</div>

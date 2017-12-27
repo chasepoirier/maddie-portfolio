@@ -3,9 +3,19 @@
 	margin-top: 75px;
 }
 
-.case-study .case-slider.wrapped {
+.case-study .case-slider.wrapped.ripple {
 	background: linear-gradient(45deg, #0088C6 0%,#20B8FF 100%);
 	padding: 75px 0px;
+}
+
+.case-study .case-slider.wrapped.flickr {
+	background: #ccc;
+	margin-top: 100px;
+	padding-bottom: 20px;
+}
+
+.case-study .case-slider.wrapped.flickr .slider-container {
+	transform: translateY(-50px);
 }
 
 .case-study .case-slider .slider-container {
@@ -50,7 +60,6 @@
 
 .case-study .case-slider .case-slide {
 	display: inline-flex;
-	background-color: #888;
 	white-space: normal;
 	justify-content: center;
 	align-items: center;
@@ -74,40 +83,59 @@
 	justify-content: center;
 }
 
-
-
 .case-study .dot-control-container .slide-dot {
 	width: 15px;
 	height: 15px;
-	background-color: #ccc;
 	cursor: pointer;
 	transition: all .2s;
 	border-radius: 25px;
 	margin: 0 12px;
 }
 
-.case-study .case-slider.wrapped .dot-control-container .slide-dot {
+.case-study .dot-control-container .slide-dot.white {
 	background-color: #87CCEB;
 }
 
-.case-study .dot-control-container .slide-dot:hover{
-	background-color: #aaa !important;
+.case-study .dot-control-container .slide-dot.white:hover {
+	background-color: #f9f9f9;
 }
 
-.case-study .case-slider.wrapped .dot-control-container .slide-dot:hover{
-	background-color: #fff !important;
+.case-study .dot-control-container .slide-dot.white.active {
+	background-color: #fff;
+}
+
+.case-study .dot-control-container .slide-dot.black {
+	background-color: #999;	
+}
+
+.case-study .dot-control-container .slide-dot.black:hover {
+	background-color: #555;	
+}
+
+.case-study .dot-control-container .slide-dot.black.active {
+	background-color: #222;	
+}
+
+
+
+.case-next-slide.white,
+.case-back-slide.white {
+	background-image: url(../../images/arrow-highres-white.png) !important;
 }
 
 .case-study .case-slider.wrapped .slide-overflow .case-next-slide {
 	right: -75px;
 	top: 150px;
-	background-image: url(../../images/arrow-highres-white.png);
+}
+
+.case-study .case-slider.wrapped.flickr .slide-overflow .case-next-slide,
+.case-study .case-slider.wrapped.flickr .slide-overflow .case-back-slide {
+	top: calc(50% - 15px);
 }
 
 .case-study .case-slider.wrapped .slide-overflow .case-back-slide {
 	left: -75px;
 	top: 150px;
-	background-image: url(../../images/arrow-highres-white.png);
 }
 
 .case-study .slide-overflow .case-next-slide {

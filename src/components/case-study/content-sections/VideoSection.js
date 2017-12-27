@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
 class VideoSection extends Component {
-	constructor() {
-		super();
-		
-	}
 
 	componentDidMount() {
 		this.renderVideo();

@@ -37,7 +37,7 @@ class About extends Component {
 	    				<p>An interaction designer and entrepreneur in my third year at Rochester Institute 
 	    				of Technology studying New Media Design and double minoring in Marketing and Advertising
 	    				 / Public Relations. Last summer, I was a Design Intern at 
-	    				 <a href='https://www.flickr.com' className="about-link" target="blank"> Flickr / YAHOO </a> 
+	    				 <a href='https://www.flickr.com' className="about-link" rel="noopener noreferrer" target="_blank"> Flickr / YAHOO </a> 
 	    				 in San Francisco, and currently, I'm looking for an internship this upcoming summer of 2018 
 	    				 relating to design, product or startups. I strive every day to learn something new, improve my 
 	    				 own skills, and create a better world and design solutions through problem-solving, iteration, 
@@ -45,17 +45,17 @@ class About extends Component {
                         <br></br>
                         <br></br>
                         When I'm not designing, I lead my startups I co-founded called
-                       	<a href='http://rippleplatform.io/' className="about-link" target="blank"> Ripple</a>, which was 
-                         <a href='https://cias.rit.edu/news/509' className="about-link" target="blank"> featured at RIT</a>, 
-                         and <a href='http://www.udio-ventures.com/index.html' className="about-link" target="blank"> Udio Ventures </a> 
+                       	<a href='http://rippleplatform.io/' className="about-link" rel="noopener noreferrer" target="_blank"> Ripple</a>, which was 
+                         <a href='https://cias.rit.edu/news/509' className="about-link" rel="noopener noreferrer" target="_blank"> featured at RIT</a>, 
+                         and <a href='http://www.udio-ventures.com/index.html' className="about-link" rel="noopener noreferrer" target="_blank"> Udio Ventures </a> 
                          a current work-in-progress, working alongside my teams learning more about business every day. 
-                         I recently <a href='#' className="about-link" target="blank">spoke and held a workshop </a> 
+                         I recently <a href='#' className="about-link" rel="noopener noreferrer" target="_blank">spoke and held a workshop </a> 
                          business conference on entrepreneurship, product and my career, which was an amazing experience. 
                          If you are looking for a hardworking designer and entrepreneur who enjoys learning and a good challenge,
                          please email or send me a message at 
                          <a href="mailto:madisonyocum@gmail.com?Subject=Hello!" className="about-link"> madisonyocum@gmail.com</a></p>
 	    				 <div className="about-buttons">
-							<a href={PDF} target="blank" className="link outlined">View Resume</a>
+							<a href={PDF} rel="noopener noreferrer" target="_blank" className="link outlined">View Resume</a>
 				         </div>
 
 	    			</div>

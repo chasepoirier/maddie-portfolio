@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 class ResearchSection extends Component {
-	constructor() {
-		super();
-	}
 
 	componentDidMount() {
 		this.renderContent();
@@ -46,7 +43,7 @@ class ResearchSection extends Component {
 						</div>
 					</div>
 					<div className="image">
-						<img src={this.renderImgURL()} className="full-image"/>
+						<img src={this.renderImgURL()} alt="reasearch" className="full-image"/>
 					</div>
 				</div>
 			</div>

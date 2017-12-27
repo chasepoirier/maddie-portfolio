@@ -24,8 +24,8 @@ class ProjectHeader extends Component {
 							
 							?
 							<span>
-							<a href={this.info.websiteURL} target="blank" className="link-button">View Website</a>
-							<a href={this.renderImg(this.info.finalPDF)} target="blank" className="link-non-button">Or view the investor pitch deck</a>
+							<a href={this.info.websiteURL} rel="noopener noreferrer" target="_blank" className="link-button">View Website</a>
+							<a href={this.renderImg(this.info.finalPDF)} target="_blank" className="link-non-button">Or view the investor pitch deck</a>
 							</span>
 							:
 							null

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 class Overview extends Component {
-	constructor() {
-		super();
-	}
 
 	componentDidMount() {
 		this.renderContent(document.querySelector('.statement .text'), this.props.overview.statement);
@@ -17,7 +14,7 @@ class Overview extends Component {
 	renderTeam = () => {
 		if(this.props.overview.teamImageURL !== undefined) {
 			const imageSrc = require(`../../images/case-studies/${this.props.overview.teamImageURL}`);
-			return <img src={imageSrc} className="overview-team" />
+			return <img src={imageSrc} alt="" className="overview-team" />
 		}
 	}
 

@@ -25,7 +25,15 @@
 	font-size: 16px;
 	display: block;
 	cursor: pointer;
+	background: #222;
+}
+
+.upper-header .external-links .link-button.ripple {
 	background: linear-gradient(45deg, #0088C6 0%,#20B8FF 100%);
+}
+
+.upper-header .external-links .link-button.flickr {
+	background: linear-gradient(45deg, #1C8AEE 0%,#2346B5 100%);
 }
 
 .upper-header .external-links .link-non-button {

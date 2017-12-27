@@ -1,0 +1,29 @@
+
+@media (max-width: 1400px) {
+	.work-list .slide .content.project .right.project-image-more {
+		transform: translate(22%, -60px) scale(.85,.85);
+	}
+}
+
+@media (max-width: 1130px) {
+	.work-list .slide .content.project .right.project-image-left {
+    	transform: translate(80%, -60px) scale(.85,.85);
+	}
+}
+
+@media (max-width: 960px) {
+	.work-list .slide .content.project .right.project-image-left {
+    	display: none;
+	}
+}
+
+@media (max-width: 1200px) {
+	header {
+		width: 90%;
+	}
+
+	.main-content {
+	    width: 90%;
+	    left: calc(50% - 45%);
+	}
+}
