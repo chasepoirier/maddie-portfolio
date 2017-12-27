@@ -24,8 +24,10 @@ class CaseStudy extends Component {
 	}
 
 	componentWillMount() {
-		
-		this.getCaseInfo();
+
+		if(this.props.project === 1 || this.props.project === 2) {
+			this.getCaseInfo();
+		}
 	}
 
 	getCaseInfo = () => {
@@ -39,6 +41,8 @@ class CaseStudy extends Component {
 			return <FlickrCaseStudy content={this.caseStudyData[this.caseStudy]} />
 		} else if (this.caseStudy === 1) {
 			return <RippleCaseStudy content={this.caseStudyData[this.caseStudy]} />
+		} else {
+			return null
 		}
 	}
 
@@ -49,8 +53,12 @@ class CaseStudy extends Component {
 		// console.log(this.approachFullImages[this.caseStudy][0]);
 
 		return (
-
-			<div className={`case-study ${this.caseStudyData[this.caseStudy].id}`}>
+			
+			<div className={this.caseStudyData[this.caseStudy] !== undefined ? 
+				`case-study ${this.caseStudyData[this.caseStudy].id}`
+				:
+				"case-study"
+			}>
 				{this.renderThisCaseStudy()}
 			</div>
 		);
