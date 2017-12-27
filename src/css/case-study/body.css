@@ -285,6 +285,10 @@
 	flex-wrap: wrap;
 }
 
+.case-study .image-wrapper.captioned img {
+	max-width: 1200px;
+}
+
 .case-study .image-wrapper.captioned .caption {
 	width: 100%;
 	text-align: center;
