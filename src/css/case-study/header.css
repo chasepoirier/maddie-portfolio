@@ -7,7 +7,8 @@
 	margin-bottom: 60px;
 }
 
-.case-study.flickr .upper-header .desc {
+.case-study.flickr .upper-header .desc,
+.case-study.mycourses .upper-header .desc {
 	margin-right: 0px;
 }
 
@@ -36,9 +37,12 @@
 	background: linear-gradient(45deg, #0088C6 0%,#20B8FF 100%);
 }
 
-.upper-header .external-links .link-button.flickr {
+.upper-header .external-links .link-button.flickr,
+.upper-header .external-links .link-button.mycourses {
 	background: linear-gradient(45deg, #1C8AEE 0%,#2346B5 100%);
 }
+
+/*1C8AEE*/
 
 .upper-header .external-links .link-non-button {
 	margin-left: 5px;

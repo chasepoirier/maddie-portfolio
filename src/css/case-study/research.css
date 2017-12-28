@@ -1,0 +1,126 @@
+
+/* Ripple Research Section */
+
+.case-study.ripple .content-container.reseach {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.case-study.ripple .content-container.reseach .image {
+	width: 45%;
+}
+
+.case-study.ripple .content-container.reseach .image .full-image {
+	object-fit: contain;
+	object-position: center;
+	width: 100%;
+	height: 100%;
+}
+
+.case-study.ripple .content-container.reseach .summary {
+	width: 50%;
+}
+
+.case-study.ripple .content-container.reseach .summary .text {
+	width: 88%;
+	text-align: justify;
+}
+
+.case-study.ripple .content-container.reseach .summary .text span.blue {
+	color: #1CAEF2;
+	font-family: 'SF UI display semibold';
+}
+
+.case-study.ripple .content-container.reseach .summary label {
+	font-family: 'SF UI display semibold';
+	color: #000;
+	margin-top: 50px;
+	display: block;	
+}
+
+.case-study.ripple .content-container.reseach .summary .findings {
+	display: flex;
+	margin-top: 15px;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+}
+
+.case-study.ripple .content-container.reseach .summary .findings .finding .percent {
+	font-size: 26px;
+	margin-bottom: 5px;
+	color: #1CAEF2;
+	font-family: 'SF UI display medium';
+}
+
+.case-study.ripple .content-container.reseach .summary .findings .finding .text {
+	text-align: left;
+}
+
+/* Mycourses Research Section */
+
+
+.case-study.mycourses .content-container.reseach {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.case-study.mycourses .content-container.reseach .image {
+	width: 45%;
+}
+
+.case-study.mycourses .content-container.reseach .image .full-image {
+	object-fit: contain;
+	object-position: center;
+	width: 100%;
+	height: 100%;
+}
+
+.case-study.mycourses .content-container.reseach .summary {
+	width: 95%;
+	max-width: 600px;
+	margin-right: 50px;
+}
+
+.case-study.mycourses .content-container.reseach .summary .text {
+	width: 100%;
+	text-align: justify;
+}
+
+.case-study.mycourses .content-container.reseach label {
+	font-family: 'SF UI display semibold';
+	color: #000;
+	display: block;	
+	margin-top: -50px;
+	margin-bottom: 20px;
+}
+
+.case-study.mycourses .content-container.reseach .findings {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	width: 95%;
+	max-width: 375px;
+	margin-right: 25px;
+}
+
+.case-study.mycourses .content-container.reseach .findings .finding {
+	width: 100%;
+}
+
+.case-study.mycourses .content-container.reseach .findings .finding .percent {
+	font-size: 24px;
+	margin-bottom: 5px;
+	color: #1D80E6;
+	font-family: 'SF UI display medium';
+}
+
+.case-study.mycourses .content-container.reseach .findings .finding .text {
+	text-align: left;
+	margin-bottom: 25px;
+}

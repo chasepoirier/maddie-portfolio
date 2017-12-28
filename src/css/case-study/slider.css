@@ -8,7 +8,8 @@
 	padding: 75px 0px;
 }
 
-.case-study .case-slider.wrapped.flickr {
+.case-study .case-slider.wrapped.flickr,
+.case-study .case-slider.wrapped.mycourses {
 	background: #f7f7f7;
 	margin-top: 125px;
 	padding-bottom: 20px;
@@ -16,11 +17,23 @@
 	margin-bottom: 175px;
 }
 
+.case-study .case-slider.wrapped.mycourses {
+	height: 525px;
+	margin-top: 175px;
+	margin-bottom: 200px;
+}
+
 .case-study .case-slider.wrapped.flickr .slider-container {
 	transform: translateY(-50px);
 }
 
-.case-study .case-slider.wrapped.flickr .dot-control-container {
+.case-study .case-slider.wrapped.mycourses .slider-container {
+	transform: translateY(-75px);
+	box-shadow:  1px 1px 15px rgba(0, 0, 0, .2);
+}
+
+.case-study .case-slider.wrapped.flickr .dot-control-container,
+.case-study .case-slider.wrapped.mycourses .dot-control-container {
 	margin-top: -60px;
 }
 
@@ -135,7 +148,9 @@
 }
 
 .case-study .case-slider.wrapped.flickr .slide-overflow .case-next-slide,
-.case-study .case-slider.wrapped.flickr .slide-overflow .case-back-slide {
+.case-study .case-slider.wrapped.flickr .slide-overflow .case-back-slide,
+.case-study .case-slider.wrapped.mycourses .slide-overflow .case-next-slide,
+.case-study .case-slider.wrapped.mycourses .slide-overflow .case-back-slide {
 	top: calc(50% - 15px);
 }
 

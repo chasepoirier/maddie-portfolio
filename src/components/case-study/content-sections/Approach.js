@@ -3,10 +3,22 @@ import '../../../css/case-study/approach.css';
 
 class Approach extends Component {
 
+	componentDidMount() {
+		this.renderText(this.refs.heading, this.props.content.heading);
+
+		if(this.props.content.text !== null) {
+			this.renderText(this.refs.text, this.props.content.text);	
+		}
+	}
+
 	renderImg = () => {
 		const imageURL = require('../../../images/case-studies/' + this.props.content.imageURL);
 
 		return imageURL
+	}
+
+	renderText = (src, text) => {
+		src.innerHTML = text;
 	}
 
 	render() {
@@ -16,8 +28,8 @@ class Approach extends Component {
 				<div className="count">0{this.props.count}</div>
 				<div className="content-container approach">
 					<div className="left">
-						<div className="heading">{this.props.content.heading}</div>
-						{this.props.content.text !== null ? <div className="text">{this.props.content.text}</div> : null}
+						<div ref="heading" className="heading"></div>
+						<div ref="text" className="text"></div>
 					</div>
 					<div className="right">
 						{this.props.content.hasImg === false  

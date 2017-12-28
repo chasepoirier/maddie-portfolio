@@ -25,7 +25,7 @@ class Overview extends Component {
 					<div className="content statement">
 						<div className="heading">01 - Overview</div>
 						<div className="text"></div>
-						{this.renderTeam()}
+						{this.props.hasImage === true ? this.renderTeam() : null}
 					</div>
 					<div className="content problem">
 						<div className="heading">02 - Problem</div>

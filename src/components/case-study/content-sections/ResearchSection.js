@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import '../../../css/case-study/research.css';
+
 class ResearchSection extends Component {
 
 	componentDidMount() {
@@ -33,19 +35,36 @@ class ResearchSection extends Component {
 	render() {
 		return (
 			<div className="case-study-wrapper">
-				<div className="heading">04 - Research</div>
-				<div className="content-container reseach">
-					<div className="summary">
-						<div className="text"></div>
-						<label>Findings</label>
+				{this.props.wrapped === false ? 
+				<span>
+					<div className="heading">04 - Research</div>
+					<div className="content-container reseach">
+						<div className="summary">
+							<div className="text"></div>
+							<label>Primary Findings</label>
+							<div className="findings">
+								{this.renderFindings()}
+							</div>
+						</div>
+						<div className="image">
+							{this.props.hasImg === true ? <img src={this.renderImgURL()} alt="reasearch" className="full-image"/> : null}
+						</div>
+					</div>
+				</span>
+				:
+				<span>
+					<div className="heading">03 - Research</div>
+					<div className="content-container reseach">
+						<div className="summary">
+							<div className="text"></div>
+						</div>
 						<div className="findings">
+							<label>Primary Findings</label>
 							{this.renderFindings()}
 						</div>
 					</div>
-					<div className="image">
-						<img src={this.renderImgURL()} alt="reasearch" className="full-image"/>
-					</div>
-				</div>
+				</span>
+				}
 			</div>
 		);
 	}

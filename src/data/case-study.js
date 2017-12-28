@@ -12,7 +12,7 @@ const ProjectInfo = [
     },
     desktopPrototype: {
       title: 'Flickr Chrometab - <span class="caption">Marvel Prototype</span>',
-      url: '<iframe src="https://marvelapp.com/34e5853?emb=1" width="1127" height="634" allowTransparency="true" frameborder="0"></iframe>'
+      url: 'https://marvelapp.com/34e5853?emb=1'
     },
       mobilePrototype: {
         title: '07 - iMessage Extension',
@@ -251,6 +251,182 @@ const ProjectInfo = [
       finalPDF: 'Ripple-Final.pdf',
       PDFtitle: 'Or view this investor pitch deck',
       websiteTitle: 'View Website'
+    }
+  },
+  {
+    id: "mycourses",
+    header: {
+      desc: "Creating a simple, collaborative and task oriented platform to enhance the user academic life.",
+      client: 'Class Project',
+      role: 'Research, Concept, Visual, UX/UI',
+      duration: 'Fall 2017',
+      websiteURL: null,
+      finalPDF: 'case-studies/flickr/yocum_intern.pdf',
+      PDFtitle: 'Process Deck'
+    },
+    desktopPrototype: {
+      title: 'Mycourses - <span class="caption">Marvel Prototype</span>',
+      url: 'https://marvelapp.com/1119g286?emb=1'
+    },
+      mobilePrototype: {
+        title: '06 - Mobile Interaction',
+        text: 'MyCourses is currently not made for a mobile device, and I wanted to expand on what it was as a product and service. I decided to create an app for MyCourses on the Iphone X and IOS, following the design grid present and common user patterns. I chose to focus on a flow where a user receives a notification for a comment on a Submission page and replies back, view Marvel Prototype',
+        url: '<iframe class="prototype" src="https://marvelapp.com/b2bjj54?emb=1" width="453" height="884" allowTransparency="true" frameborder="0"></iframe>',
+        secondaryImage: 'mycourses/mobile_userflow-min.png'
+    },
+    overview: {
+      statement: "MyCourses is the current web based platform and course management system at the Rochester Institute of Technology, which It is used to organize course content, facilitate faculty and student interaction, and be a guide for a student during their academic years. Several features are available within MyCourses to promote these key features, but are lacking in an innovative and streamlined user experience.",
+      problem: "The main purpose of the MyCourses redesign is to design an effective and modern solution that gets students excited to use the platform, effectively and collaboratively. I chose to focus on creating a simple, collaborative and task-oriented platform to enhance the user academic life. Several of the current problems students face while using the platform are:<span><br><br></span>- Lacking a collaborative and simplified environment<span><br><br></span>- Faculty engagement is low, and professors use outside software<span><br><br></span>- No way to check what is weekly assigned by professors<span><br><br></span>",
+      teamImageURL: null
+    },
+    headingSlider: [
+      {
+        url: 'mycourses/01_header_slider/header_01-min.png',
+      },
+      {
+        url: 'mycourses/01_header_slider/header_02-min.png',
+      },
+      {
+        url: 'mycourses/01_header_slider/header_03-min.png',
+      }
+    ],
+    sliderTwo: [
+      {
+        url: 'mycourses/02_approach_slider/03_01-min.png'
+      },
+      {
+        url: 'mycourses/02_approach_slider/03_02-min.png'
+      },
+      {
+        url: 'mycourses/02_approach_slider/03_03-min.png'
+      },
+      {
+        url: 'mycourses/02_approach_slider/03_04-min.png'
+      },
+      {
+        url: 'mycourses/02_approach_slider/03_05-min.png'
+      }
+    ],
+    sliderThree: [
+      {
+        url: 'mycourses/02_approach_slider/04_01-min.png'
+      },
+      {
+        url: 'mycourses/02_approach_slider/04_02-min.png'
+      }
+    ],
+    sliderFour: [
+      {
+        url: 'mycourses/02_approach_slider/05_01-min.png'
+      },
+      {
+        url: 'mycourses/02_approach_slider/05_02-min.png'
+      }
+    ],
+    researchSection: {
+      summary: 'I conducted primary research from early September in the form of a Google Forms survey. Collecting <span class="colored bold">16 responses from varying students and professors in different majors</span> and year levels, each gave a unique perspective to their experience using the platform in their academic lives. Overall, it is concluded that users complained of the new redesign and it still did not solve their existing problems. Over 80% of students and faculty access the platform over 10x per week, relying on the software to view information from their classes.',
+      findings: [
+        {
+          percent: '61%',
+          desc: 'use MyCourses for up to 30mins a day.'
+        },
+        {
+          percent: '62%',
+          desc: 'primary features are used during a session.'
+        },
+        {
+          percent: 'Key Features',
+          desc: 'used were the Course Content, Dropboxes, and Grades.'
+        },
+        {
+          percent: 'User expressed',
+          desc: 'assignments and course material wasn’t streamlined.'
+        }
+      ],
+      imageURL: null
+    },
+    sketchesImg: 'mycourses/whiteboard2-min.png',
+    sectionFive: {
+      title: '06 - Final Product',
+      text: 'Back to the drawing board, considering the user testing results, suggestions from the user testing manager, and with the mentoring of the Head of Design. I worked on simplifying the interace into a singular panel and minimizing the concept of a photo history taking over a whole area of the design, <span class="colored"><a href="#" target="blank">view the Invision Prototype</a></span',
+      imageURL: 'flickr/sketch_02-min.png'
+    },
+    approach: [
+     {
+        heading: 'Define the experience and redesign direction',
+        text: null,
+        hasImg: false, 
+        nonImg: {
+          title: 'Goals',
+          text: 'Focusing on the main goals I set for the platform I created a user experience based on a collaborative platform, simplified experience, increasing faculty engagement KPIs, and adding a task management system. Overall, this created a structured and streamlined platform students and professors would use as a companion to their academic lifestyles. Below is the sitemap for the current MyCourses before the redesign.'
+        }
+      },
+      {
+        heading: 'Creating a task management system.',
+        text: 'Improve the current information hierarchy, navigational experience, and homepage to promote task management of course content. Each weeks students ask what is due or already keep their own task-lists through another source, if it was a key component of MyCourses students would not only use it more but also rely on the system promoting engagement.',
+        hasImg: true,
+        imageURL: 'mycourses/userflow_02-min.png',
+      },
+      {
+        heading: 'Streamlining a user experience.',
+        text: 'Cut down on the steps needed for a user to accomplish a certain goal, therefore establishing an efficient interface. I chose to focus on the Dropbox feature, <span class="colored bold">which I called Submissions a living document that closes once a deadline is passed</span> and the content within a course.',
+        hasImg: true,
+        imageURL: 'mycourses/userflow_03-min.png'
+      },
+      {
+        heading: 'Collaboration and communication is key.',
+        text: 'Create a collaborative platform based on communication between the professor and student, and also between students by using MyCourses. This is achieved through a highlighted commenting system and responses.',
+        hasImg: true,
+        imageURL: 'mycourses/userflow_04-min.png'
+      },
+      {
+        heading: 'Increasing professor content and engagement.',
+        text: 'Encourage faculty to use MyCourses as their only platform and keep their classes consistent through intuitive and customizable features, by doing this it allows MyCourses to be the only platform used by professors in most use cases. Each course is given the same navigational treatment and distribution of course content.',
+        hasImg: true,
+        imageURL: 'mycourses/userflow_05-min.png'
+      },
+      {
+        heading: 'Receiving a notification and viewing the conversation.',
+        text: 'A push notification is sent to a user showing that a comment was received on their latest Submission they created and are able to view this within Notifications and respond to the comment.',
+        hasImg: false
+      },
+      {
+        heading: 'Replying to a comment within a Submission.',
+        text: 'A highlighted area indicates a comment is said about certain content within the Submission, a user taps the highlighted area and sees the conversation. Upon viewing the comment, they are able to reply or resolve the comment from their mobile device.',
+        hasImg: false
+      }
+    ],
+    approachFullImages: [
+      {
+        imageURL: 'mycourses/userflow_01-min.png'
+      },
+      {
+        imageURL: 'mycourses/02_approach_slider/02_01-min.png'
+      },
+      {
+        imageURL: 'mycourses/mobile_01-min.png'
+      },
+      {
+        imageURL: 'mycourses/mobile_02-min.png'
+      },
+      {
+        imageURL: 'mycourses/mobile_03-min.png'
+      },
+      {
+        imageURL: 'mycourses/mobile_04-min.png'
+      },
+      {
+        imageURL: 'mycourses/mobile_05-min.png'
+      }
+    ],
+    takeaway: {
+      heading: '"The fundamental role of design is problem solving for a user."',
+      text: 'MyCourses was a project I wanted to push to the best of my abilities and grow as a interaction and experience designer. I plan to iterate on the concepts and focus on other user problems to solve within the redesign, and grow the project to a full product and business related casestudy focusing on the mobile possibilites.',
+      websiteURL: null,
+      caption: null,
+      imageURL: 'mycourses/07-takeaway-min.png',
+      finalPDF: 'case-studies/flickr/yocum_intern.pdf',
+      PDFtitle: 'Process Deck'
     }
   }
 ];

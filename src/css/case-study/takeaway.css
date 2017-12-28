@@ -28,7 +28,8 @@
 	background: linear-gradient(45deg, #0088C6 0%,#20B8FF 100%);
 }
 
-.case-study.flickr .content-container.takeaway .external-links .link-button {
+.case-study.flickr .content-container.takeaway .external-links .link-button,
+.case-study.mycourses .content-container.takeaway .external-links .link-button {
 	background: linear-gradient(45deg, #1C8AEE 0%,#2346B5 100%);
 }
 

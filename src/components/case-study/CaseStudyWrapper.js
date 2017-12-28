@@ -9,6 +9,7 @@ import '../../css/case-study/header.css'
 // Case study components
 import RippleCaseStudy from './section-builds/RippleCaseStudy';
 import FlickrCaseStudy from './section-builds/FlickrCaseStudy';
+import MycoursesCaseStudy from './section-builds/MycoursesCaseStudy';
 
 
 
@@ -24,10 +25,9 @@ class CaseStudy extends Component {
 	}
 
 	componentWillMount() {
+		console.log(this.caseStudy);
 
-		if(this.props.project === 1 || this.props.project === 2) {
-			this.getCaseInfo();
-		}
+		this.getCaseInfo();
 	}
 
 	getCaseInfo = () => {
@@ -41,6 +41,8 @@ class CaseStudy extends Component {
 			return <FlickrCaseStudy content={this.caseStudyData[this.caseStudy]} />
 		} else if (this.caseStudy === 1) {
 			return <RippleCaseStudy content={this.caseStudyData[this.caseStudy]} />
+		} else if (this.caseStudy === 2) {
+			return <MycoursesCaseStudy content={this.caseStudyData[this.caseStudy]} />
 		} else {
 			return null
 		}

@@ -1,3 +1,20 @@
+/* Iframe styles */
+
+iframe {
+	border-width: 0px;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+/*.case-study .content {
+	display: none;
+}*/
+
+.case-study.mycourses .case-study-wrapper.prototype {
+	overflow: hidden;
+}
+
 
 /* Flickr Final Approach Section */
 .case-study.flickr .case-study-wrapper.flickr .heading.flickr {
@@ -9,6 +26,18 @@
 	width: 95%;
 	max-width: 510px;
 }
+
+/* Single Col Mycourses section */
+.case-study.mycourses .case-study-wrapper.mycourses .heading {
+	width: 90%;
+	max-width: 350px;
+}
+
+.case-study.mycourses .case-study-wrapper.mycourses .text.solution {
+	width: 95%;
+	max-width: 470px;
+}
+
 
 /* Global CSS for Case Studies */
 
@@ -80,6 +109,11 @@
 	color: #0063db;
 }
 
+.case-study .heading.mycourses,
+.case-study.mycourses span.colored {
+	color: #1D80E6;
+}
+
 .case-study span.colored.bold {
 	font-family: 'sf ui display medium'
 }
@@ -122,75 +156,15 @@
 	height: 475px;
 }
 
-/* Ripple Research Section */
 
-.case-study.ripple .content-container.reseach {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-}
+ /* Sketch Image */
 
-.case-study.ripple .content-container.reseach .image {
-	width: 45%;
-}
-
-.case-study.ripple .content-container.reseach .image .full-image {
-	object-fit: contain;
-	object-position: center;
-	width: 100%;
-	height: 100%;
-}
-
-.case-study.ripple .content-container.reseach .summary {
-	width: 50%;
-}
-
-.case-study.ripple .content-container.reseach .summary .text {
-	width: 88%;
-	text-align: justify;
-}
-
-.case-study.ripple .content-container.reseach .summary .text span.blue {
-	color: #1CAEF2;
-	font-family: 'SF UI display semibold';
-}
-
-.case-study.ripple .content-container.reseach .summary label {
-	font-family: 'SF UI display semibold';
-	columns: #000;
-	margin-top: 50px;
-	display: block;	
-}
-
-.case-study.ripple .content-container.reseach .summary .findings {
-	display: flex;
-	margin-top: 15px;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-}
-
-.case-study.ripple .content-container.reseach .summary .findings .finding .percent {
-	font-size: 26px;
-	margin-bottom: 5px;
-	color: #1CAEF2;
-	font-family: 'SF UI display medium';
-}
-
-.case-study.ripple .content-container.reseach .summary .findings .finding .text {
-	text-align: left;
-}
-
-
- /* Ripple Sketch Image */
-
-.case-study.ripple .full-width.sketch {
+.case-study .full-width.sketch {
 	padding: 0px;
 	background-color: transparent;
 }
 
-.case-study.ripple .full-width.sketch img {
+.case-study .full-width.sketch img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -201,13 +175,15 @@
 
 /* Flickr Desktop Prototype */
 
-.case-study.flickr .case-study-wrapper .subheading {
+.case-study.flickr .case-study-wrapper .subheading,
+.case-study.mycourses .case-study-wrapper .subheading {
 	font-family: 'sf ui display semibold';
 	color: #222;
 	font-size: 22px;
 }
 
-.case-study.flickr .case-study-wrapper .subheading span.caption {
+.case-study.flickr .case-study-wrapper .subheading span.caption,
+.case-study.mycourses .case-study-wrapper .subheading span.caption {
 	font-family: 'sf ui display light';
 }
 
@@ -218,7 +194,20 @@
 	justify-content: center;
 	margin-top: 35px;
 	height: 100%;
+
 }
+
+.case-study.mycourses .case-study-wrapper .prototype.desktop {
+	width: 2401px;
+	max-height: 950px;
+}
+
+.case-study.mycourses .case-study-wrapper .prototype.desktop iframe.scaled {
+	transform: scale(.47) translate(-1300px, -1050px);
+	overflow: visible;
+	display: block;
+}
+
 
 
 /* Full width images */
@@ -244,18 +233,32 @@
 	align-items: center;
 }
 
-.case-study.flickr .image-wrapper.overflow {
+.case-study.flickr .image-wrapper.overflow,
+.case-study.mycourses .image-wrapper.overflow {
 	padding: 0px;
-	height: 350px;
+	height: 100%;
 	overflow: visible;
 	margin: 125px 0;
 }
 
-.case-study.flickr .image-wrapper.overflow img {
+.case-study.flickr .image-wrapper.overflow img,
+.case-study.mycourses .image-wrapper.overflow img {
 	overflow: visible;
-	height: 450px;
+	max-height: 450px;
+	height: 100%;
 	max-width: 800px;
-	object-fit: contain;	
+	object-fit: contain;
+	margin: -50px 0;
+}
+
+.case-study.mycourses .image-wrapper.overflow {
+	max-height: 850px
+}
+
+.case-study.mycourses .image-wrapper.overflow img {
+	max-width: 1200px;
+	max-height: 950px;
+	margin: -25px 0;
 }
 
 
@@ -295,4 +298,22 @@
 	margin-top: 25px;
 	font-size: 16px;
 	opacity: .8;
+}
+
+/* flexed image container */ 
+
+.case-study .image-wrapper-transparent.flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.case-study .image-wrapper-transparent.flex img {
+	object-fit: contain;
+	width: 95%;
+	max-width: 475px;
+}
+
+.case-study .image-wrapper-transparent.flex.centered {
+	display: flex;
+	justify-content: center;
 }
