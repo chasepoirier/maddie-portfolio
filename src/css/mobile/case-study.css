@@ -35,9 +35,10 @@
 }
 
 @media (max-width: 960px) {
-	#background.project-background {
+	/*#background.project-background {
 		transform: translate3d(0px ,-100px, 0px) !important;
-	}
+	}*/
+
 	.case-study .upper-header {
 		margin-top: 430px;
 		margin-bottom: 40px;
