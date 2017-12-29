@@ -3,8 +3,10 @@ import { NavLink, withRouter } from 'react-router-dom';
 //import logo from '../svgs/logo.svg';
 import InlineSVG from 'svg-inline-react';
 import { hideArrow, showArrow } from '../js/helpers';
-import { animateWorkOut, animateIn, animateOut, animateName, hideName, staggerShowTitle } from '../js/Animation';
+import { animateMobileLinksIn, animateMobileLinksOut, animateWorkOut, animateIn, animateOut, animateName, hideName, staggerShowTitle } from '../js/Animation';
 import $ from 'jquery';
+
+import SocialLinks from './Social';
 
 
 const svgSource = `<svg className="logo" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -59,6 +61,9 @@ class Header extends React.Component {
   }
 
   workHandler = () => {
+
+      this.closeMobileLinks();
+
       let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
       let home = $('#home');
       let arrow = $('#back-arrow')
@@ -110,6 +115,30 @@ class Header extends React.Component {
 
   }
 
+  showMobileLinks = () => {
+    let nav = this.refs.mobileNav;
+    let links = this.refs.mobileLinks;
+    
+    if (nav.classList.contains('clicked')) {
+      links.classList.remove('clicked');
+      nav.classList.remove('clicked');
+      this.closeMobileLinks();
+
+      
+    } else {
+      animateMobileLinksIn();
+      links.classList += ' clicked'
+      nav.classList += ' clicked'
+    }
+  }
+
+  closeMobileLinks = () => {
+    this.refs.mobileNav.classList.remove('clicked');
+    this.refs.mobileLinks.classList.remove('clicked');
+    animateMobileLinksOut();
+    // this.refs.mobileLinks.style.display = 'none'
+  }
+
 
   render() {
 
@@ -125,10 +154,23 @@ class Header extends React.Component {
     		<div style={{visibility: 'hidden'}} className="name header-white">Madison Yocum</div>
         </div>
         <ul className="right">
+          <div onClick={this.showMobileLinks} ref="mobileNav" className="mobile-nav"></div>
+          
           <li onClick={this.workHandler}><NavLink id="headers" className="header-white" to="/projects">Work</NavLink></li>
           <li><NavLink onClick={this.toAboutPage} className="header-white" to="/about">About</NavLink></li>
           <li><NavLink onClick={this.toAboutPage} className="header-white" to="/resume">Resume</NavLink></li>
+
         </ul>
+
+        <div ref="mobileLinks" className="mobile-links">
+          <div className="center-container">
+            <div onClick={this.workHandler} className="mobile-link animate-mobile" ><NavLink id="headers" className="header-white" to="/projects">Work</NavLink></div>
+            <div onClick={this.closeMobileLinks} className="mobile-link animate-mobile"><NavLink onClick={this.toAboutPage} className="header-white" to="/about">About</NavLink></div>
+            <div onClick={this.closeMobileLinks} className="mobile-link animate-mobile"><NavLink onClick={this.toAboutPage} className="header-white" to="/resume">Resume</NavLink></div>
+            <a href="mailto:madisonyocum@gmail.com" className="header-button animate-mobile">SAY HELLO</a>
+            <SocialLinks mobile={true} />
+          </div>
+        </div>
       </header>
     );
   }

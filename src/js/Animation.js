@@ -1,36 +1,10 @@
-import { TweenMax, Elastic, Power3, Power2, Power4 } from 'gsap';
+import { TweenMax, Elastic, Power3, Power2, Power4, Expo } from 'gsap';
 import $ from "jquery";
 
-const duration = 0.5;
-
-export default {
-    show(target, cb) {
-        return TweenMax
-            .from(target, duration, {
-                opacity: 0,
-                height: 0,
-                onComplete() {
-                    cb();
-                },
-                ease: Elastic.easeOut.config(0.25, 1),
-            });
-    },
-    hide(target, cb) {
-        return TweenMax
-            .to(target, duration, {
-                opacity: 0,
-                height: 0,
-                onComplete() {
-                    cb();
-                },
-                ease: Elastic.easeOut.config(0.25, 1),
-            });
-    },
-};
 
 export function animateFooter() {
     TweenMax.fromTo(('.footer .slide-controls'), .4, { transform: 'translateY(10px)', opacity: 0 }, { transform: 'translateY(0px)', opacity: .6, delay: .7, ease: 'cubic-bezier(0.215, 0.61, 0.355, 1)' });
-    TweenMax.staggerFromTo(('.icon'), .2, { transform: 'translateY(10px)', opacity: 0 }, { transform: 'translateY(0px)', opacity: .6, delay: .7, ease: Elastic.easeIn.config(0.25, 1) }, .1);
+    TweenMax.staggerFromTo(('.footer .icon'), .2, { transform: 'translateY(10px)', opacity: 0 }, { transform: 'translateY(0px)', opacity: .6, delay: .7, ease: Elastic.easeIn.config(0.25, 1) }, .1);
 }
 
 
@@ -103,4 +77,22 @@ export function animateCaseStudyData() {
 export function animateLoader() {
     TweenMax.fromTo($('.loader'), 3.7, { transform: 'scale(0,1)',  ease: Power2.easeOut}, { transform: 'scale(1,1)',  ease: Power2.easeOut, });
     TweenMax.to($('.loader'), .2, { delay:3.7, transform: 'translateY(6px)',  ease: Power3.easeOut});
+}
+
+export function animateMobileBG(open) {
+    if(open === true) {
+
+    }
+}
+
+export function animateMobileLinksIn() {
+    TweenMax.staggerFromTo(('.animate-mobile'), .6, 
+        { transform: 'translateY(20px)', opacity: 0, ease: Expo.easeOut }, 
+        { transform: 'translateY(0px)', opacity: 1, delay: .2, ease: Expo.easeOut }, .1);
+}
+
+export function animateMobileLinksOut() {
+    TweenMax.staggerFromTo(('.animate-mobile'), .15, 
+        { transform: 'translateY(0px)', opacity: 1, ease: Expo.easeIn }, 
+        { transform: 'translateY(180px)', opacity: 0, ease: Expo.easeIn }, -.05);
 }
