@@ -7,11 +7,11 @@
   and (-webkit-device-pixel-ratio: 3) {
 
   #root .wrapper {
-    height: 640px;
+    height: 100%;
   }
 
   .main-content {
-    height: calc(640px - 200px);
+    height: calc(100% - 150px);
   }
   
 }
@@ -104,7 +104,6 @@
       position: relative;
     }
 
-
 }
 
 /* Portrait */
@@ -134,13 +133,12 @@
   and (-webkit-min-device-pixel-ratio: 3) { 
 
   #root .wrapper {
-    height: 736px;
+    height: 628px;
   }
 
   .main-content {
-    height: calc(736px - 200px);
+    height: calc(628px - 150px);
   }
-
 }
 
 /* Portrait */
@@ -176,8 +174,7 @@
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-
+  and (orientation: portrait) {
 }
 
 /* Landscape */

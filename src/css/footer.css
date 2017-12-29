@@ -1,5 +1,4 @@
 
-
 .footer {
 	width: 100%;
 	display: flex;
@@ -152,4 +151,16 @@
 .footer-about  .count  {
  	margin: 0 5px;
     white-space: nowrap;
+}
+
+@media (max-width: 500px) {
+    .footer-about .bottom{
+        flex-direction: column;
+        margin-bottom: 30px;
+        margin-top: 70px;
+    }
+    
+    .footer-about .footer-container .center-content .footer-text{
+        margin-top: 25px;
+    }
 }

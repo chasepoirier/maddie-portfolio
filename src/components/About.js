@@ -54,8 +54,8 @@ class About extends Component {
                          <a href='https://cias.rit.edu/news/509' className="about-link" rel="noopener noreferrer" target="_blank"> featured at RIT</a>, 
                          and <a href='http://www.udio-ventures.com/index.html' className="about-link" rel="noopener noreferrer" target="_blank"> Udio Ventures </a> 
                          a current work-in-progress, working alongside my teams learning more about business every day. 
-                         I recently <a href='#' className="about-link" rel="noopener noreferrer" target="_blank">spoke and held a workshop </a> 
-                         business conference on entrepreneurship, product and my career, which was an amazing experience. 
+                         I recently <a href='https://medium.com/@madisonyocum' className="about-link" rel="noopener noreferrer" target="_blank">spoke and held a workshop </a> 
+                         at a business conference on entrepreneurship, product and my career, which was an amazing experience. 
                          If you are looking for a hardworking designer and entrepreneur who enjoys learning and a good challenge,
                          please email or send me a message at 
                          <a href="mailto:madisonyocum@gmail.com?Subject=Hello!" className="about-link"> madisonyocum@gmail.com</a></p>

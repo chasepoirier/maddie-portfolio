@@ -9,6 +9,8 @@ import '../css/animations.css';
 import '../css/mobile/main.css';
 import '../css/mobile/iphones.css';
 import '../css/mobile/case-study.css';
+import '../css/mobile/about-mobile.css';
+import '../css/mobile/resume-mobile.css';
 import '../fonts/style.css'
 
 
