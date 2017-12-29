@@ -12,7 +12,7 @@ import ThreeColsSection from '../content-sections/ThreeColsSection';
 import TakeAwaySection from '../content-sections/TakeAwaySection';
 import Footer from '../../Footer';
 
-import { animateCaseStudyIn } from '../../../js/Animation';
+import { animateCaseStudyData } from '../../../js/Animation';
 
 class RippleCaseStudy extends Component {
 	constructor(props) {
@@ -48,8 +48,8 @@ class RippleCaseStudy extends Component {
 	}
 
 	componentDidMount() {
+		animateCaseStudyData();
 		
-		animateCaseStudyIn();
 		this.renderStyles();
 		this.renderText(this.refs.desktopPrototypeHeading, this.desktopPrototype.title);
 		//this.renderText(this.refs.desktopPrototypeUrl, this.desktopPrototype.url);
@@ -60,10 +60,6 @@ class RippleCaseStudy extends Component {
 
 	renderStyles = () => {
 		let headings = document.querySelectorAll('.content .heading');
-		let button = document.querySelector('.external-links .link-button');
-
-		button.className += ' flickr';
-		button.style.width = '130px';
 
 		headings.forEach(function(heading) {
 			heading.className += " flickr"
@@ -92,11 +88,10 @@ class RippleCaseStudy extends Component {
 		return (
 
 			<div ref="content" className="content">
-				<ProjectHeader headerInfo={this.headerInfo} />
 
 				<div className="case-separator"></div>
 				
-				<div className="case-study-wrapper case-animate">
+				<div className="case-study-wrapper case-data-animated">
 					<div ref="desktopPrototypeHeading" className="subheading"></div>
 					<div ref="desktopPrototypeUrl" className="prototype desktop">
 						<iframe src={this.desktopPrototype.url} width="1127" height="634" allowTransparency="true" frameborder="0"></iframe>

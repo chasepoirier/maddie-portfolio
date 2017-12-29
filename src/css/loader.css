@@ -1,0 +1,26 @@
+.loader {
+	background-color: #222;
+	width: 100%;
+	height: 6px;
+	z-index: 1000000;
+	position: fixed;
+	bottom: 0px;
+	transform-origin: left;
+	/*transform: scale(0,1);*/
+	left: 0;
+	/*transition: 3.8s cubic-bezier(0.215, 0.61, 0.355, 1);*/
+}
+
+.loader.loaded {
+	transition: .2s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transform: translateY(6px);
+}
+
+.loader.ripple {
+	background: linear-gradient(45deg, #0088C6 0%,#20B8FF 100%);
+}
+
+.loader.mycourses,
+.loader.flickr {
+	background: linear-gradient(45deg, #1C8AEE 0%,#2346B5 100%);
+}

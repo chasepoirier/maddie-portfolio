@@ -1,3 +1,5 @@
+
+
 .upper-header {
 	width: 100%;
 	max-width: 750px;
@@ -12,6 +14,10 @@
 	margin-right: 0px;
 }
 
+.case-study.ripple .upper-header .desc {
+	margin-right: 15px;
+}
+
 .upper-header .desc {
 	max-width: 475px;
 	margin-right: 50px;
@@ -19,7 +25,8 @@
 	width: 100%;
 }
 
-.upper-header .external-links .link-button {
+.upper-header .external-links .link-button,
+.content.mobile .external-links .link-button {
 	border-radius: 50px;
 	width: 175px;
 	height: 32px;
@@ -33,16 +40,55 @@
 	background: #222;
 }
 
-.upper-header .external-links .link-button.ripple {
+.case-study.ripple .upper-header .external-links .link-button {
 	background: linear-gradient(45deg, #0088C6 0%,#20B8FF 100%);
 }
 
-.upper-header .external-links .link-button.flickr,
-.upper-header .external-links .link-button.mycourses {
+.case-study.flickr .upper-header .external-links .link-button,
+.case-study.mycourses .upper-header .external-links .link-button {
 	background: linear-gradient(45deg, #1C8AEE 0%,#2346B5 100%);
+	width: 130px;
 }
 
-/*1C8AEE*/
+.case-study .content.mobile .external-links {
+	display: none;
+}
+
+.case-study .content.mobile .external-links span {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
+
+.case-study .content.mobile .external-links .link-button {
+	background: transparent;
+	width: 150px;
+	height: 38px;
+	margin-bottom: 20px;
+	line-height: 38px;
+	font-family: 'sf ui display medium';
+}
+
+.case-study .content.mobile .external-links .link-non-button {
+	text-align: center;
+}
+
+.case-study.flickr .content.mobile .external-links .link-button {
+	border: 1.5px solid #0063db;
+	color: #0063db;	
+}
+
+.case-study.ripple .content.mobile .external-links .link-button {
+	border: 1.5px solid #1CAEF2;
+	color: #1CAEF2;	
+}
+
+.case-study.mycourses .content.mobile .external-links .link-button {
+	border: 1.5px solid #1D80E6;
+	color: #1D80E6;	
+}
+
 
 .upper-header .external-links .link-non-button {
 	margin-left: 5px;

@@ -6,23 +6,7 @@ html {
     overflow-y: scroll;
 }
 
-#overlay {
-	position: absolute;
-	margin: 0 auto;
-	width: calc(100% - 200px);
-	height: calc(100vh - 200px);
-	top: 100px;
-	left: 100px;
-	background-color: #fff;
-	z-index: 100000;
-	transform: scale(0,1);
-	transform-origin: left;
-}
-
-
-
 .main-content {
-	
 	position: absolute;
 	margin: 0 auto;
 	width: calc(100% - 200px);
@@ -31,6 +15,10 @@ html {
 	top: 100px;
 	left: 100px;
 	z-index: 2;
+}
+
+.main-content.onProject {
+	height: 536px;
 }
 
 .footer-home {
@@ -139,4 +127,46 @@ html {
 .shape-container .shape.yellow-ring {
 	bottom: 60px;
 	left: 450px;
+}
+
+@media (max-width: 450px) {
+	.shape-container .shape.red-rect {
+		width: 130px;
+		height: 130px;
+		top: -5px;
+		left: -35px;
+	}
+
+	.shape-container .shape.orange-tri {
+		top: 75px;
+		left: 145px;
+	}
+
+	.shape-container .shape.blue-penta {
+		bottom: -35px;
+		left: -45px;
+	}
+
+	.shape-container .shape.blue-rect {
+		display: none;
+	}
+
+	.shape-container .shape.green-tri {
+		top: 15px;
+		right: -35px;
+	}
+
+	.shape-container .shape.navy-circle {
+		top: 35px;
+		right: 105px;
+	}
+
+	.shape-container .shape.pink-circle {
+		bottom: 25px;
+		right: -25px;
+	}
+
+	.shape-container .shape.yellow-ring {
+		display: none;
+	}
 }

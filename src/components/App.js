@@ -7,6 +7,7 @@ import '../css/project.css';
 import '../css/about.css';
 import '../css/animations.css';
 import '../css/mobile/main.css';
+import '../css/mobile/iphones.css';
 import '../css/mobile/case-study.css';
 import '../css/mobile/about-mobile.css';
 import '../css/mobile/resume-mobile.css';
@@ -35,7 +36,8 @@ export default class App extends Component {
         super(props);
 
         this.state = {
-            slideCount: 1
+          slideCount: 1,
+          onProject: false
         }
     }
 
@@ -110,16 +112,26 @@ export default class App extends Component {
         this.url = url
     }
 
+    onProject = () => {
+        this.setState({ onProject: true })
+    }
+
+    leaveProject = () => {
+        this.setState({ onProject: false })   
+    }
+
   render() {
+
+    console.log(this.state.onProject);
     return (
-      <div className="wrapper">
+      <div className={`wrapper ${this.state.onProject}`}>
         <Header slideCount={this.state.slideCount} />
         <div id="overlay" />
             <Route path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/resume" render={({ match }) => <Resume />} />
-            <Route path="/projects" render={( {match} ) => <Work slideCount={this.state.slideCount} path={this.url}  countUp={this.nextSlide} countDown={this.previousSlide} />} />
-            <Route path="/projects/:id" render={({ match }) => <CaseStudy project={this.state.slideCount} />} />
+            <Route path="/about" render={({ match })  => <About leaveProject={this.leaveProject} onProject={this.onProject} />} />
+            <Route path="/resume" render={({ match }) => <Resume leaveProject={this.leaveProject} onProject={this.onProject} />} />
+            <Route path="/projects" render={( {match} ) => <Work onProject={this.state.onProject} slideCount={this.state.slideCount} path={this.url}  countUp={this.nextSlide} countDown={this.previousSlide} />} />
+            <Route path="/projects/:id" render={({ match }) => <CaseStudy leaveProject={this.leaveProject} onProject={this.onProject} project={this.state.slideCount} />  } />
       </div>
     );
   }

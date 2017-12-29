@@ -1,46 +1,46 @@
 
 /* Ripple Research Section */
 
-.case-study.ripple .content-container.reseach {
+.case-study.ripple .content-container.research {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 }
 
-.case-study.ripple .content-container.reseach .image {
+.case-study.ripple .content-container.research .image {
 	width: 45%;
 }
 
-.case-study.ripple .content-container.reseach .image .full-image {
+.case-study.ripple .content-container.research .image .full-image {
 	object-fit: contain;
 	object-position: center;
 	width: 100%;
 	height: 100%;
 }
 
-.case-study.ripple .content-container.reseach .summary {
+.case-study.ripple .content-container.research .summary {
 	width: 50%;
 }
 
-.case-study.ripple .content-container.reseach .summary .text {
+.case-study.ripple .content-container.research .summary .text {
 	width: 88%;
 	text-align: justify;
 }
 
-.case-study.ripple .content-container.reseach .summary .text span.blue {
+.case-study.ripple .content-container.research .summary .text span.blue {
 	color: #1CAEF2;
 	font-family: 'SF UI display semibold';
 }
 
-.case-study.ripple .content-container.reseach .summary label {
+.case-study.ripple .content-container.research .summary label {
 	font-family: 'SF UI display semibold';
 	color: #000;
 	margin-top: 50px;
 	display: block;	
 }
 
-.case-study.ripple .content-container.reseach .summary .findings {
+.case-study.ripple .content-container.research .summary .findings {
 	display: flex;
 	margin-top: 15px;
 	justify-content: flex-start;
@@ -48,50 +48,50 @@
 	width: 100%;
 }
 
-.case-study.ripple .content-container.reseach .summary .findings .finding .percent {
+.case-study.ripple .content-container.research .summary .findings .finding .percent {
 	font-size: 26px;
 	margin-bottom: 5px;
 	color: #1CAEF2;
 	font-family: 'SF UI display medium';
 }
 
-.case-study.ripple .content-container.reseach .summary .findings .finding .text {
+.case-study.ripple .content-container.research .summary .findings .finding .text {
 	text-align: left;
 }
 
 /* Mycourses Research Section */
 
 
-.case-study.mycourses .content-container.reseach {
+.case-study.mycourses .content-container.research {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 }
 
-.case-study.mycourses .content-container.reseach .image {
+.case-study.mycourses .content-container.research .image {
 	width: 45%;
 }
 
-.case-study.mycourses .content-container.reseach .image .full-image {
+.case-study.mycourses .content-container.research .image .full-image {
 	object-fit: contain;
 	object-position: center;
 	width: 100%;
 	height: 100%;
 }
 
-.case-study.mycourses .content-container.reseach .summary {
+.case-study.mycourses .content-container.research .summary {
 	width: 95%;
 	max-width: 600px;
 	margin-right: 50px;
 }
 
-.case-study.mycourses .content-container.reseach .summary .text {
+.case-study.mycourses .content-container.research .summary .text {
 	width: 100%;
 	text-align: justify;
 }
 
-.case-study.mycourses .content-container.reseach label {
+.case-study.mycourses .content-container.research label {
 	font-family: 'SF UI display semibold';
 	color: #000;
 	display: block;	
@@ -99,7 +99,7 @@
 	margin-bottom: 20px;
 }
 
-.case-study.mycourses .content-container.reseach .findings {
+.case-study.mycourses .content-container.research .findings {
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
@@ -109,18 +109,35 @@
 	margin-right: 25px;
 }
 
-.case-study.mycourses .content-container.reseach .findings .finding {
+.case-study.mycourses .content-container.research .findings .finding {
 	width: 100%;
 }
 
-.case-study.mycourses .content-container.reseach .findings .finding .percent {
+.case-study.mycourses .content-container.research .findings .finding .percent {
 	font-size: 24px;
 	margin-bottom: 5px;
 	color: #1D80E6;
 	font-family: 'SF UI display medium';
 }
 
-.case-study.mycourses .content-container.reseach .findings .finding .text {
+.case-study.mycourses .content-container.research .findings .finding .text {
 	text-align: left;
 	margin-bottom: 25px;
+}
+
+/* Mycourses Research Button */
+
+.case-study.mycourses .content-container.research .external-links .link-button {
+	border-radius: 50px;
+	width: 168px;
+	height: 38px;
+	line-height: 38px;
+	margin-bottom: 10px;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	display: block;
+	cursor: pointer;
+	margin-top: 40px;
+	background: linear-gradient(45deg, #1C8AEE 0%,#2346B5 100%);
 }

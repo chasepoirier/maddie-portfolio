@@ -89,9 +89,9 @@ class Slider extends Component {
 
 	renderSlideStyle = () => {
 		if(this.props.isFullWidth === false) {
-			return "case-slider case-animate wrapped " + this.props.caseStudy
+			return "case-slider case-data-animated wrapped " + this.props.caseStudy
 		} else {
-			return "case-slider case-animate " + this.props.caseStudy
+			return "case-slider case-data-animated " + this.props.caseStudy
 		}
 	}
 

@@ -19,6 +19,7 @@ import { setToBlack, hideArrow } from '../js/helpers';
 class About extends Component { 
 
 	componentDidMount() {
+		this.props.onProject();
 		hideArrow();
 		setToBlack();
 		TweenMax.fromTo($('.about.main-content'), .7, 
@@ -26,6 +27,10 @@ class About extends Component {
 		{ transform: 'translateY(0px)', opacity: 1, delay:.4,ease: Elastic.easeOut.config(0.25, 1),});
    	
    }   
+
+   componentWillUnmount() {
+   		this.props.leaveProject();
+   }
  
   render() {
     return (
