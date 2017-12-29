@@ -188,6 +188,7 @@
 	}
 
 	.main-content {
+		top: 75px;
 	    width: 100%;
 	    left: 0;
 	}

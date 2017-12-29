@@ -51,6 +51,17 @@ header .left .logo-container.arrow {
   	transition-delay: .6s;
 }
 
+@media (max-width: 450px) {
+	header .left .logo-container.arrow,
+	header .left .logo-container.logo {
+		top: 18px;
+	}
+
+	header {
+		height: 75px;
+	}
+}
+
 
 #back-arrow {
 	width: 80%;
