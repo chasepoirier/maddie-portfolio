@@ -119,8 +119,6 @@ export default class App extends Component {
     }
 
   render() {
-
-    console.log(this.state.onProject);
     return (
       <div className={`wrapper ${this.state.onProject}`}>
         <Header slideCount={this.state.slideCount} />
