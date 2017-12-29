@@ -50,6 +50,7 @@
 	}
 }
 
+
 @media (max-width: 960px) {
 
 	.wrapper.true {
@@ -170,6 +171,13 @@
 	}
 }
 
+
+@media (max-width: 560px) {
+	header .name {
+		display: none;
+	}
+}
+
 @media (max-width: 490px) {
 
 	.work-list .slide .content.project .right.project-image-more {
@@ -188,9 +196,7 @@
 		width: 90%;
 	}
 
-	header .name {
-		display: none;
-	}
+	
 
 	header .mobile-links {
 		position: fixed;

@@ -6,7 +6,7 @@
     }
     
     .slide.about .content.about p{
-        Width: 60% !important;
+        Width: 60%;
     }
     
     .about-pic {
@@ -44,6 +44,28 @@
 }
 
 @media (max-width: 960px) {
+
+    .slide.about .about-pic {
+        position: relative;
+        top: 75px;
+        left: calc(50% - 130px);
+    }
+
+    .slide.about .content.about {
+        margin-top: 150px;
+        margin-bottom: 50px;
+    }
+
+    .slide.about .content.about p {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .slide.about .content.about .about-buttons {
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
 	
 }
 
@@ -52,7 +74,11 @@
 }
 
 @media (max-width: 568px) {
-	
+    .about.main-content {
+        width: 90%;
+        top: 50px;
+        left: calc(50% - 45%);
+    }
 }
 
 @media (max-width: 401px) {

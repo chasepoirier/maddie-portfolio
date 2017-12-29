@@ -155,9 +155,9 @@
 
 @media (max-width: 500px) {
     .footer-about .bottom{
-        flex-direction: column;
-        margin-bottom: 30px;
-        margin-top: 70px;
+        flex-direction: column-reverse; 
+        margin-bottom: 40px;
+        margin-top: 50px;
     }
     
     .footer-about .footer-container .center-content .footer-text{
