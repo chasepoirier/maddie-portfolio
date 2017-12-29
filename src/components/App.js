@@ -7,6 +7,7 @@ import '../css/project.css';
 import '../css/about.css';
 import '../css/animations.css';
 import '../css/mobile/main.css';
+import '../css/mobile/iphones.css';
 import '../css/mobile/case-study.css';
 import '../fonts/style.css'
 
