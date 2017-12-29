@@ -9,7 +9,8 @@ import Approach from '../content-sections/Approach';
 import TakeAwaySection from '../content-sections/TakeAwaySection';
 import Footer from '../../Footer';
 
-import { animateCaseStudyIn } from '../../../js/Animation';
+import { animateCaseStudyData } from '../../../js/Animation';
+
 
 class RippleCaseStudy extends Component {
 	constructor(props) {
@@ -35,7 +36,7 @@ class RippleCaseStudy extends Component {
 	}
 
 	componentDidMount() {
-		animateCaseStudyIn();
+		animateCaseStudyData();
 		this.renderStyles();
 	}
 
@@ -93,7 +94,7 @@ class RippleCaseStudy extends Component {
 		return (
 
 			<div className="content">
-				<ProjectHeader headerInfo={this.headerInfo} />
+				
 				<Slider caseStudy={this.id} dotColor="black" arrowColor="black" isFullWidth={true} slides={this.sliderOne}/>
 				<div className="case-hairline"></div>
 

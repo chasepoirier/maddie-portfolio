@@ -1,4 +1,4 @@
-import { TweenMax, Elastic } from 'gsap';
+import { TweenMax, Elastic, Power3, Power2, Power4 } from 'gsap';
 import $ from "jquery";
 
 const duration = 0.5;
@@ -88,7 +88,19 @@ export function animateOut() {
 }
 
 export function animateCaseStudyIn() {
-    TweenMax.staggerFromTo(('.case-animate'), .4, 
+    TweenMax.staggerFromTo(('.case-header-animated'), .8, 
         { transform: 'translateY(20px)', opacity: 0 }, 
-        { transform: 'translateY(0px)', opacity: 1, delay: 1, ease: Elastic.easeOut.config(0.25, 1) }, .1);
+        { transform: 'translateY(0px)', opacity: 1, delay: 1, ease: Power3.easeOut }, .1);
+}
+
+export function animateCaseStudyData() {
+    TweenMax.staggerFromTo(('.case-data-animated'), 1.8, 
+        { transform: 'translateY(20px)', opacity: 0 }, 
+        { transform: 'translateY(0px)', opacity: 1, delay: 1.9, ease: Power3.easeOut }, .1);
+}
+
+
+export function animateLoader() {
+    TweenMax.fromTo($('.loader'), 3.7, { transform: 'scale(0,1)',  ease: Power2.easeOut}, { transform: 'scale(1,1)',  ease: Power2.easeOut, });
+    TweenMax.to($('.loader'), .2, { delay:3.7, transform: 'translateY(6px)',  ease: Power3.easeOut});
 }

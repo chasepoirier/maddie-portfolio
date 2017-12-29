@@ -44,6 +44,10 @@ iframe {
 .case-study {
 	position: relative;
 	z-index: 200000;
+	
+}
+
+.upper-header {
 	margin-top: 250px;
 }
 
@@ -99,17 +103,17 @@ iframe {
 
 /* Heading colors for specific case studies */
 
-.case-study .heading.ripple,
+.case-study.ripple .heading,
 .case-study.ripple span.colored {
 	color: #1CAEF2;
 }
 
-.case-study .heading.flickr,
+.case-study.flickr .heading,
 .case-study.flickr span.colored {
 	color: #0063db;
 }
 
-.case-study .heading.mycourses,
+.case-study.mycourses .heading,
 .case-study.mycourses span.colored {
 	color: #1D80E6;
 }

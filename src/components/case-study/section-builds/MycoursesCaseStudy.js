@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// lazy loader
+
+
 import ProjectHeader from '../Header';
 import Slider from '../slider/wrapper';
 import Overview from '../Overview'
@@ -12,7 +15,8 @@ import ThreeColsSection from '../content-sections/ThreeColsSection';
 import TakeAwaySection from '../content-sections/TakeAwaySection';
 import Footer from '../../Footer';
 
-import { animateCaseStudyIn } from '../../../js/Animation';
+import { animateCaseStudyData } from '../../../js/Animation';
+
 
 class MycoursesCaseStudy extends Component {
 	constructor(props) {
@@ -47,8 +51,7 @@ class MycoursesCaseStudy extends Component {
 	}
 
 	componentDidMount() {
-		
-		animateCaseStudyIn();
+		animateCaseStudyData();
 		this.renderStyles();
 		this.renderText(this.refs.desktopPrototypeHeading, this.desktopPrototype.title);
 		//this.renderText(this.refs.desktopPrototypeUrl, this.desktopPrototype.url);
@@ -91,15 +94,19 @@ class MycoursesCaseStudy extends Component {
 		return (
 
 			<div ref="content" className="content">
-				<ProjectHeader headerInfo={this.headerInfo} />
 
 				<div className="case-separator"></div>
 				
-				<div className="case-study-wrapper prototype case-animate">
+				<div className="case-study-wrapper prototype case-data-animated">
 					<div ref="desktopPrototypeHeading" className="subheading"></div>
+
+
 					<div ref="desktopPrototypeUrl" className="prototype desktop">
-						<iframe className="scaled" src={this.desktopPrototype.url} width="2401" height="1900" allowTransparency="true" frameborder="0"></iframe>
+						
+							<iframe className="scaled" src={this.desktopPrototype.url} width="2401" height="1900" allowTransparency="true" frameborder="0"></iframe>
+						
 					</div>
+					
 				</div>
 
 				<div className="case-hairline"></div>
@@ -107,33 +114,47 @@ class MycoursesCaseStudy extends Component {
 				<Overview hasImage={false} overview={this.overview} />
 				<div className="case-hairline"></div>
 				
-				<Slider dotColor="black" caseStudy={this.id}  arrowColor="white" isFullWidth={true} slides={this.sliderOne}/>
+				
+					<Slider dotColor="black" caseStudy={this.id}  arrowColor="white" isFullWidth={true} slides={this.sliderOne}/>
+				
 				<div className="case-hairline"></div>
-
-				<ResearchSection twoCol={true} hasImage={false} content={this.research} />
+				
+				<ResearchSection hasButton={true} twoCol={true} hasImage={false} content={this.research} />
 				<div className="case-hairline"></div>
+				
+				
+				<div className="full-width sketch">
+					
+						<img src={this.renderImg(this.sketchesImage)} alt=""/>
+					
+				</div>
+				
 
-				<div className="full-width sketch"><img src={this.renderImg(this.sketchesImage)} alt=""/></div>
 				<div className="case-hairline"></div>
 
 				<div className="case-study-wrapper"><div className="heading">04 - Approach</div></div>
 				<Approach content={this.approach[0]} count={1} />
 
 				<div className="case-study-wrapper image-wrapper-transparent">
-					<img src={this.renderImg(this.approachFullImages[0].imageURL)} alt=""/>
+					
+						<img src={this.renderImg(this.approachFullImages[0].imageURL)} alt=""/>
+					
 				</div>
 				<div className="case-hairline"></div>
 
 				<Approach content={this.approach[1]} count={2} />
 
 				<div className="full-width image-wrapper overflow">
+				
 					<img src={this.renderImg(this.approachFullImages[1].imageURL)} alt=""/>
+				
 				</div>
 
 				<Approach content={this.approach[2]} count={3} />
-
+				
+				
 				<Slider caseStudy={this.id} dotColor="black" arrowColor="black" isFullWidth={false} slides={this.sliderTwo}/>
-
+				
 				<Approach content={this.approach[3]} count={4} />
 				
 				<Slider caseStudy={this.id} dotColor="black" arrowColor="black" isFullWidth={false} slides={this.sliderThree}/>
@@ -185,6 +206,7 @@ class MycoursesCaseStudy extends Component {
 				<div className="case-hairline"></div>
 
 				<Footer onCaseStudy={true} />
+
 			</div>
 		);
 	}

@@ -33,7 +33,8 @@ export default class App extends Component {
         super(props);
 
         this.state = {
-            slideCount: 1
+          slideCount: 1,
+          onProject: false
         }
     }
 
@@ -108,6 +109,14 @@ export default class App extends Component {
         this.url = url
     }
 
+    onProject = () => {
+        this.setState({ onProject: true })
+    }
+
+    leaveProject = () => {
+        this.setState({ onProject: false })   
+    }
+
   render() {
     return (
       <div className="wrapper">
@@ -116,8 +125,8 @@ export default class App extends Component {
             <Route path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/resume" render={({ match }) => <Resume />} />
-            <Route path="/projects" render={( {match} ) => <Work slideCount={this.state.slideCount} path={this.url}  countUp={this.nextSlide} countDown={this.previousSlide} />} />
-            <Route path="/projects/:id" render={({ match }) => <CaseStudy project={this.state.slideCount} />} />
+            <Route path="/projects" render={( {match} ) => <Work onProject={this.state.onProject} slideCount={this.state.slideCount} path={this.url}  countUp={this.nextSlide} countDown={this.previousSlide} />} />
+            <Route path="/projects/:id" render={({ match }) => <CaseStudy leaveProject={this.leaveProject} onProject={this.onProject} project={this.state.slideCount} />  } />
       </div>
     );
   }

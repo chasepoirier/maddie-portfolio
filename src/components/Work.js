@@ -13,18 +13,46 @@ class Work extends Component {
     constructor(props) {
         super(props);
         this.dom = {};
+
+        
         this.state = {
             isClicked: false
         };
     }
 
+    componentWillUpdate(nextProps, nextState) {
+        console.log('oldProps: ' + this.props.onProject);
+        console.log('nextProps: ' + nextProps.onProject);
+        let width = document.querySelector('body').offsetWidth;
+        console.log('body: ' +  width);
+        console.log((width - (width*.9)) / 2);
+        
+
+        if(nextProps.onProject === true) {
+            this.refs.work.classList += ' onProject ';
+            this.refs.background.style.width = `${width}px`;
+            this.refs.background.style.transform = `translate3d(-${(width - (width*.9)) / 2}px,-100px,0)`;
+        } else {
+            this.refs.background.style.width = `100%`;
+            this.refs.background.style.transform = `translate3d(0px,0px,0)`;
+            this.refs.work.classList.remove('onProject');    
+        }
+        
+    }
+
+    
+
     componentDidMount() {
+        console.log('Mounted');
         this.dom.root = ReactDOM.findDOMNode(this);
         $('#work').css('opacity', '0');
         animateWorkUp();
+
+        
     }
 
     componentWillUnmount() {
+        
         TweenMax.to($('#work'), .7, { transform: 'translateY(20px)', opacity: 0, ease: Elastic.easeOut.config(0.25, 1), });
     }
 
@@ -114,15 +142,17 @@ class Work extends Component {
 
     render() {
 
+        console.log(this.props.onProject);
+
       return (
     	
 
-        <div id="work" className="main-content">
+        <div ref="work" id="work" className="main-content">
           <div className="overlay" />
           <Helmet>
             <title>Projects - Madison Yocum - Interaction & Visual Designer</title>
           </Helmet>
-  			 <div className={this.getStyleBG()}>
+  			 <div ref="background" id="background" className={this.getStyleBG()}>
           <TransitionGroup>
   				  <div style={this.getStyleRight()} className={this.getStyleBgColoredRight() + " colored-bg right"}></div>
             <div style={this.getStyleLeft()} className={this.getStyleBgColoredLeft() + " colored-bg left"}></div>

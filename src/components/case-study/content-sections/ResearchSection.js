@@ -30,7 +30,10 @@ class ResearchSection extends Component {
 		document.querySelector('.summary .text').innerHTML = this.props.content.summary;
 	}
 
-
+	renderImg = (img) => {
+		const imageURL = require('../../../images/' + img);
+		return imageURL;
+	}
 
 	render() {
 		return (
@@ -38,7 +41,7 @@ class ResearchSection extends Component {
 				{this.props.wrapped === false ? 
 				<span>
 					<div className="heading">04 - Research</div>
-					<div className="content-container reseach">
+					<div className="content-container research">
 						<div className="summary">
 							<div className="text"></div>
 							<label>Primary Findings</label>
@@ -49,14 +52,22 @@ class ResearchSection extends Component {
 						<div className="image">
 							{this.props.hasImg === true ? <img src={this.renderImgURL()} alt="reasearch" className="full-image"/> : null}
 						</div>
+						
 					</div>
 				</span>
 				:
 				<span>
 					<div className="heading">03 - Research</div>
-					<div className="content-container reseach">
+					<div className="content-container research">
 						<div className="summary">
 							<div className="text"></div>
+							{this.props.hasButton === true  
+							?
+							<div className="external-links">
+								<a href={this.renderImg(this.props.content.finalPDF)} rel="noopener noreferrer" target="_blank" className="link-button">{this.props.content.PDFtitle}</a>
+							</div>
+								: null
+							}
 						</div>
 						<div className="findings">
 							<label>Primary Findings</label>

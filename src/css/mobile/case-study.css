@@ -1,3 +1,17 @@
+@media (min-width: 1400px) {
+	.case-study-wrapper.header {
+		width: calc(100% - 200px);
+		max-width: none;
+	}
+
+
+	.project-info-container .content { 
+		margin-right: 50px;
+		width: 200px !important;
+	}
+}
+
+
 @media (max-width: 1310px) {
 	.upper-header .external-links {
 		width: 100%;
@@ -21,6 +35,15 @@
 }
 
 @media (max-width: 960px) {
+
+	.case-study .upper-header .external-links {
+		display: none;
+	}
+
+	.case-study .content.mobile .external-links {
+		display: flex !important;
+	}
+
 	.case-study .slide-overflow .case-next-slide {
 		right: 25px !important;
 	}

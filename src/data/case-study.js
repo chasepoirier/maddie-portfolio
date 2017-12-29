@@ -151,7 +151,7 @@ const ProjectInfo = [
     	duration: 'Fall 2016 - Present',
     	websiteURL: 'http://www.rippleplatform.io',
       finalPDF: 'Ripple-Final.pdf',
-      PDFtitle: 'Or view this investor pitch deck',
+      PDFtitle: 'Or view the investor pitch deck',
       websiteTitle: 'View Website'	
     },
     headingSlider: [
@@ -249,7 +249,7 @@ const ProjectInfo = [
       caption: 'At Demo Day, the last day to pitch ideas to investors and VCs after the RIT - Simone Center Summer Start Incubator.',
       imageURL: 'ripple/team2-min.png',
       finalPDF: 'Ripple-Final.pdf',
-      PDFtitle: 'Or view this investor pitch deck',
+      PDFtitle: 'Or view the investor pitch deck',
       websiteTitle: 'View Website'
     }
   },
@@ -261,7 +261,7 @@ const ProjectInfo = [
       role: 'Research, Concept, Visual, UX/UI',
       duration: 'Fall 2017',
       websiteURL: null,
-      finalPDF: 'case-studies/flickr/yocum_intern.pdf',
+      finalPDF: 'case-studies/mycourses/mycourses_deck.pdf',
       PDFtitle: 'Process Deck'
     },
     desktopPrototype: {
@@ -343,7 +343,9 @@ const ProjectInfo = [
           desc: 'assignments and course material wasn’t streamlined.'
         }
       ],
-      imageURL: null
+      imageURL: null,
+      finalPDF: 'case-studies/mycourses/mycourses_research.pdf',
+      PDFtitle: 'Research Document'
     },
     sketchesImg: 'mycourses/whiteboard2-min.png',
     sectionFive: {

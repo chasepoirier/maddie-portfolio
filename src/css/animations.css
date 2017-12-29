@@ -3,6 +3,10 @@
   to {transform: scale(1);}
 }
 
+.case-header-animated {
+  opacity: 0;
+}
+
 .scaling {
   animation: scaleUp .7s cubic-bezier(0.215, 0.61, 0.355, 1);
 }

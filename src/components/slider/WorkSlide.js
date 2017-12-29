@@ -118,6 +118,7 @@ class WorkSlide extends React.Component {
 						<div className="view title-tag">view work</div>
 						
 					</div>
+                    
 					<div className={"right " + this.getStyleImg()}>
 						<div id={"l" + this.props.number + "-slide"} className={"header-img " + this.props.project + " " + this.state.style + " " }></div>
 					</div>

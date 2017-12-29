@@ -8,7 +8,9 @@ class Slide extends Component {
 		return (
 			
 			<li className="case-slide">
+			
 				<img src={imageSrc} alt="" className="slide-image"/>
+			
 			</li>
 		);
 	}

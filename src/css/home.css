@@ -6,23 +6,7 @@ html {
     overflow-y: scroll;
 }
 
-#overlay {
-	position: absolute;
-	margin: 0 auto;
-	width: calc(100% - 200px);
-	height: calc(100vh - 200px);
-	top: 100px;
-	left: 100px;
-	background-color: #fff;
-	z-index: 100000;
-	transform: scale(0,1);
-	transform-origin: left;
-}
-
-
-
 .main-content {
-	
 	position: absolute;
 	margin: 0 auto;
 	width: calc(100% - 200px);
@@ -31,6 +15,10 @@ html {
 	top: 100px;
 	left: 100px;
 	z-index: 2;
+}
+
+.main-content.onProject {
+	height: 536px;
 }
 
 .footer-home {
