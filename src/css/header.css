@@ -9,7 +9,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	z-index: 1000000;
+	z-index: 100000000;
 	position: relative;
 }
 
@@ -21,6 +21,7 @@ header .left {
 	display: flex;
 	justify-content: flex-start;
 	height: 100%;
+	
 	align-items: center;
 }
 

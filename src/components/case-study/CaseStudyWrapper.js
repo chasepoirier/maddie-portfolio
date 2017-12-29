@@ -47,6 +47,10 @@ class CaseStudy extends Component {
 	}
 
 	componentDidMount() {
+		
+		document.querySelector('.wrapper').style.overflow = 'hidden';
+		
+
 
 		if(this.checkCurrentCaseStudy() === true) {
 		this.refs.loader.classList += ` ${this.projectID[this.caseStudy]} `;

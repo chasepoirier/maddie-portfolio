@@ -13,18 +13,12 @@ class Resume extends Component {
 
 	componentDidMount() {
 
-        this.props.onProject();
         hideArrow();
         setToBlack();
         TweenMax.fromTo($('.resume.main-content'), .7, 
                 { transform: 'translateY(20px)', opacity: 0, ease: Elastic.easeOut.config(0.25, 1),},
                 { transform: 'translateY(0px)', opacity: 1, delay:.4,ease: Elastic.easeOut.config(0.25, 1),});
     }   
-
-   componentWillUnmount() {
-       this.props.leaveProject();
-   }
-
 
   render() {
     return (

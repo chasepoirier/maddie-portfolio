@@ -35,18 +35,10 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1150px) {
     
-    .slide.about .content.about {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        position: none;
-        
-    }
-    
-    .about-pic{
-        margin-top: 90px;
+    .slide.about .about-pic {
+        right: 0px;
     }
 
 }

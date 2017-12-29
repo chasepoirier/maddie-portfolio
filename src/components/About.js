@@ -19,7 +19,6 @@ import { setToBlack, hideArrow } from '../js/helpers';
 class About extends Component { 
 
 	componentDidMount() {
-		this.props.onProject();
 		hideArrow();
 		setToBlack();
 		TweenMax.fromTo($('.about.main-content'), .7, 
@@ -27,16 +26,22 @@ class About extends Component {
 		{ transform: 'translateY(0px)', opacity: 1, delay:.4,ease: Elastic.easeOut.config(0.25, 1),});
    	
    }   
-
-   componentWillUnmount() {
-   		this.props.leaveProject();
-   }
- 
   render() {
     return (
     	<div className="about main-content">
     		<div className="about_background"></div>
       			<div className="slide about">
+					<div className="about-pic">
+						<div to="/projects" id="box-home" className="shape-container">
+				            <img id="l1" src={RedRect} alt="Red Rectangle" className="shape red-rect" />
+				            <img id="l3" src={PinkRect} alt="Blue Rectangle" className="shape blue-rect" />
+				            <img id="l4" src={GreenTri} alt="Green Triangle" className="shape green-tri" />
+				            <img id="l5" src={NavyCircle} alt="Navy Circle" className="shape navy-circle" />
+				            <img id="l6" src={OrangeTri} alt="Orange Triangle" className="shape orange-tri" />
+				            <img id="l7" src={BlueCircle} alt="Pink Circle" className="shape pink-circle" />
+				            <img id="l8" src={YellowRing} alt="Yellow Ring" className="shape yellow-ring" />
+				     	</div>
+				  	</div>
 	    			<div className="content about">
 	    				<h1>Hello! I'm Madison Yocum.</h1>
 	    				<p>An interaction designer and entrepreneur in my third year at Rochester Institute 
@@ -64,17 +69,7 @@ class About extends Component {
 				         </div>
 
 	    			</div>
-	          <div className="about-pic">
-					<div to="/projects" id="box-home" className="shape-container">
-			            <img id="l1" src={RedRect} alt="Red Rectangle" className="shape red-rect" />
-			            <img id="l3" src={PinkRect} alt="Blue Rectangle" className="shape blue-rect" />
-			            <img id="l4" src={GreenTri} alt="Green Triangle" className="shape green-tri" />
-			            <img id="l5" src={NavyCircle} alt="Navy Circle" className="shape navy-circle" />
-			            <img id="l6" src={OrangeTri} alt="Orange Triangle" className="shape orange-tri" />
-			            <img id="l7" src={BlueCircle} alt="Pink Circle" className="shape pink-circle" />
-			            <img id="l8" src={YellowRing} alt="Yellow Ring" className="shape yellow-ring" />
-		         	</div>
-	          </div>
+	          
 				<Footer />
       </div>
       </div>
