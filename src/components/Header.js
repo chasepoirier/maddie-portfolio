@@ -47,6 +47,8 @@ class Header extends React.Component {
   }
 
   handleSubmit = (e) => {
+      this.closeMobileLinks();
+      
       let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
 
       if (url !== '') {

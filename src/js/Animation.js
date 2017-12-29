@@ -79,11 +79,6 @@ export function animateLoader() {
     TweenMax.to($('.loader'), .2, { delay:3.7, transform: 'translateY(6px)',  ease: Power3.easeOut});
 }
 
-export function animateMobileBG(open) {
-    if(open === true) {
-
-    }
-}
 
 export function animateMobileLinksIn() {
     TweenMax.staggerFromTo(('.animate-mobile'), .6, 
