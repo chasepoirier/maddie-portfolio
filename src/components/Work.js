@@ -14,18 +14,16 @@ class Work extends Component {
         super(props);
         this.dom = {};
 
+        this.projectID = [];
         
-        this.state = {
+        this.state = {  
             isClicked: false
         };
     }
 
     componentWillUpdate(nextProps, nextState) {
-        console.log('oldProps: ' + this.props.onProject);
-        console.log('nextProps: ' + nextProps.onProject);
+
         let width = document.querySelector('body').offsetWidth;
-        console.log('body: ' +  width);
-        console.log((width - (width*.9)) / 2);
         
 
         if(nextProps.onProject === true) {
@@ -38,16 +36,28 @@ class Work extends Component {
             this.refs.work.classList.remove('onProject');    
         }
         
+        //this.renderBGClass(nextProps);
+        
     }
 
+    renderBGClass = (state) => {
+        //console.log(state.slideCount);
+        let count = state.slideCount - 1;
+        this.setState({backgroundClass: this.projectID[count]});
+    }
     
-
+    componentWillMount() {
+        ProjectList.map(project => {
+            this.projectID.push(project.project)
+        });
+    }
+    
     componentDidMount() {
         console.log('Mounted');
         this.dom.root = ReactDOM.findDOMNode(this);
         $('#work').css('opacity', '0');
         animateWorkUp();
-
+        
         
     }
 
@@ -142,7 +152,7 @@ class Work extends Component {
 
     render() {
 
-        console.log(this.props.onProject);
+        console.log(this.props.slideCount);
 
       return (
     	
@@ -153,10 +163,9 @@ class Work extends Component {
             <title>Projects - Madison Yocum - Interaction & Visual Designer</title>
           </Helmet>
   			 <div ref="background" id="background" className={this.getStyleBG()}>
-          <TransitionGroup>
-  				  <div style={this.getStyleRight()} className={this.getStyleBgColoredRight() + " colored-bg right"}></div>
-            <div style={this.getStyleLeft()} className={this.getStyleBgColoredLeft() + " colored-bg left"}></div>
-          </TransitionGroup>
+                <div className={`background-colored-mobile ${this.projectID[this.props.slideCount - 1]}`}></div>
+  				<div style={this.getStyleRight()} className={this.getStyleBgColoredRight() + " colored-bg right"}></div>
+                <div style={this.getStyleLeft()} className={this.getStyleBgColoredLeft() + " colored-bg left"}></div>
   			</div>
         		
 

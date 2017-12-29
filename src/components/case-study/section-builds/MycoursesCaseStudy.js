@@ -23,7 +23,7 @@ class MycoursesCaseStudy extends Component {
 		super(props);
 		
 
-		// components for Flickr Case Study
+		// components for Mycourses Case Study
 		this.headerInfo = this.props.content.header;
 
 		this.sliderOne = this.props.content.headingSlider;
