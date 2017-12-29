@@ -62,9 +62,9 @@
 
     #root .wrapper {
     height: 667px;
-    overflow-x: hidden;
-    position: relative;
-  }
+      overflow-x: hidden;
+      position: relative;
+    }
 
 
 }
@@ -95,11 +95,12 @@
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
 
-
   #root .wrapper {
     height: 736px;
-    overflow-x: hidden;
-    position: relative;
+  }
+
+  .main-content {
+    height: calc(736px - 200px);
   }
 
 }

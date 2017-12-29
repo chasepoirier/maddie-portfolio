@@ -119,13 +119,15 @@ export default class App extends Component {
     }
 
   render() {
+
+    console.log(this.state.onProject);
     return (
-      <div className="wrapper">
+      <div className={`wrapper ${this.state.onProject}`}>
         <Header slideCount={this.state.slideCount} />
         <div id="overlay" />
             <Route path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/resume" render={({ match }) => <Resume />} />
+            <Route path="/about" render={({ match })  => <About leaveProject={this.leaveProject} onProject={this.onProject} />} />
+            <Route path="/resume" render={({ match }) => <Resume leaveProject={this.leaveProject} onProject={this.onProject} />} />
             <Route path="/projects" render={( {match} ) => <Work onProject={this.state.onProject} slideCount={this.state.slideCount} path={this.url}  countUp={this.nextSlide} countDown={this.previousSlide} />} />
             <Route path="/projects/:id" render={({ match }) => <CaseStudy leaveProject={this.leaveProject} onProject={this.onProject} project={this.state.slideCount} />  } />
       </div>

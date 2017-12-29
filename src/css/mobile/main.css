@@ -5,6 +5,11 @@
 		overflow-x: hidden;
 		position: relative;
 	}
+
+	#root .wrapper.false {
+		overflow: hidden;
+	}
+
 #background.project-background {
 		width: 120% !important;
 	}

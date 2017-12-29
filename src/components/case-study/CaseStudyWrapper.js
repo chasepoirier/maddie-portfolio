@@ -35,7 +35,6 @@ class CaseStudy extends Component {
 	}
 
 	componentWillMount() {
-		
 		this.props.onProject();
 		this.getCaseHeaderInfo();
 
