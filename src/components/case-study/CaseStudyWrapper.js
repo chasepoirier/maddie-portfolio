@@ -48,7 +48,7 @@ class CaseStudy extends Component {
 
 	componentDidMount() {
 		
-		document.querySelector('.wrapper').style.overflow = 'hidden';
+		//document.querySelector('.wrapper').style.overflow = 'hidden';
 		
 
 

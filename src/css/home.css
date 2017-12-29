@@ -151,7 +151,7 @@ body {
 	.shape-container .shape.red-rect {
 		width: 130px;
 		height: 130px;
-		top: -5px;
+		top: 25px;
 		left: -35px;
 	}
 
@@ -161,22 +161,23 @@ body {
 	}
 
 	.shape-container .shape.blue-penta {
-		bottom: -35px;
-		left: -45px;
+		bottom: -25px;
+		left: -25px;
 	}
 
 	.shape-container .shape.blue-rect {
-		display: none;
+		bottom: 175px;
+		right: 125px;
 	}
 
 	.shape-container .shape.green-tri {
-		top: 15px;
+		top: 115px;
 		right: -35px;
 	}
 
 	.shape-container .shape.navy-circle {
-		top: 35px;
-		right: 105px;
+		top: 205px;
+		right: 255px;
 	}
 
 	.shape-container .shape.pink-circle {
@@ -185,6 +186,7 @@ body {
 	}
 
 	.shape-container .shape.yellow-ring {
-		display: none;
+		bottom: 125px;
+		right: 50px;
 	}
 }

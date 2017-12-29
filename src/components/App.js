@@ -52,6 +52,10 @@ export default class App extends Component {
     }
 
     componentDidMount() {
+         var width = window.innerWidth;
+
+         document.querySelector('#box-home').style.width = `${width}px`;
+
     let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
 
         window.onpopstate = () => {

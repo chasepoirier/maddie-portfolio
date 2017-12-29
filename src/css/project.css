@@ -75,6 +75,13 @@
 	width: 165px;
 }
 
+.slide-controls.mobile-controls {
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 45px;
+	display: none;
+}
+
 .slide-controls .count {
 	margin: 0 15px;
 	-webkit-user-select: none;  

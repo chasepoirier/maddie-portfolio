@@ -192,6 +192,10 @@
     	transform: translate(0%, 80px) scale(.95,.95);
 	}
 
+	.slide-controls.mobile-controls {
+		display: flex;
+	}
+
 	header {
 		width: 90%;
 	}
@@ -202,7 +206,7 @@
 		position: fixed;
 		width: 100%;
 		z-index: 9999;
-		height: 100vh;
+		height: 100%;
 		background-color: #fff;
 		top: 0;
 		left: 0;
@@ -210,11 +214,26 @@
 		justify-content: center;
 		align-items: center;
 		transition: all .4s;
-		transform: translateY(100%);
+		transform: translateY(150%);
 	}
 	
 	header .mobile-links.clicked {
 		transform: translateY(0);	
+	}
+
+	#home {
+		height: 100% !important;
+		top: 0px;
+		overflow: hidden;
+	}
+
+	#box-home {
+		height: 100%;
+
+	}
+
+	.footer-home {
+		display: none;
 	}
 
 	header .mobile-links .center-container {

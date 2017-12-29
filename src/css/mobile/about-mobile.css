@@ -47,13 +47,15 @@
 
     .slide.about .about-pic {
         position: relative;
-        top: 75px;
+        top: 90px;
         left: calc(50% - 130px);
     }
 
     .slide.about .content.about {
+        margin: 0 auto;
         margin-top: 150px;
         margin-bottom: 50px;
+        width: 85%;
     }
 
     .slide.about .content.about p {
@@ -69,19 +71,11 @@
 	
 }
 
-@media (max-width: 736px) {
-	
-}
 
 @media (max-width: 568px) {
     .about.main-content {
-        width: 90%;
+        width: 100%;
         top: 50px;
-        left: calc(50% - 45%);
+        left: 0;
     }
 }
-
-@media (max-width: 401px) {
-    
-}
-
