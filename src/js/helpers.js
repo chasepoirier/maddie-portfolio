@@ -10,6 +10,10 @@ export function setToWhite() {
     window.setTimeout(function() {
         $('#logo').css('stroke', '#fff');
         $('header .right li a, .header-white').css('color', '#fff');
+        $('.mobile-nav').css('background-color', '#fff');
+
+        document.querySelector('.mobile-nav').classList += ' toWhite';
+        
     }, 401);
 }
 
@@ -17,6 +21,8 @@ export function setToBlack() {
     window.setTimeout(function() {
         $('#logo').css('stroke', '#000');
         $('header .right li a, .header-white').css('color', '#444');
+        $('.mobile-nav').css('background-color', '#000');
+        document.querySelector('.mobile-nav').classList.remove('toWhite');
     }, 401);
 }
 

@@ -48,7 +48,7 @@ class Header extends React.Component {
 
   handleSubmit = (e) => {
       this.closeMobileLinks();
-      
+
       let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
 
       if (url !== '') {
@@ -156,7 +156,10 @@ class Header extends React.Component {
     		<div style={{visibility: 'hidden'}} className="name header-white">Madison Yocum</div>
         </div>
         <ul className="right">
-          <div onClick={this.showMobileLinks} ref="mobileNav" className="mobile-nav"></div>
+          <div onClick={this.showMobileLinks} className="mobile-nav-container">
+             <div ref="mobileNav" className="mobile-nav"></div>
+          </div>
+        
           
           <li onClick={this.workHandler}><NavLink id="headers" className="header-white" to="/projects">Work</NavLink></li>
           <li><NavLink onClick={this.toAboutPage} className="header-white" to="/about">About</NavLink></li>
@@ -166,9 +169,9 @@ class Header extends React.Component {
 
         <div ref="mobileLinks" className="mobile-links">
           <div className="center-container">
-            <div onClick={this.workHandler} className="mobile-link animate-mobile" ><NavLink id="headers" className="header-white" to="/projects">Work</NavLink></div>
-            <div onClick={this.closeMobileLinks} className="mobile-link animate-mobile"><NavLink onClick={this.toAboutPage} className="header-white" to="/about">About</NavLink></div>
-            <div onClick={this.closeMobileLinks} className="mobile-link animate-mobile"><NavLink onClick={this.toAboutPage} className="header-white" to="/resume">Resume</NavLink></div>
+            <div onClick={this.workHandler} className="mobile-link animate-mobile" ><NavLink id="headers" to="/projects">Work</NavLink></div>
+            <div onClick={this.closeMobileLinks} className="mobile-link animate-mobile"><NavLink onClick={this.toAboutPage} to="/about">About</NavLink></div>
+            <div onClick={this.closeMobileLinks} className="mobile-link animate-mobile"><NavLink onClick={this.toAboutPage} to="/resume">Resume</NavLink></div>
             <a href="mailto:madisonyocum@gmail.com" className="header-button animate-mobile">SAY HELLO</a>
             <SocialLinks mobile={true} />
           </div>

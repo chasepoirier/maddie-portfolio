@@ -199,6 +199,7 @@
 	header .mobile-links {
 		position: fixed;
 		width: 100%;
+		z-index: 9999;
 		height: 100vh;
 		background-color: #fff;
 		top: 0;
@@ -257,13 +258,24 @@
 		display: none;
 	}
 
+	header ul.right .mobile-nav-container {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	header .right {
+		z-index: 100000000;
+	}
+
 	header ul.right .mobile-nav {
 		width: 30px;
 		height: 2px;
 		border-radius: 5px;
 		transition: all .2s;
 		background-color: #000;
-		z-index: 10000;
 	}
 
 	header ul.right .mobile-nav::after {
@@ -278,8 +290,17 @@
 		margin-left: 10px;
 	}
 
+	header ul.right .mobile-nav.toWhite::after {
+		background-color: #fff !important;
+	}
+
+	header ul.right .mobile-nav.toWhite.clicked::after {
+		background-color: #000 !important;
+	}
+
 	header ul.right .mobile-nav.clicked {
 		transform: rotate(45deg);
+		background-color: #000 !important;
 	}
 
 	header ul.right .mobile-nav.clicked::after {
