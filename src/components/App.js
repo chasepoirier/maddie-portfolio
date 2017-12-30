@@ -16,8 +16,7 @@ import '../fonts/style.css'
 
 import  ReactGA from 'react-ga';
 
-ReactGA.initialize('UA-111707855-1');
-ReactGA.pageview(window.location.pathname + window.location.search);
+
 
 
 
@@ -61,6 +60,10 @@ export default class App extends Component {
     }
 
     componentDidMount() {
+
+        ReactGA.initialize('UA-111707855-1');
+        ReactGA.pageview(window.location.pathname + window.location.search);
+        
          var width = window.innerWidth;
         
         if (width < 450) {
