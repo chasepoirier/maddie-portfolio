@@ -78,4 +78,16 @@
         top: 50px;
         left: 0;
     }
+    
+    .about-pic{
+        margin-bottom: 30px;
+    }
+    
+    .slide.about .content.about h1 {
+        padding-top: 40px;
+    }
+    
+    .slide.about .content.about p{
+        font-size: 16.5px;
+    }
 }
