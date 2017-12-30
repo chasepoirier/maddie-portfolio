@@ -7,6 +7,7 @@ import $ from 'jquery';
 import { TweenMax, Elastic } from 'gsap';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 import { Helmet } from 'react-helmet';
+import Swipe from 'react-easy-swipe';
 
 class Work extends Component {
 
@@ -150,15 +151,32 @@ class Work extends Component {
 
     }
 
+    checkNextSlide = () => {
+        let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+        if(url === 'projects') {
+            this.props.countUp()
+        }
+    }
+
+    checkLastSlide = () => {
+        let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+        if(url === 'projects') {
+            this.props.countDown()
+        } 
+    }
+
     render() {
 
         console.log(this.props.slideCount);
 
       return (
     	
-
+        <Swipe style={{display: 'inline'}}  onSwipeLeft={this.checkNextSlide} onSwipeRight={this.checkLastSlide} >
         <div ref="work" id="work" className="main-content">
           <div className="overlay" />
+
           <Helmet>
             <title>Projects - Madison Yocum - Interaction & Visual Designer</title>
           </Helmet>
@@ -172,6 +190,8 @@ class Work extends Component {
   			<Slider clickHandler={this.clickHandler} data={ProjectList} slideCount={this.props.slideCount} countUp={this.props.countUp} countDown={this.props.countDown} />
 
         </div>
+
+        </Swipe>
     );
   }
 }

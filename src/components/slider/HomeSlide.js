@@ -12,6 +12,9 @@ import { parallax } from '../../js/parallax.js';
 import { NavLink } from 'react-router-dom';
 import { animateOut, animateName } from '../../js/Animation';
 
+import { withRouter } from 'react-router-dom';
+import Swipe from 'react-easy-swipe';
+
 class HomeSlide extends React.Component { 
 
   componentDidMount() {
@@ -33,13 +36,24 @@ class HomeSlide extends React.Component {
       animateName();
   }
 
+    swipeToProjects = () => {
+    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+
+      if(url === '') {
+            this.props.history.push('/projects');
+            this.pageTransition();
+        }
+  }
+
   render() {
 
     return ( 
+       <Swipe style={{display: 'inline'}} onSwipeLeft={this.swipeToProjects}
+                onSwipeRight={this.swipeToProjects} >
       <div style={this.props.style} className="slide home">
     			<div className="content home">
     				<h1>Hello! I'm Madison Yocum.</h1>
-    				<p>An interaction and visual designer, focusing on product design and entrepreneurship. .</p>
+    				<p>An interaction and visual designer, focusing on product design and entrepreneurship.</p>
     				<div className="view">view work</div>
             <div className="slide-controls mobile-controls">
                 <div onClick={this.props.countDown} className="backward"></div>
@@ -69,9 +83,10 @@ class HomeSlide extends React.Component {
             <SocialLinks />
           </div>
       </div>
+      </Swipe>
     );
   }
   
 }
-export default HomeSlide;
+export default withRouter(HomeSlide);
 

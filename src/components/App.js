@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
+
 import '../css/home.css';
 import '../css/header.css';
 import '../css/footer.css'
@@ -12,6 +13,8 @@ import '../css/mobile/case-study.css';
 import '../css/mobile/about-mobile.css';
 import '../css/mobile/resume-mobile.css';
 import '../fonts/style.css'
+
+
 
 
 import { hideArrow } from "../js/helpers";
@@ -59,13 +62,13 @@ export default class App extends Component {
          document.querySelector('#box-home').style.width = `${width}px`;
         }
 
-    let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+        let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
 
         window.onpopstate = () => {
             url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
             this.checkProject(url, window.event);
         }
-        this.checkProject(url, 'test');      
+        this.checkProject(url);      
     }
 
     checkProject = (url) => {
@@ -127,11 +130,14 @@ export default class App extends Component {
         this.setState({ onProject: false })   
     }
 
+    
+
   render() {
     return (
       <div className={`wrapper ${this.state.onProject}`}>
         <Header slideCount={this.state.slideCount} />
-        <div id="overlay" />
+       
+        
             <Route path="/" component={Home} />
             <Route path="/about" render={({ match })  => <About />} />
             <Route path="/resume" render={({ match }) => <Resume />} />

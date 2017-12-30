@@ -4,6 +4,8 @@ import { animateOut, animateName } from '../js/Animation';
 import $ from 'jquery';
 import TransitionGroup from 'react-transition-group/TransitionGroup' // ES6
 
+
+
 class Home extends Component {
 
   constructor() {
@@ -41,12 +43,16 @@ class Home extends Component {
   }
 
 
+
+
   render() {
   let style = {transform: 'scale(.85,.85)', opacity: 0}
   return (
       
 
       <TransitionGroup>
+
+      
 
       {this.state.url === true 
 
@@ -62,6 +68,7 @@ class Home extends Component {
               <HomeSlide style={style} />
         </div>
       }
+
       
       </TransitionGroup>
 

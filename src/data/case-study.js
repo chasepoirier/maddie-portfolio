@@ -54,7 +54,7 @@ const ProjectInfo = [
     ],
     sectionThree: {
       title: '03 - MVP #1',
-      text: '<span class="colored">The Flickr Chrometab was designed through two major MVPs, which lead it to the final product based on a user first and research approach. At first, I was given certain KPIs to work the redesign towards and a previous history of user research conducted by the Flickr Team to work from.</span>',
+      text: 'The Flickr Chrometab was designed through two major MVPs, which lead it to the final product based on a user first and research approach. At first, I was given certain KPIs to work the redesign towards and a previous history of user research conducted by the Flickr Team to work from.',
       imageURL: 'flickr/sketch_01-min.png'
     },
     sectionThreeGoals: [
