@@ -63,7 +63,6 @@ export default class App extends Component {
 
         ReactGA.initialize('UA-111707855-1');
         ReactGA.pageview(window.location.pathname + window.location.search);
-        
          var width = window.innerWidth;
         
         if (width < 450) {
