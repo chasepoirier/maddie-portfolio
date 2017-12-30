@@ -14,6 +14,12 @@ import '../css/mobile/about-mobile.css';
 import '../css/mobile/resume-mobile.css';
 import '../fonts/style.css'
 
+import  ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-111707855-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
+
 
 
 
