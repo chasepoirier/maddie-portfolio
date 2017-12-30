@@ -38,15 +38,15 @@ export function centerPosition() {
 }
 
 export function showArrow() {
-    $('header.static .left .logo-container.arrow').addClass('showArrow');
-    $('header.static .left .logo-container.logo').addClass('hide');
+    $('header .left .logo-container.arrow').addClass('showArrow');
+    $('header .left .logo-container.logo').addClass('hide');
 
 
 }
 
 export function hideArrow() {
-    $('header.static .left .logo-container.arrow').removeClass('showArrow');
-    $('header.static .left .logo-container.logo').removeClass('hide');
+    $('header .left .logo-container.arrow').removeClass('showArrow');
+    $('header .left .logo-container.logo').removeClass('hide');
 
     //parallaxOne();
 }

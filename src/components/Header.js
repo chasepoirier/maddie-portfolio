@@ -202,12 +202,12 @@ class Header extends React.Component {
       <header ref="fixed" className="fixed">
         <div className="fixed-nav-wrapper">
           <div className="left">
-          <div onClick={this.handleSubmit} className="logo-container logo" to="/">
-             <InlineSVG src={svgSource}  />
-          </div>
-          <NavLink className="logo-container arrow" to="/projects"><div onClick={this.arrowHandler} id="back-arrow"></div></NavLink>
-          <div style={{visibility: 'hidden'}} className="name header-white">Madison Yocum</div>
-          </div>
+        <div onClick={this.handleSubmit} className="logo-container logo" to="/">
+           <InlineSVG src={svgSource}  />
+        </div>
+        <NavLink className="logo-container arrow black" to="/projects"><div onClick={this.arrowHandler} className="black" id="back-arrow"></div></NavLink>
+        <div style={{visibility: 'hidden'}} className="name header-white">Madison Yocum</div>
+        </div>
           <ul className="right">
             <div onClick={this.showMobileLinks} className="mobile-nav-container">
                <div ref="fixedMobileNav" className="mobile-nav"></div>

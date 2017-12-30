@@ -50,7 +50,9 @@ class CaseStudy extends Component {
 		
 		//document.querySelector('.wrapper').style.overflow = 'hidden';
 		
-
+		// if(window.innerWidth < 490) {
+		// 	document.querySelector('header.fixed').classList += ' visible';
+		// }
 
 		if(this.checkCurrentCaseStudy() === true) {
 		this.refs.loader.classList += ` ${this.projectID[this.caseStudy]} `;
@@ -67,6 +69,7 @@ class CaseStudy extends Component {
 	componentWillUnmount() {
 		this.props.leaveProject();
 		window.removeEventListener('resize', this.boundEvent);
+		document.querySelector('header.fixed').remove('visible');
 	}
 
 	getCaseInfo = () => {

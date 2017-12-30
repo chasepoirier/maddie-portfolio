@@ -16,7 +16,7 @@ header.fixed {
 }
 
 header.fixed.visible {
-	transform: translateY(0px);
+	transform: translateY(0px) !important;
 }
 
 header.fixed .fixed-nav-wrapper {
@@ -33,14 +33,14 @@ header.fixed ul.right div.mobile-nav-container {
 	margin-top: -5px;
 }
 
-header.fixed .left .logo-container.logo {
-	position: static;
-	transform: scale(.9);
+header.fixed .logo-container {
+	margin-top: -22px;
+
 }
 
-header.fixed .left .name {
-	transform: translateX(10px) !important;
-
+header.fixed .logo-container.logo {
+	transform: scale(.8) !important;
+	top: 28px !important;
 }
 
 header {
@@ -105,6 +105,12 @@ header .left .logo-container.arrow {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+#back-arrow.black {
+	width: 80%;
+	height: 80%;
+	background-image: url(../images/arrow-back-black.png);
 }
 
 

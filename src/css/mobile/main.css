@@ -201,10 +201,16 @@
 	}
 /*
 	header.fixed {
-		transform: translateY(0px) !important;
+		transform: translateY(-70px) !important;
+		height: 65px !important;
 	}
-*/
-	
+
+
+	header.fixed .logo-container {
+		
+		margin-top: -13px;
+	}
+	*/
 
 	header .mobile-links {
 		position: fixed;
