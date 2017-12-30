@@ -6,11 +6,12 @@ export const firstChild = props => {
     return childrenArray[0] || null;
 };
 
+
 export function setToWhite() {
     window.setTimeout(function() {
-        $('#logo').css('stroke', '#fff');
-        $('header .right li a, .header-white').css('color', '#fff');
-        $('.mobile-nav').css('background-color', '#fff');
+        $('.static #logo').css('stroke', '#fff');
+        $('header.static .right li a, .static .header-white').css('color', '#fff');
+        $('.static .mobile-nav').css('background-color', '#fff');
 
         document.querySelector('.mobile-nav').classList += ' toWhite';
         
@@ -19,9 +20,9 @@ export function setToWhite() {
 
 export function setToBlack() {
     window.setTimeout(function() {
-        $('#logo').css('stroke', '#000');
-        $('header .right li a, .header-white').css('color', '#444');
-        $('.mobile-nav').css('background-color', '#000');
+        $('.static #logo').css('stroke', '#000');
+        $('header.static .right li a, .header-white').css('color', '#444');
+        $('.static .mobile-nav').css('background-color', '#000');
         document.querySelector('.mobile-nav').classList.remove('toWhite');
     }, 401);
 }
@@ -37,15 +38,15 @@ export function centerPosition() {
 }
 
 export function showArrow() {
-    $('header .left .logo-container.arrow').addClass('showArrow');
-    $('header .left .logo-container.logo').addClass('hide');
+    $('header.static .left .logo-container.arrow').addClass('showArrow');
+    $('header.static .left .logo-container.logo').addClass('hide');
 
 
 }
 
 export function hideArrow() {
-    $('header .left .logo-container.arrow').removeClass('showArrow');
-    $('header .left .logo-container.logo').removeClass('hide');
+    $('header.static .left .logo-container.arrow').removeClass('showArrow');
+    $('header.static .left .logo-container.logo').removeClass('hide');
 
     //parallaxOne();
 }

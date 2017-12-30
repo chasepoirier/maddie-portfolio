@@ -199,7 +199,11 @@
 	header {
 		width: 90%;
 	}
-
+/*
+	header.fixed {
+		transform: translateY(0px) !important;
+	}
+*/
 	
 
 	header .mobile-links {

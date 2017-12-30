@@ -91,7 +91,7 @@ class RippleCaseStudy extends Component {
 
 				<div className="case-separator"></div>
 				
-				<div className="case-study-wrapper case-data-animated">
+				<div className="case-study-wrapper prototype case-data-animated">
 					<div ref="desktopPrototypeHeading" className="subheading"></div>
 					<div ref="desktopPrototypeUrl" className="prototype desktop">
 						<iframe src={this.desktopPrototype.url} width="1127" height="634" allowTransparency="true" frameborder="0"></iframe>

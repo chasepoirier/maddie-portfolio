@@ -22,6 +22,12 @@ const svgSource = `<svg className="logo" viewBox="0 0 42 42" version="1.1" xmlns
 
 class Header extends React.Component {
 
+  constructor() {
+    super();
+
+    this.boundScroll = this.showFixedNav.bind(this);
+  }
+
 
   checkUrl = () => {
 
@@ -44,6 +50,17 @@ class Header extends React.Component {
           animateName();
       }
 
+      window.addEventListener('scroll', this.boundScroll);
+
+  }
+
+  showFixedNav = (e) => {
+    
+    if(window.pageYOffset > 300 ) {
+      this.refs.fixed.classList += ' visible'
+    } else {
+      this.refs.fixed.classList.remove('visible');
+    }
   }
 
   handleSubmit = (e) => {
@@ -119,17 +136,20 @@ class Header extends React.Component {
 
   showMobileLinks = () => {
     let nav = this.refs.mobileNav;
+    let fixedNav = this.refs.fixedMobileNav;
     let links = this.refs.mobileLinks;
     
     if (nav.classList.contains('clicked')) {
       links.classList.remove('clicked');
       nav.classList.remove('clicked');
+      fixedNav.classList.remove('clicked');
       this.closeMobileLinks();
 
       
     } else {
       animateMobileLinksIn();
       links.classList += ' clicked'
+      fixedNav.classList += ' clicked'
       nav.classList += ' clicked'
     }
   }
@@ -137,6 +157,7 @@ class Header extends React.Component {
   closeMobileLinks = () => {
     this.refs.mobileNav.classList.remove('clicked');
     this.refs.mobileLinks.classList.remove('clicked');
+    this.refs.fixedMobileNav.classList.remove('clicked');
     animateMobileLinksOut();
     // this.refs.mobileLinks.style.display = 'none'
   }
@@ -145,8 +166,8 @@ class Header extends React.Component {
   render() {
 
     return (
-
-      <header>
+      <span>
+      <header className="static">
         
         <div className="left">
     		<div onClick={this.handleSubmit} className="logo-container logo" to="/">
@@ -177,6 +198,29 @@ class Header extends React.Component {
           </div>
         </div>
       </header>
+
+      <header ref="fixed" className="fixed">
+        <div className="fixed-nav-wrapper">
+          <div className="left">
+          <div onClick={this.handleSubmit} className="logo-container logo" to="/">
+             <InlineSVG src={svgSource}  />
+          </div>
+          <NavLink className="logo-container arrow" to="/projects"><div onClick={this.arrowHandler} id="back-arrow"></div></NavLink>
+          <div style={{visibility: 'hidden'}} className="name header-white">Madison Yocum</div>
+          </div>
+          <ul className="right">
+            <div onClick={this.showMobileLinks} className="mobile-nav-container">
+               <div ref="fixedMobileNav" className="mobile-nav"></div>
+            </div>
+                      
+            <li onClick={this.workHandler}><NavLink id="headers" className="header-white" to="/projects">Work</NavLink></li>
+            <li><NavLink onClick={this.toAboutPage} className="header-white" to="/about">About</NavLink></li>
+            <li><NavLink onClick={this.toAboutPage} className="header-white" to="/resume">Resume</NavLink></li>
+
+          </ul>
+        </div>
+      </header>
+      </span>
     );
   }
 }

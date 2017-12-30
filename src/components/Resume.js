@@ -24,7 +24,7 @@ class Resume extends Component {
     return (
       <div className="resume main-content">
             <div className="main-container">
-                <div className="objective"><div className="job">Interaction Designer & Visual Designer</div>Focusing on product design and entrepreneurship. Currently, I am searching for an internship for the upcoming summer of 2018 and any other design, product and startup opportunities.
+                <div className="objective"><div className="job">Interaction Designer & Entrepreneur</div>Focusing on product design and entrepreneurship. Currently, I am searching for an internship for the upcoming summer of 2018 and any other design, product and startup opportunities.
             </div>
                 <div className="right">
                 <a className="button" target="blank" download="resume_madisonyocum.pdf" href={PDF}>Download Resume</a>

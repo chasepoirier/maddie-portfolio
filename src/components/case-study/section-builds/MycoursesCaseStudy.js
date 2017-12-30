@@ -178,7 +178,7 @@ class MycoursesCaseStudy extends Component {
 					<img src={this.renderImg(this.approachFullImages[2].imageURL)} alt=""/>
 					<img src={this.renderImg(this.approachFullImages[3].imageURL)} alt=""/>
 				</div>	
-				<div className="case-separator"></div>
+				<div className="case-separator mobile"></div>
 				
 
 				<div className="case-study-wrapper mycourses">
@@ -187,14 +187,14 @@ class MycoursesCaseStudy extends Component {
 					<div className="text solution">{this.approach[6].text}</div>
 				</div>
 				
-				<div className="case-separator"></div>
+				<div className="case-separator mobile"></div>
 
 				<div className="case-study-wrapper image-wrapper-transparent flex">
 					<img src={this.renderImg(this.approachFullImages[4].imageURL)} alt=""/>
 					<img src={this.renderImg(this.approachFullImages[5].imageURL)} alt=""/>
 				</div>
 
-				<div className="case-separator"></div>
+				<div className="case-separator mobile"></div>
 
 				<div className="case-study-wrapper image-wrapper-transparent flex centered">
 					<img src={this.renderImg(this.approachFullImages[6].imageURL)} alt=""/>

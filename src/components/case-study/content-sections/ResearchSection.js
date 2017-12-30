@@ -49,9 +49,11 @@ class ResearchSection extends Component {
 								{this.renderFindings()}
 							</div>
 						</div>
+						{this.props.hasImg === true ?
 						<div className="image">
-							{this.props.hasImg === true ? <img src={this.renderImgURL()} alt="reasearch" className="full-image"/> : null}
+							 <img src={this.renderImgURL()} alt="reasearch" className="full-image"/> 
 						</div>
+						: null}
 						
 					</div>
 				</span>
