@@ -55,11 +55,15 @@ class Header extends React.Component {
   }
 
   showFixedNav = (e) => {
+
+    if(window.innerWidth > 500) {
     
-    if(window.pageYOffset > 300 ) {
-      this.refs.fixed.classList += ' visible'
-    } else {
-      this.refs.fixed.classList.remove('visible');
+      if(window.pageYOffset > 300 ) {
+        this.refs.fixed.classList += ' visible'
+      } else {
+        this.refs.fixed.classList.remove('visible');
+      }
+
     }
   }
 
@@ -118,6 +122,7 @@ class Header extends React.Component {
 
   arrowHandler = () => {
       hideArrow();
+      this.closeMobileLinks();
       staggerShowTitle(this.props.slideCount);
   }
 

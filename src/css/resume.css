@@ -2,6 +2,16 @@
 .resume.main-content {
     height: auto;
     margin-bottom: 75px;
+    width: 100%;
+    position: static;
+
+}
+
+.resume.main-content .resume-content-container {
+    width: 93%;
+
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .line{
