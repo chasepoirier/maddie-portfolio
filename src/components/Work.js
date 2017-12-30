@@ -15,6 +15,8 @@ class Work extends Component {
         super(props);
         this.dom = {};
 
+        this.shouldSwipe = true;
+
         this.projectID = [];
         
         this.state = {  
@@ -151,20 +153,43 @@ class Work extends Component {
 
     }
 
-    checkNextSlide = () => {
+
+
+     onSwipeMove = (position, event) => {
         let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
 
+        console.log(this.props.onProject);
+            
         if(url === 'projects') {
-            this.props.countUp()
+
+
+            if(position.x < -50) {            
+                this.checkIfShouldSwipe('left');
+            }
+
+            if(position.x > 50) {
+                this.checkIfShouldSwipe('right');
+            }
         }
+
     }
 
-    checkLastSlide = () => {
-        let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+    checkIfShouldSwipe = (direction) => {
 
-        if(url === 'projects') {
-            this.props.countDown()
-        } 
+        if(this.shouldSwipe === true) {
+
+
+
+            if(direction === 'left') {
+                console.log('COUNT UP');
+                this.props.countUp();
+            } else {
+                this.props.countDown();
+            }
+
+            this.shouldSwipe = false;
+            setTimeout(() => this.shouldSwipe = true, 500);
+        }
     }
 
     render() {
@@ -173,7 +198,7 @@ class Work extends Component {
 
       return (
     	
-        <Swipe style={{display: 'inline'}}  onSwipeLeft={this.checkNextSlide} onSwipeRight={this.checkLastSlide} >
+        <Swipe style={{display: 'inline'}} onSwipeMove={this.onSwipeMove}>
         <div ref="work" id="work" className="main-content">
           <div className="overlay" />
 

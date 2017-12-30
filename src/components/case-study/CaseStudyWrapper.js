@@ -16,6 +16,8 @@ import MycoursesCaseStudy from './section-builds/MycoursesCaseStudy';
 import { animateCaseStudyIn, animateLoader } from '../../js/Animation';
 
 
+import Swipe from 'react-easy-swipe';
+
 
 
 class CaseStudy extends Component {
@@ -69,6 +71,7 @@ class CaseStudy extends Component {
 	componentWillUnmount() {
 		this.props.leaveProject();
 		window.removeEventListener('resize', this.boundEvent);
+		document.querySelector('header.fixed').classList.remove('visible');
 	}
 
 	getCaseInfo = () => {
@@ -142,14 +145,22 @@ class CaseStudy extends Component {
 	}
 
 
+	 showNav = () => {
+            document.querySelector('header.fixed').classList += ' visible';
+    }
 
+    hideNav = () => {
+        
+        document.querySelector('header.fixed').classList.remove('visible');
+        
+    }
 
 
 	render() {
 
 		return (
 			
-			<span>
+			<Swipe style={{display: 'inline'}} onSwipeMove={this.onSwipeMove} onSwipeDown={this.showNav} onSwipeUp={this.hideNav}>
 				{this.checkCurrentCaseStudy() === true ?
 				<span> 
 				<div ref="loader" className="loader"></div>
@@ -165,7 +176,7 @@ class CaseStudy extends Component {
 				:
 				null
 				}
-			</span>
+			</Swipe>
 		);
 	}
 }
