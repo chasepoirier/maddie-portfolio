@@ -18,11 +18,12 @@ class WorkSlide extends React.Component {
 
         handleSubmit = (e) => {
             let url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
-            staggerHideTitle(this.props.slideCount);
-           	if (url === 'projects') {
+            
+           	if (url === 'projects' && this.props.slideCount < 4) {
+                staggerHideTitle(this.props.slideCount);
                 let path = `projects/${this.props.project}`;
                 this.props.history.push(path);
-            }
+            } 
             e.preventDefault();
 
         }
@@ -104,26 +105,56 @@ class WorkSlide extends React.Component {
             }
         }
 
+        renderSlides = () => {
+            if(this.props.slideCount < 4) {
+                return(
+                    <li id={"slide-" + this.props.number} onClick={this.handleSubmit} className={this.props.isEven ? "slide even" : "slide"}>
+                        <div className="large-title">{this.props.project}</div>
+                        <div className="content project">
+                            <div style={this.getStyleCounter()}  id="title-revealer" className="left">
+                                <h1 className="title-tag">{this.props.title}</h1>
+                                <p className="title-tag"> {this.props.desc}</p>
+                                <div className="view title-tag">view work</div>
+                                
+                            </div>
+                            
+                            <div className={"right " + this.getStyleImg()}>
+                                <div id={"l" + this.props.number + "-slide"} className={"header-img " + this.props.project + " " + this.state.style + " " }></div>
+                            </div>
+                        </div>
+                    </li>
 
+                )
+            } else {
+                return (
+
+                    <a href={this.props.link} target="blank" id={"slide-" + this.props.number} className={this.props.isEven ? "slide even" : "slide"}>
+                        <div className="large-title">{this.props.project}</div>
+                        <div className="content project">
+                            <div style={this.getStyleCounter()}  id="title-revealer" className="left">
+                                <h1 className="title-tag">{this.props.title}</h1>
+                                <p className="title-tag"> {this.props.desc}</p>
+                                <div className="view title-tag">view work</div>
+                                
+                            </div>
+                            
+                            <div className={"right " + this.getStyleImg()}>
+                                <div id={"l" + this.props.number + "-slide"} className={"header-img " + this.props.project + " " + this.state.style + " " }></div>
+                            </div>
+                        </div>
+                    </a>
+
+                )
+            }
+        } 
 
         render() {
 
 		return(
-			<li id={"slide-" + this.props.number} onClick={this.handleSubmit} className={this.props.isEven ? "slide even" : "slide"}>
-				<div className="large-title">{this.props.project}</div>
-				<div className="content project">
-					<div style={this.getStyleCounter()}  id="title-revealer" className="left">
-						<h1 className="title-tag">{this.props.title}</h1>
-						<p className="title-tag"> {this.props.desc}</p>
-						<div className="view title-tag">view work</div>
-						
-					</div>
-                    
-					<div className={"right " + this.getStyleImg()}>
-						<div id={"l" + this.props.number + "-slide"} className={"header-img " + this.props.project + " " + this.state.style + " " }></div>
-					</div>
-				</div>
-			</li>
+			<span>
+       
+                {this.renderSlides()}         
+            </span>
 		);
 	}
 }

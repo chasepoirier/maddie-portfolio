@@ -35,10 +35,6 @@ html {
 	z-index: 2;
 }
 
-#project {
-	overflow: scroll;
-}
-
 .main-content.onProject {
 	height: 536px;
 }

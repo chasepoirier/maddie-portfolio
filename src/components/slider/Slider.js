@@ -39,7 +39,7 @@ class Slider extends Component {
                 number = { project.number }
                 project = { project.project }
                 slideCount = { this.props.slideCount }
-
+                link={ project.behanceLink}
                 />
             } else {
                 return <WorkSlide
@@ -50,6 +50,7 @@ class Slider extends Component {
                 slideCount = { this.props.slideCount }
                 key = { project.key }
                 project = { project.project }
+                link={ project.behanceLink}
 
                 />
             }

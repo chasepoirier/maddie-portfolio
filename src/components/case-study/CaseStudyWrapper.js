@@ -69,7 +69,6 @@ class CaseStudy extends Component {
 	componentWillUnmount() {
 		this.props.leaveProject();
 		window.removeEventListener('resize', this.boundEvent);
-		document.querySelector('header.fixed').remove('visible');
 	}
 
 	getCaseInfo = () => {
