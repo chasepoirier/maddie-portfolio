@@ -128,6 +128,15 @@
 		margin-right: 50px;
 	}
 
+	.case-study.ripple .case-study-wrapper .content-container.research {
+		flex-wrap: wrap;
+	}
+
+	.case-study.ripple .case-study-wrapper .content-container.research .image {
+		width: 100%;
+		margin-top: 50px;
+	}
+
 	.case-study .case-slider.wrapped.flickr, 
 	.case-study .case-slider.wrapped.mycourses {
 		height: 100% !important;

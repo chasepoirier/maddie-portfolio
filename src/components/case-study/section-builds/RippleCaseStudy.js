@@ -104,7 +104,7 @@ class RippleCaseStudy extends Component {
 				<VideoSection content={this.video} />
 				<div className="case-hairline"></div>
 
-				<ResearchSection wrapped={false} content={this.research} />
+				<ResearchSection wrapped={false} hasImg={true} content={this.research} />
 				<div className="case-hairline"></div>
 
 				<div className="full-width sketch"><img src={this.renderImg(this.sketchesImage)} alt=""/></div>
