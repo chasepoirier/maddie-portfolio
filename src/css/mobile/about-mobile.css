@@ -1,8 +1,6 @@
 @media (max-width: 1290px) {
     .about.main-content {
-        width: calc(100% - 100px);
         top: 50px;
-        left: 50px;
     }
     
     .slide.about .content.about p{
@@ -38,7 +36,7 @@
 @media (max-width: 1150px) {
     
     .slide.about .about-pic {
-        right: 0px;
+        right: 20px;
     }
 
 }

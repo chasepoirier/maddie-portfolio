@@ -70,8 +70,9 @@ class About extends Component {
 
 	    			</div>
 	          
-				<Footer />
-      </div>
+				
+      	</div>
+      	<Footer />
       </div>
     );
   }

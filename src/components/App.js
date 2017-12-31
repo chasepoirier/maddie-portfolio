@@ -16,12 +16,6 @@ import '../fonts/style.css'
 
 import  ReactGA from 'react-ga';
 
-
-
-
-
-
-
 import { hideArrow } from "../js/helpers";
 
 import { staggerHideTitle, staggerShowTitle, animateIn, animateOut } from '../js/Animation';
@@ -36,8 +30,6 @@ import Work from './Work';
 import About from './About';
 import Header from './Header';
 import Resume from './Resume';
-
-
 
 export default class App extends Component {
     constructor(props) {

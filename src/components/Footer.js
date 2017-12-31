@@ -25,7 +25,8 @@ class Footer extends Component {
 					<div className="bottom">
 						<div className="contact-container">
 		            		<a href="/" className="copyright">Madison Yocum</a>
-		          		</div> 
+		          		</div>
+		          		<div className="love"><a href="http://chasepoirier.com" target="blank">Coded with &#x2764; by Chase Poirier</a></div> 
 		            	<SocialLinks />
 					</div>
 				</div>

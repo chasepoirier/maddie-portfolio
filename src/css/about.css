@@ -9,6 +9,11 @@
 	margin-bottom:100px;
 }
 
+.about.main-content {
+	width: 100%;
+	left: 0px;
+}
+
 .about_background{
     background-color: #ffffff;
 }
@@ -27,7 +32,8 @@
 .slide.about {
 	z-index: 100000;
 	margin: 0 auto;
-	width: 100%;
+	width: 95%;
+	max-width: 1200px;
 }
 
 .slide.about .content {
