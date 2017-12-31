@@ -134,7 +134,7 @@ const ProjectInfo = [
     ],
     takeaway: {
       heading: '"Work hard and be nice to everyone."',
-      text: 'An summer worth a lifetime of memories, I couldn’t thank you to the Flickr team enough for taking me under their wings and teaching me more about what I love to do everyday. If I were to add on onto the project, it would be allowing users to connect directly to their Flickr account photos and continue to simplify the interace.',
+      text: 'An summer worth a lifetime of memories, I couldn’t thank you to the Flickr team enough for taking me under their wings and teaching me more about what I love to do everyday. If I were to add on onto the project, it would be allowing users to connect directly to their Flickr account photos and continue to simplify the interface.',
       websiteURL: null,
       caption: null,
       imageURL: 'flickr/takeaway-min.png',
