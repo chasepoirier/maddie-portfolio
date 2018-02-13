@@ -44,8 +44,7 @@ class About extends Component {
 				  	</div>
 	    			<div className="content about">
 	    				<h1>Hello! I'm Madison Yocum.</h1>
-	    				<p>An interaction designer and entrepreneur in my third year at Rochester Institute 
-	    				of Technology studying New Media Design and double minoring in Marketing and Advertising
+	    				<p>An interaction designer and entrepreneur in my third year at Rochester Institute of Technology studying New Media Design and double minoring in Marketing and Advertising
 	    				 / Public Relations. Last summer, I was a Design Intern at 
 	    				 <a href='https://www.flickr.com' className="about-link" rel="noopener noreferrer" target="_blank"> Flickr / YAHOO </a> 
 	    				 in San Francisco, and currently, I'm looking for an internship this upcoming summer of 2018 
@@ -57,7 +56,7 @@ class About extends Component {
                         When I'm not designing, I lead my startups I co-founded called
                        	<a href='http://rippleplatform.io/' className="about-link" rel="noopener noreferrer" target="_blank"> Ripple</a>, which was 
                          <a href='https://cias.rit.edu/news/509' className="about-link" rel="noopener noreferrer" target="_blank"> featured at RIT</a>, 
-                         and <a href='http://www.udio-ventures.com/index.html' className="about-link" rel="noopener noreferrer" target="_blank"> Udio Ventures </a> 
+                         and <a href='http://www.udio-ventures.com/' className="about-link" rel="noopener noreferrer" target="_blank"> Udio Ventures </a> 
                          a startup studio and venture, working alongside my teams learning more about business every day. 
                          I recently <a href='https://medium.com/@madisonyocum/why-we-should-share-our-knowledge-with-others-70a528e8bf9e' className="about-link" rel="noopener noreferrer" target="_blank">spoke and held a workshop </a> 
                          at a business conference on entrepreneurship, product and my career, which was an amazing experience. 
