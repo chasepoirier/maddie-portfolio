@@ -55,7 +55,7 @@ export default class App extends Component {
 
         ReactGA.initialize('UA-111707855-1');
         ReactGA.pageview(window.location.pathname + window.location.search);
-         var width = window.innerWidth;
+        var width = window.innerWidth;
         
         if (width < 450) {
             
@@ -137,7 +137,6 @@ export default class App extends Component {
       <div className={`wrapper ${this.state.onProject}`}>
         <Header slideCount={this.state.slideCount} />
        
-        
             <Route path="/" component={Home} />
             <Route path="/about" render={({ match })  => <About />} />
             <Route path="/resume" render={({ match }) => <Resume />} />
