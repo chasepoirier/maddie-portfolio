@@ -53,7 +53,7 @@ class Resume extends Component {
                     <div className="work">
                         <a className="company" target="blank" href="http://www.udio-ventures.com/index.html">Udio Ventures</a>
                         <div className="info">Co-Founer & Product Lead   |   Oct. 2017 - Present </div>
-                        <div className="description">Currently an in progress startup idea and company, Udio, a product design and venture production studio that focuses on innovative and new startups furthering their product, and creates effective solutions based on user and product advancement.</div>
+                        <div className="description">For early stage startups who but lack the key resources, talent or time to do so, Udio Ventures provides high quality entrepreneurial consulting, seed investments, team recruitment, and product advancement for a fee and equity based on the. Unlike other venture studios we work hands on with our startups and integrate our core team with their’s to ensure the highest chance of success.</div>
                     </div>
                 </div>
                 <div className="line"></div>
