@@ -44,7 +44,7 @@ class About extends Component {
 				  	</div>
 	    			<div className="content about">
 	    				<h1>Hello! I'm Madison Yocum.</h1>
-	    				<p>An interaction designer and entrepreneur in my third year at Rochester Institute of Technology studying New Media Design and double minoring in Marketing and Advertising
+	    				<p>An product designer and entrepreneur in my third year at Rochester Institute of Technology studying New Media Design and double minoring in Marketing and Advertising
 	    				 / Public Relations. Last summer, I was a Design Intern at 
 	    				 <a href='https://www.flickr.com' className="about-link" rel="noopener noreferrer" target="_blank"> Flickr / YAHOO </a> 
 	    				 in San Francisco, and currently, I'm looking for an internship this upcoming summer of 2018 

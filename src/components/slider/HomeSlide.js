@@ -53,7 +53,7 @@ class HomeSlide extends React.Component {
       <div style={this.props.style} className="slide home">
     			<div className="content home">
     				<h1>Hello! I'm Madison Yocum.</h1>
-    				<p>An interaction and visual designer, focusing on product design and entrepreneurship.</p>
+    				<p>A freelance product designer and entrepreneur, working with startups and product companies.</p>
     				<div className="view">view work</div>
             <div className="slide-controls mobile-controls">
                 <div onClick={this.props.countDown} className="backward"></div>
