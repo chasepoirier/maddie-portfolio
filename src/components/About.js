@@ -44,10 +44,10 @@ class About extends Component {
 				  	</div>
 	    			<div className="content about">
 	    				<h1>Hello! I'm Madison Yocum.</h1>
-	    				<p>An product designer and entrepreneur in my third year at Rochester Institute of Technology studying New Media Design and double minoring in Marketing and Advertising
-	    				 / Public Relations. Last summer, I was a Design Intern at 
+	    				<p>An product designer and entrepreneur in my final year at Rochester Institute of Technology studying New Media Design and double minoring in Marketing and Advertising
+	    				 / Public Relations. Previously, I was a design intern at 
 	    				 <a href='https://www.flickr.com' className="about-link" rel="noopener noreferrer" target="_blank"> Flickr / YAHOO </a> 
-	    				 in San Francisco, and currently, I'm looking for an internship this upcoming summer of 2018 
+	    				 and a designer at <a href='https://www.readme.io' className="about-link" rel="noopener noreferrer" target="_blank"> ReadMe </a> in San Francisco, and currently, I'm a freelance product designer looking for opportunities
 	    				 relating to design, product or startups. I strive every day to learn something new, improve my 
 	    				 own skills, and create a better world and design solutions through problem-solving, iteration, 
 	    				 and a user first mindset.
