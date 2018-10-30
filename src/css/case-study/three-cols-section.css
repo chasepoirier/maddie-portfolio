@@ -3,7 +3,7 @@
 /* ex: .case-study.flickr .three-cols-section */
 
 .case-study .case-study-wrapper .subheading.three-cols {
-	font-size: 16px;
+	font-size: 14px;
 	margin-bottom: 25px;
 }
 
@@ -23,7 +23,7 @@
 .case-study .case-study-wrapper .three-cols-section .col-1 .text,
 .case-study .case-study-wrapper .three-cols-section .col-2 .text,
 .case-study .case-study-wrapper .three-cols-section .col-3 .text {
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 21px;
 	text-align: justify;
 }

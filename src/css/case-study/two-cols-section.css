@@ -17,7 +17,7 @@
 .case-study .two-cols-section .col-1 { 
 	width: 95%;
 	max-width: 525px;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 21px;
 	text-align: justify;
 }
@@ -75,7 +75,7 @@
 }
 
 .case-study .two-cols-section.wrapped .col-2 .content-container .subheading {
-	font-size: 16px;
+	font-size: 14px;
 	margin-bottom: 25px;
 }
 

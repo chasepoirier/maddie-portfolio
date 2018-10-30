@@ -44,17 +44,17 @@ class About extends Component {
 				  	</div>
 	    			<div className="content about">
 	    				<h1>Hello! I'm Madison Yocum.</h1>
-	    				<p>An product designer and entrepreneur in my final year at Rochester Institute of Technology studying New Media Design and double minoring in Marketing and Advertising
+	    				<p>Product Designer and Entrepreneur in my final year at Rochester Institute of Technology studying New Media Design and double minoring in Marketing and Advertising
 	    				 / Public Relations. Previously, I was a design intern at 
-	    				 <a href='https://www.flickr.com' className="about-link" rel="noopener noreferrer" target="_blank"> Flickr / YAHOO </a> 
-	    				 and a designer at <a href='https://www.readme.io' className="about-link" rel="noopener noreferrer" target="_blank"> ReadMe </a> in San Francisco, and currently, I'm a freelance product designer looking for opportunities
+	    				 <a href='https://www.flickr.com' className="about-link" rel="noopener noreferrer" target="_blank"> Flickr </a> 
+	    				 and a Product Designer at <a href='https://www.readme.io' className="about-link" rel="noopener noreferrer" target="_blank"> ReadMe </a> in San Francisco. Currently, I'm a remote product designer looking for opportunities
 	    				 relating to design, product or startups. I strive every day to learn something new, improve my 
 	    				 own skills, and create a better world and design solutions through problem-solving, iteration, 
-	    				 and a user first mindset.
+	    				 and a user-first mindset.
                         <br></br>
                         <br></br>
                         When I'm not designing, I lead my startups I co-founded called
-                       	<a href='http://rippleplatform.io/' className="about-link" rel="noopener noreferrer" target="_blank"> Ripple</a>, which was 
+                       	<a href='http://www.madisonyocum.com/projects/ripple' className="about-link" rel="noopener noreferrer" target="_blank"> Ripple</a>, which was 
                          <a href='https://cias.rit.edu/news/509' className="about-link" rel="noopener noreferrer" target="_blank"> featured at RIT</a>, 
                          and <a href='http://www.udio-ventures.com/' className="about-link" rel="noopener noreferrer" target="_blank"> Udio Ventures </a> 
                          a startup studio and venture, working alongside my teams learning more about business every day. 

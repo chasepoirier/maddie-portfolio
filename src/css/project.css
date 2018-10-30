@@ -157,7 +157,7 @@
 
 .work-list .content.home p,
 .slide.home .content.home p {
-	font-size: 20px;
+	font-size: 17px;
 }
 
 .work-list .content.project {
@@ -181,14 +181,14 @@
 .slide.home .content h1 {
 	margin-top: 0px;
 	font-family: 'SF UI Display Bold';
-	font-size: 28px;
+	font-size: 26px;
 	margin-bottom: 8px;
 }
 
 .work-list .content p {
 	margin-top: 0px;
 	font-family: 'SF UI Display Light';
-	font-size: 18px;
+	font-size: 16px;
 }
 
 a:visited {

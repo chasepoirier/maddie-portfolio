@@ -20,6 +20,7 @@ iframe {
 .case-study.flickr .case-study-wrapper.flickr .heading.flickr {
 	width: 90%;
 	max-width: 370px;
+    line-height: 30px;
 }
 
 .case-study.flickr .case-study-wrapper.flickr .text.solution {
@@ -55,8 +56,8 @@ iframe {
 	width: 90%;
 	max-width: 1200px;
 	margin: 0 auto;
-
-	font-size: 16px;
+    line-height: 20px;
+	font-size: 14px;
 }
 
 .case-separator {
@@ -129,7 +130,7 @@ iframe {
 
 
 .case-study .overview-container .content .text {
-	font-size: 16px;
+	font-size: 14px;
 	width: 95%;
 	line-height: 21px;
 }
@@ -300,7 +301,7 @@ iframe {
 	width: 100%;
 	text-align: center;
 	margin-top: 25px;
-	font-size: 16px;
+	font-size: 14px;
 	opacity: .8;
 }
 

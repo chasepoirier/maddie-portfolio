@@ -25,7 +25,7 @@ class Resume extends Component {
         <div className="resume main-content">
             <div className="resume-content-container">
                 <div className="main-container">
-                    <div className="objective"><div className="job">Product Designer & Entrepreneur</div>Focusing on experience design and entrepreneurship. Currently, I'm searching for contract and freelance projects in product and startup companies.
+                    <div className="objective"><div className="job">Product Designer & Entrepreneur</div>Currently searching for remote or freelance opportunities with startups and corporations, and product design or startup positions.
                 </div>
                     <div className="right">
                     <a className="button" target="blank" download="resume_madisonyocum.pdf" href={PDF}>Download Resume</a>
@@ -35,15 +35,15 @@ class Resume extends Component {
                 <div className="main-line"></div>
                 <div className="work-title">Work Experience</div>
                 <div className="container">
-                    <div className="work">
-                        <a className="company" target="blank" href="https://www.flickr.com/">Flickr / YAHOO</a>
-                        <div className="info">Design Intern   |   San Francisco, CA   |   Summer 2017</div>
-                        <div className="description">Worked in collaboration with the design and development teams on various Flickr products. Responsible for the redesign of Flickr's Chrome Tab and iMessage Extensions by creating product concepts and research, user flows, wireframes, and visual designs for features of the experiences.</div>
+            <div className="work">
+                        <a className="company" target="blank" href="https://www.readme.io/">ReadMe</a>
+                        <div className="info">Product Designer   |   San Francisco, CA   |   March 2018 - Present</div>
+                        <div className="description">Scheduled to work in March of 2018 as a product and interaction designer at ReadMe, a company based in downtown San Francisco. Will be working with the developers, product managers, and designers to further innovate on the products of ReadMe. Also, learning the strategies of running a functional business and product creation processes.</div>
                     </div>
                     <div className="work">
-                        <a className="company" target="blank" href="https://www.readme.io/">ReadMe</a>
-                        <div className="info">Product Designer   |   San Francisco, CA   |   Winter 2018</div>
-                        <div className="description">Scheduled to work in March of 2018 as a product and interaction designer at ReadMe, a company based in downtown San Francisco. Will be working with the developers, product managers, and designers to further innovate on the products of ReadMe. Also, learning the strategies of running a functional business and product creation processes.</div>
+                        <a className="company" target="blank" href="https://www.flickr.com/">Flickr</a>
+                        <div className="info">Design Intern   |   San Francisco, CA   |   Summer 2017</div>
+                        <div className="description">Worked in collaboration with the design and development teams on various Flickr products. Responsible for the redesign of Flickr's Chrome Tab and iMessage Extensions by creating product concepts and research, user flows, wireframes, and visual designs for features of the experiences.</div>
                     </div>
                     <div className="work">
                         <a className="company" target="blank" href="http://rippleplatform.io/">Ripple</a>

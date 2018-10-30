@@ -18,7 +18,7 @@
 	margin-bottom: 10px;
 	text-align: center;
 	color: #fff;
-	font-size: 16px;
+	font-size: 14px;
 	display: block;
 	cursor: pointer;
 	background: linear-gradient(45deg, #0088C6 0%,#20B8FF 100%);
@@ -56,6 +56,7 @@
 	font-family: 'sf ui display light';
 	font-size: 18px;
 	color: #555;
+   
 }
 
 .case-study .content-container.takeaway .text span.blue {
@@ -83,7 +84,7 @@
 }
 
 .case-study .content-container.takeaway .right .caption {
-	font-size: 16px;
+	font-size: 14px;
 	text-align: center;
 	margin: 0 auto;
 	margin-top: 25px;
