@@ -8,7 +8,7 @@
     "gasp": "0.0.2",
     "gsap": "^1.20.6",
     "heroku": "^0.2.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "react": "^15.6.1",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^15.6.1",
